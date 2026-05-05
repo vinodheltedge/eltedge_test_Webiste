@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — eLT Edge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ============================================================
+       CONTACT US — PAGE-SPECIFIC STYLES
+       ============================================================ */
+
+    /* ---- HERO ---- */
+    .contact-hero {
+      position: relative;
+      min-height: 380px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .contact-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(3, 12, 38, 0.92) 0%,
+          rgba(0, 30, 90, 0.75) 50%,
+          rgba(3, 12, 38, 0.88) 100%
+        ),
+        linear-gradient(180deg, #040d24 0%, #071d5a 50%, #040d24 100%);
+    }
+
+    /* Circuit board pattern overlay */
+    .contact-hero-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0, 121, 243, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 121, 243, 0.07) 1px, transparent 1px),
+        linear-gradient(rgba(0, 121, 243, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 121, 243, 0.04) 1px, transparent 1px);
+      background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
+      pointer-events: none;
+    }
+
+    /* Glowing blue focal point (circuit hot spot) */
+    .contact-hero-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 80% at 65% 60%, rgba(0, 90, 220, 0.22) 0%, transparent 65%),
+        radial-gradient(ellipse 25% 30% at 60% 55%, rgba(60, 160, 255, 0.14) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .contact-hero-inner {
+      position: relative;
+      z-index: 1;
+      padding: 90px 24px 72px;
+      max-width: 1280px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .contact-hero h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(40px, 5.5vw, 68px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.05;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .contact-hero p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(14px, 1.5vw, 17px);
+      color: rgba(255, 255, 255, 0.75);
+      max-width: 480px;
+      line-height: 1.7;
+    }
+
+    /* ---- CONTACT MAIN SECTION ---- */
+    .contact-section {
+      background: #f4f7fb;
+      padding: 64px 0 80px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* ---- FORM CARD ---- */
+    .form-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 36px 32px 40px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-card-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #0d1b2a;
+      margin-bottom: 6px;
+    }
+
+    .form-card-subtitle {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: #7a8ea8;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    /* Tabs */
+    .form-tabs {
+      display: flex;
+      gap: 0;
+      border-bottom: 1.5px solid #e4ecf5;
+      margin-bottom: 28px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .form-tabs::-webkit-scrollbar { display: none; }
+
+    .form-tab {
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #7a8ea8;
+      background: none;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      position: relative;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+
+    .form-tab::after {
+      content: '';
+      position: absolute;
+      bottom: -1.5px;
+      left: 0;
+      right: 0;
+      height: 2.5px;
+      background: transparent;
+      border-radius: 2px 2px 0 0;
+      transition: background 0.2s;
+    }
+
+    .form-tab.active {
+      color: #0079f3;
+    }
+
+    .form-tab.active::after {
+      background: #0079f3;
+    }
+
+    /* Form fields */
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 16px;
+    }
+
+    .form-group:last-child { margin-bottom: 0; }
+
+    .form-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: #4a5a6a;
+    }
+
+    .form-input {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: #0d1b2a;
+      background: #f7fafd;
+      border: 1.5px solid #dde7f2;
+      border-radius: 10px;
+      padding: 12px 16px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .form-input::placeholder { color: #aab8cb; }
+
+    .form-input:focus {
+      border-color: #0079f3;
+      box-shadow: 0 0 0 3px rgba(0, 121, 243, 0.1);
+    }
+
+    /* Phone with country code */
+    .phone-group {
+      display: flex;
+      gap: 0;
+      background: #f7fafd;
+      border: 1.5px solid #dde7f2;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .phone-group:focus-within {
+      border-color: #0079f3;
+      box-shadow: 0 0 0 3px rgba(0, 121, 243, 0.1);
+    }
+
+    .phone-code {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #0d1b2a;
+      background: #edf2fa;
+      border: none;
+      border-right: 1.5px solid #dde7f2;
+      padding: 12px 14px;
+      cursor: pointer;
+      outline: none;
+      white-space: nowrap;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .phone-input {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: #0d1b2a;
+      background: transparent;
+      border: none;
+      padding: 12px 16px;
+      outline: none;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .phone-input::placeholder { color: #aab8cb; }
+
+    /* Textarea */
+    .form-textarea {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: #0d1b2a;
+      background: #f7fafd;
+      border: 1.5px solid #dde7f2;
+      border-radius: 10px;
+      padding: 12px 16px;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+      resize: vertical;
+      min-height: 96px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-textarea::placeholder { color: #aab8cb; }
+
+    .form-textarea:focus {
+      border-color: #0079f3;
+      box-shadow: 0 0 0 3px rgba(0, 121, 243, 0.1);
+    }
+
+    /* Select */
+    .form-select {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: #0d1b2a;
+      background: #f7fafd url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 16 16'%3E%3Cpolyline points='4 6 8 10 12 6' stroke='%23aab8cb' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 14px center;
+      border: 1.5px solid #dde7f2;
+      border-radius: 10px;
+      padding: 12px 38px 12px 16px;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+      appearance: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-select:focus {
+      border-color: #0079f3;
+      box-shadow: 0 0 0 3px rgba(0, 121, 243, 0.1);
+    }
+
+    .form-footer {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 24px;
+    }
+
+    .btn-submit {
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      background: #0079f3;
+      border: none;
+      border-radius: 100px;
+      padding: 13px 32px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-submit:hover {
+      background: #0062cc;
+      transform: translateY(-1px);
+    }
+
+    /* ---- INFO CARD ---- */
+    .info-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Map placeholder */
+    .map-container {
+      width: 100%;
+      height: 260px;
+      background: #dde7f2;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* Map fallback (if iframe is blocked) */
+    .map-fallback {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background:
+        linear-gradient(160deg, #c8d8ec 0%, #b8ccdf 100%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Crect width='40' height='40' fill='none' stroke='%23a0b8d0' stroke-width='0.5'/%3E%3C/svg%3E");
+      background-size: cover, 40px 40px;
+    }
+
+    /* Contact details */
+    .info-details {
+      padding: 28px 28px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 0;
+      border-bottom: 1px solid #edf2fa;
+    }
+
+    .info-row:last-of-type {
+      border-bottom: none;
+    }
+
+    .info-icon {
+      width: 38px;
+      height: 38px;
+      background: #e6f0ff;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .info-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: #0079f3;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .info-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .info-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: #8fa4bc;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .info-value {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #0d1b2a;
+      line-height: 1.5;
+    }
+
+    .btn-get-in-touch {
+      display: block;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      background: #0079f3;
+      border: none;
+      border-radius: 100px;
+      padding: 14px 28px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-get-in-touch:hover {
+      background: #0062cc;
+      transform: translateY(-1px);
+    }
+
+    /* ---- CTA SECTION ---- */
+    .contact-cta {
+      background: linear-gradient(135deg, #0052cc 0%, #0079f3 50%, #0052cc 100%);
+      padding: 88px 24px;
+      text-align: center;
+    }
+
+    .contact-cta h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(26px, 3.5vw, 44px);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+
+    .contact-cta p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(14px, 1.4vw, 17px);
+      color: rgba(255, 255, 255, 0.82);
+      margin-bottom: 36px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.65;
+    }
+
+    .btn-contact-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255, 255, 255, 0.65);
+      padding: 14px 38px;
+      border-radius: 100px;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: 'Sora', sans-serif;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .btn-contact-cta:hover {
+      background: rgba(255, 255, 255, 0.13);
+      border-color: #fff;
+    }
+
+    /* ============================================================
+       MOBILE ACCORDION FOOTER
+       ============================================================ */
+    .footer-acc-head {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-acc-head h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .footer-acc-icon {
+      width: 18px;
+      height: 18px;
+      stroke: rgba(255, 255, 255, 0.55);
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: transform 0.25s;
+    }
+
+    .footer-col.open .footer-acc-icon {
+      transform: rotate(180deg);
+    }
+
+    .footer-acc-body {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 1024px) {
+      .contact-grid {
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      /* Hero */
+      .contact-hero { min-height: 280px; }
+      .contact-hero-inner { padding: 64px 20px 52px; }
+
+      /* Contact grid stacks */
+      .contact-section { padding: 40px 0 56px; }
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      /* Form card */
+      .form-card { padding: 24px 20px 28px; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
+      .form-row .form-group { margin-bottom: 16px; }
+
+      /* Info card */
+      .map-container { height: 200px; }
+      .info-details { padding: 20px 20px 24px; }
+
+      /* CTA */
+      .contact-cta { padding: 64px 20px; }
+
+      /* Footer accordion */
+      .footer-acc-head { display: flex; }
+      .footer-col h4 { display: none; }
+      .footer-acc-body {
+        max-height: 0;
+        gap: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding-top: 0;
+      }
+      .footer-acc-body a { padding: 8px 0; }
+      .footer-col.open .footer-acc-body { max-height: 240px; }
+
+      .footer-links {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .footer-top {
+        flex-direction: column;
+        gap: 28px;
+      }
+      .footer-brand { flex: none; width: 100%; }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .form-tabs { gap: 0; }
+      .form-tab { padding: 10px 14px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Banner -->
+  <div class="top-banner">
+    <span>Looking for Smart Factory &amp; Industrial Intelligence Solutions?</span>
+    <a href="https://factis.in" target="_blank" class="banner-link">Visit factis.in by eLT Edge </a>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner container">
+      <div class="nav-logo">
+       <a href="./index.html"
+            ><img src="assets/images/logo white bg (1) 1.png" alt="eLT Edge" class="logo-img"
+          /></a>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="approach.html" class="nav-link">Approach</a>
+        <a href="#" class="nav-link">Capabilities</a>
+        <a href="ourworks.html" class="nav-link">Our Works</a>
+        <a href="aboutus.html" class="nav-link">About Us</a>
+        <a href="resources.html" class="nav-link">Resources</a>
+      </nav>
+      <div class="nav-actions">
+         <a href="contact.html" class="btn-contact" class="btn-contact" style="background:#0079f3;color:#fff;">Contact Us</a>
+       
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      <nav class="drawer-links">
+        <a href="approach.html">Approach</a>
+        <a href="#">Capabilities</a>
+        <a href="ourworks.html">Our Works</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="resources.html">Resources</a>
+      </nav>
+       <a href="contact.html" class="btn-contact">Contact Us</a>
+    </div>
+  </div>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="contact-hero">
+    <div class="contact-hero-bg"></div>
+    <div class="contact-hero-inner">
+      <h1>Contact Us</h1>
+      <p>Let's build something impactful. Reach out and we'll get back to you shortly.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT MAIN SECTION
+       ============================================================ -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- LEFT: Form Card -->
+        <div class="form-card">
+          <div class="form-card-title">Send us a Message</div>
+          <div class="form-card-subtitle">Fill out the form below and our team will get back to you within 24 hours.</div>
+
+          <!-- Tabs -->
+          <div class="form-tabs" role="tablist">
+            <button class="form-tab active" role="tab" aria-selected="true" data-tab="service">Service</button>
+            <button class="form-tab" role="tab" aria-selected="false" data-tab="partnership">Partnership</button>
+            <button class="form-tab" role="tab" aria-selected="false" data-tab="career">Career</button>
+            <button class="form-tab" role="tab" aria-selected="false" data-tab="solution">Solution</button>
+          </div>
+
+          <!-- Form -->
+          <form id="contactForm" novalidate>
+
+            <!-- Name + Company -->
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="inputName">Name</label>
+                <input class="form-input" type="text" id="inputName" name="name" placeholder="Your full name" autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="inputCompany">Company Name</label>
+                <input class="form-input" type="text" id="inputCompany" name="company" placeholder="Your company" autocomplete="organization" />
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+              <label class="form-label" for="inputPhone">Phone Number</label>
+              <div class="phone-group">
+                <select class="phone-code" aria-label="Country code">
+                  <option value="+91">🇮🇳 +91</option>
+                  <option value="+1">🇺🇸 +1</option>
+                  <option value="+44">🇬🇧 +44</option>
+                  <option value="+971">🇦🇪 +971</option>
+                  <option value="+65">🇸🇬 +65</option>
+                  <option value="+61">🇦🇺 +61</option>
+                  <option value="+49">🇩🇪 +49</option>
+                  <option value="+33">🇫🇷 +33</option>
+                </select>
+                <input class="phone-input" type="tel" id="inputPhone" name="phone" placeholder="Phone number" autocomplete="tel-national" />
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label class="form-label" for="inputEmail">Email Address</label>
+              <input class="form-input" type="email" id="inputEmail" name="email" placeholder="you@company.com" autocomplete="email" />
+            </div>
+
+            <!-- Service dropdown (shown for Service tab) -->
+            <div class="form-group" id="serviceSelectGroup">
+              <label class="form-label" for="inputService">Service Required</label>
+              <select class="form-select" id="inputService" name="service">
+                <option value="" disabled selected>Select a service</option>
+                <option value="hardware">Hardware Design &amp; Development</option>
+                <option value="firmware">Firmware &amp; Software Development</option>
+                <option value="iot">IoT Solutions</option>
+                <option value="pcb">PCB Design &amp; Manufacturing</option>
+                <option value="prototype">Rapid Prototyping</option>
+                <option value="production">Mass Production Support</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label class="form-label" for="inputMessage">Message</label>
+              <textarea class="form-textarea" id="inputMessage" name="message" placeholder="Describe your project or enquiry…" rows="4"></textarea>
+            </div>
+
+            <div class="form-footer">
+              <button type="submit" class="btn-submit">Submit →</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- RIGHT: Info Card -->
+        <div class="info-card">
+
+          <!-- Map -->
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4730095474786!2d78.44!3d17.44!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI2JzI0LjAiTiA3OMKwMjYnMjQuMCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="eLT Edge Location — Hyderabad"
+            ></iframe>
+          </div>
+
+          <!-- Contact details -->
+          <div class="info-details">
+
+            <div class="info-row">
+              <div class="info-icon">
+                <!-- Email icon -->
+                <svg viewBox="0 0 24 24">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <polyline points="2,4 12,13 22,4"/>
+                </svg>
+              </div>
+              <div class="info-text">
+                <span class="info-label">Email</span>
+                <span class="info-value">info@eltedge.io</span>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-icon">
+                <!-- Phone icon -->
+                <svg viewBox="0 0 24 24">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11.23 19.79 19.79 0 0 1 1.61 2.64 2 2 0 0 1 3.6 0.46h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.1a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 15.46z"/>
+                </svg>
+              </div>
+              <div class="info-text">
+                <span class="info-label">Phone</span>
+                <span class="info-value">+91 9177444992</span>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-icon">
+                <!-- Location icon -->
+                <svg viewBox="0 0 24 24">
+                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="info-text">
+                <span class="info-label">Address</span>
+                <span class="info-value">Hyderabad, Telangana, India</span>
+              </div>
+            </div>
+
+            <a href="mailto:info@eltedge.io" class="btn-get-in-touch">Get in Touch →</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA
+       ============================================================ -->
+  <section class="contact-cta">
+    <h2>Have a Product Idea?</h2>
+    <p>Let's turn your vision into a production-ready embedded product.</p>
+    <a href="#" class="btn-contact-cta">Start your Project &nbsp;→</a>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <img src="assets/images/logo in white.png" alt="eLT Edge" class="footer-logo" />
+          <p>Embedded product development from concept to mass production. Your trusted engineering partner.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter" class="social-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="social-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069Zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881Z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="social-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065Zm1.782 13.019H3.555V9h3.564v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="social-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073Z"/></svg>
+            </a>
+            <a href="#" aria-label="Discord" class="social-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.08.114 18.1.138 18.116a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+
+          <div class="footer-col" id="footerColCompany">
+            <div class="footer-acc-head" data-col="footerColCompany">
+              <h4>Company</h4>
+              <svg class="footer-acc-icon" viewBox="0 0 16 16"><polyline points="4 6 8 10 12 6"/></svg>
+            </div>
+            <h4 style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;">Company</h4>
+            <div class="footer-acc-body">
+              <a href="#">Home</a>
+              <a href="#">About Us</a>
+              <a href="#">Careers</a>
+              <a href="#">Blogs</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+
+          <div class="footer-col" id="footerColServices">
+            <div class="footer-acc-head" data-col="footerColServices">
+              <h4>Services</h4>
+              <svg class="footer-acc-icon" viewBox="0 0 16 16"><polyline points="4 6 8 10 12 6"/></svg>
+            </div>
+            <h4 style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;">Services</h4>
+            <div class="footer-acc-body">
+              <a href="#">Hardware Design</a>
+              <a href="#">Firmware Development</a>
+              <a href="#">IoT Solutions</a>
+              <a href="#">Manufacturing</a>
+            </div>
+          </div>
+
+          <div class="footer-col" id="footerColResources">
+            <div class="footer-acc-head" data-col="footerColResources">
+              <h4>Resources</h4>
+              <svg class="footer-acc-icon" viewBox="0 0 16 16"><polyline points="4 6 8 10 12 6"/></svg>
+            </div>
+            <h4 style="font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;">Resources</h4>
+            <div class="footer-acc-body">
+              <a href="#">Case Studies</a>
+              <a href="#">Technical Articles</a>
+              <a href="#">FAQs</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>©2026 eLT Edge. All rights reserved</p>
+        <div class="footer-bottom-links">
+          <a href="#">Terms of use</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      /* ----------------------------------------------------------
+         FORM TABS
+      ---------------------------------------------------------- */
+      var tabs = document.querySelectorAll('.form-tab');
+      var serviceGroup = document.getElementById('serviceSelectGroup');
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          tabs.forEach(function (t) {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+
+          // Show service select only on "service" tab
+          if (tab.getAttribute('data-tab') === 'service') {
+            serviceGroup.style.display = 'flex';
+          } else {
+            serviceGroup.style.display = 'none';
+          }
+        });
+      });
+
+      /* ----------------------------------------------------------
+         FORM SUBMIT (client-side only)
+      ---------------------------------------------------------- */
+      document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        // Could integrate with a backend or mailto here
+        alert('Thank you! We will get back to you shortly.');
+        this.reset();
+      });
+
+      /* ----------------------------------------------------------
+         MOBILE FOOTER ACCORDION
+      ---------------------------------------------------------- */
+      document.querySelectorAll('.footer-acc-head').forEach(function (head) {
+        head.addEventListener('click', function () {
+          var colId = head.getAttribute('data-col');
+          var col = document.getElementById(colId);
+          col.classList.toggle('open');
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>

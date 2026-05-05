@@ -1,0 +1,539 @@
+/* ============================================================
+       APPROACH PAGE — SECTION-SPECIFIC STYLES
+       ============================================================ */
+
+/* ---- HERO ---- */
+.approach-hero {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.approach-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  /* Deep blue industrial gradient as base; swap src for real robot-arm photo */
+  background:
+    linear-gradient(
+      110deg,
+      rgba(3, 12, 38, 0.88) 0%,
+      rgba(0, 38, 110, 0.6) 55%,
+      rgba(0, 18, 60, 0.4) 100%
+    ),
+    url("./assets/images./approch hero.png"); /* 🔥 your image path */
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Decorative light-beam overlay to mimic the welding spark in the reference */
+.approach-hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 45% 60% at 72% 55%,
+      rgba(0, 100, 240, 0.28) 0%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 20% 20% at 68% 52%,
+      rgba(120, 200, 255, 0.18) 0%,
+      transparent 50%
+    );
+}
+
+.approach-hero-inner {
+  position: relative;
+  z-index: 1;
+  padding: 90px 24px 160px;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.approach-hero h1 {
+  font-family: var(--font-main);
+  font-size: clamp(40px, 5.5vw, 68px);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.05;
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
+}
+
+.approach-hero p {
+  font-size: clamp(14px, 1.6vw, 20px);
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 500px;
+  line-height: 1.7;
+}
+
+/* ---- WHAT YOU GIVE US ---- */
+.give-us {
+  background: #fff;
+  padding: 72px 0 80px;
+}
+
+.give-us-heading {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(22px, 2.8vw, 34px);
+  font-weight: 800;
+  color: #0d1b2a;
+  margin-bottom: 44px;
+}
+
+.give-us-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 0.5fr);
+  gap: 18px;
+}
+
+.give-card {
+  background: #fff;
+  /* border: 1px solid #e0eaf4; */
+  border-radius: 16px;
+  padding: 26px 20px 28px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  transition:
+    box-shadow 0.25s,
+    transform 0.25s;
+}
+
+.give-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.09);
+}
+
+.logo-giveus {
+  width: 80px;
+  height: 80px;
+  /* background: #e6f0ff;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; */
+}
+
+/* .give-icon svg {
+  width: 24px;
+  height: 24px;
+} */
+
+.give-card h3 {
+  font-family: "Sora", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0d1b2a;
+  line-height: 1.3;
+}
+
+.give-card p {
+  font-size: 13px;
+  color: #5a6b80;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ---- WHAT WE DO (TIMELINE) ---- */
+.what-we-do {
+  background: #f4f7fb;
+  padding: 72px 0 80px;
+}
+
+.what-we-do-header {
+  text-align: right;
+  margin-bottom: 52px;
+}
+
+.what-we-do-header h2 {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(22px, 2.8vw, 34px);
+  font-weight: 800;
+  color: #0d1b2a;
+}
+
+/* Phase container */
+.timeline-phase {
+  margin-bottom: 48px;
+}
+
+.phase-label-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0;
+}
+
+.phase-plus {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #0079f3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.phase-plus svg {
+  width: 12px;
+  height: 12px;
+  stroke: #0079f3;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.phase-label {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(17px, 2vw, 22px);
+  font-weight: 700;
+  color: #0079f3;
+}
+
+/* ===== DESKTOP SNAKE TIMELINE ===== */
+.timeline-snake {
+  position: relative;
+  margin-top: 28px;
+}
+
+/* Each row is a flex of step-nodes */
+.snake-row {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* Horizontal connecting line through dot centers (dot=18px → center at 9px) */
+.snake-row::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: calc(100% / 8); /* start at center of first node */
+  right: calc(100% / 8); /* end at center of last node */
+  height: 2px;
+  background: #0079f3;
+  z-index: 0;
+}
+
+/* Step node */
+.step-node {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 24px;
+}
+
+.step-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0079f3;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #0079f3;
+  flex-shrink: 0;
+  margin-bottom: 12px;
+}
+
+.step-label {
+  font-size: 12px;
+  color: #3a4a5e;
+  line-height: 1.45;
+  text-align: center;
+  max-width: 108px;
+}
+
+/* Vertical connector between rows */
+.snake-connector {
+  position: relative;
+  height: 44px;
+}
+
+/* Right-side vertical drop (after row-ltr → before row-rtl) */
+.snake-connector.right::after {
+  content: "";
+  position: absolute;
+  right: calc(100% / 8 - 1px); /* align with center of last column */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #0079f3;
+}
+
+/* Left-side vertical drop (if needed) */
+.snake-connector.left::after {
+  content: "";
+  position: absolute;
+  left: calc(100% / 8 - 1px);
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #0079f3;
+}
+
+/* ===== MOBILE VERTICAL TIMELINE ===== */
+.timeline-vertical {
+  display: none;
+}
+
+/* ===== WHAT YOU GET ===== */
+.what-you-get {
+  background: #fff;
+  padding: 72px 0 80px;
+}
+
+.what-you-get-heading {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(22px, 2.8vw, 34px);
+  font-weight: 800;
+  color: #0d1b2a;
+  margin-bottom: 36px;
+}
+
+.get-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.get-card {
+  background: #f1f5fb;
+  border-radius: 16px;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  transition:
+    box-shadow 0.25s,
+    transform 0.25s;
+}
+
+.get-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.get-card.featured {
+  background: linear-gradient(135deg, #0079f3 0%, #0050cc 100%);
+}
+
+.get-card-icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.get-card:not(.featured) .get-card-icon {
+  background: #dce8ff;
+}
+
+.get-card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.get-card-title {
+  font-family: "Sora", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0d1b2a;
+  line-height: 1.3;
+}
+
+.get-card.featured .get-card-title {
+  color: #fff;
+  font-size: 18px;
+}
+
+/* ---- CTA ---- */
+.approach-cta {
+  background: linear-gradient(135deg, #0079f3 0%, #0050cc 100%);
+  padding: 88px 24px;
+  text-align: center;
+}
+
+.approach-cta h2 {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(28px, 3.5vw, 46px);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.approach-cta p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 36px;
+}
+
+.btn-start-project {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  padding: 14px 38px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Sora", sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.btn-start-project:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: #fff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* ============================================================
+       RESPONSIVE — TABLET (≤ 1024px)
+       ============================================================ */
+@media (max-width: 1024px) {
+  .give-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .get-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .what-we-do-header {
+    text-align: left;
+  }
+
+  .step-label {
+    max-width: 90px;
+    font-size: 11.5px;
+  }
+}
+
+/* ============================================================
+       RESPONSIVE — MOBILE (≤ 768px)
+       ============================================================ */
+@media (max-width: 768px) {
+  .approach-hero {
+    min-height: 320px;
+  }
+
+  .approach-hero-inner {
+    padding: 56px 20px 52px;
+  }
+
+  .give-us {
+    padding: 52px 0 56px;
+  }
+  .what-we-do {
+    padding: 52px 0 56px;
+  }
+  .what-you-get {
+    padding: 52px 0 56px;
+  }
+  .approach-cta {
+    padding: 64px 20px;
+  }
+
+  .give-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .what-we-do-header {
+    text-align: left;
+    margin-bottom: 32px;
+  }
+
+  /* Hide desktop snake, show vertical on mobile */
+  .timeline-snake {
+    display: none;
+  }
+  .timeline-vertical {
+    display: flex;
+  }
+
+  .get-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .get-card.featured {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .give-us-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+       VERTICAL TIMELINE (mobile only)
+       ============================================================ */
+.timeline-vertical {
+  flex-direction: column;
+  position: relative;
+  padding-left: 32px;
+  margin-top: 24px;
+}
+
+.timeline-vertical::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  bottom: 8px;
+  width: 2px;
+  background: #0079f3;
+  z-index: 0;
+}
+
+.vt-item {
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.vt-item::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0079f3;
+  border: 2.5px solid #f4f7fb;
+  box-shadow: 0 0 0 2px #0079f3;
+  z-index: 1;
+}
+
+.vt-label {
+  font-size: 13.5px;
+  color: #3a4a5e;
+  line-height: 1.5;
+  display: block;
+}
