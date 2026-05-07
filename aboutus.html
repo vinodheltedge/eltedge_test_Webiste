@@ -8,751 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <style>
-    /* ============================================================
-       ABOUT US — PAGE-SPECIFIC STYLES
-       ============================================================ */
-
-    /* ---- HERO ---- */
-    .about-hero {
-      background: #050a14;
-      padding: 80px 0 72px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .about-hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 80% at 50% 100%, rgba(0,100,240,0.08) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .about-hero-inner {
-      position: relative;
-      z-index: 1;
-    }
-
-    .about-hero h1 {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(28px, 4vw, 52px);
-      font-weight: 800;
-      color: #0079f3;
-      line-height: 1.18;
-      max-width: 580px;
-      margin-bottom: 20px;
-    }
-
-    .about-hero p {
-      font-size: clamp(14px, 1.4vw, 16px);
-      color: rgba(255,255,255,0.72);
-      max-width: 520px;
-      line-height: 1.72;
-    }
-
-    /* ---- WHO ARE WE ---- */
-    .who-section {
-      background: #fff;
-      padding: 72px 0 0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Globe watermark */
-    .who-section::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 520px;
-      height: 520px;
-      border-radius: 50%;
-      background:
-        radial-gradient(circle, rgba(0,121,243,0.06) 0%, rgba(0,121,243,0.02) 60%, transparent 70%);
-      border: 1.5px solid rgba(0,121,243,0.07);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Inner rings for globe effect */
-    .globe-rings {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 520px;
-      height: 520px;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .globe-rings svg {
-      width: 100%;
-      height: 100%;
-      opacity: 0.10;
-    }
-
-    .who-inner {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: flex-start;
-      gap: 40px;
-    }
-
-    .who-left {
-      flex: 0 0 38%;
-    }
-
-    .who-heading {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(28px, 3.5vw, 48px);
-      font-weight: 800;
-      color: #0079f3;
-      line-height: 1.15;
-      text-transform: uppercase;
-    }
-
-    .who-right {
-      flex: 1;
-      padding-top: 6px;
-    }
-
-    .who-right p {
-      font-size: clamp(13.5px, 1.3vw, 15.5px);
-      color: #3a4a5e;
-      line-height: 1.78;
-      margin-bottom: 20px;
-    }
-
-    .who-right p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* ---- STAT CARDS ---- */
-    .stats-section {
-      background: #fff;
-      padding: 44px 0 72px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    .stat-blue-card {
-      background: #0079f3;
-      border-radius: 14px;
-      padding: 28px 22px 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .stat-blue-num {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(32px, 3.5vw, 44px);
-      font-weight: 800;
-      color: #fff;
-      line-height: 1;
-    }
-
-    .stat-blue-label {
-      font-size: 13px;
-      color: rgba(255,255,255,0.82);
-      font-weight: 500;
-      line-height: 1.4;
-    }
-
-    /* ---- MISSION & VISION ---- */
-    .mv-section {
-      background: #f4f7fb;
-      padding: 56px 0 72px;
-    }
-
-    .mv-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .mv-card {
-      border-radius: 16px;
-      padding: 32px 28px;
-    }
-
-    .mv-card.mission {
-      background: #fff;
-      border: 1px solid #e0eaf4;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-    }
-
-    .mv-card.vision {
-      background: #0079f3;
-    }
-
-    .mv-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 18px;
-    }
-
-    .mv-card.mission .mv-icon {
-      background: #e6f0ff;
-    }
-
-    .mv-card.vision .mv-icon {
-      background: rgba(255,255,255,0.18);
-    }
-
-    .mv-icon svg {
-      width: 26px;
-      height: 26px;
-    }
-
-    .mv-label {
-      font-family: 'Sora', sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .mv-card.mission .mv-label { color: #0079f3; }
-    .mv-card.vision  .mv-label { color: rgba(255,255,255,0.72); }
-
-    .mv-text {
-      font-size: 15px;
-      line-height: 1.65;
-      font-weight: 500;
-    }
-
-    .mv-card.mission .mv-text { color: #0d1b2a; }
-    .mv-card.vision  .mv-text { color: #fff; }
-
-    /* ---- OUR JOURNEY ---- */
-    .journey-section {
-      background: linear-gradient(150deg, #1565e8 0%, #0d4fd4 40%, #0a3fb8 75%, #0c2e9a 100%);
-      padding: 64px 0 52px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .journey-section::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(255,255,255,0.06) 0%, transparent 65%);
-      pointer-events: none;
-    }
-
-    .journey-inner {
-      position: relative;
-      z-index: 1;
-    }
-
-    .journey-heading {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(22px, 2.5vw, 32px);
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 48px;
-    }
-
-    /* Desktop timeline */
-    .journey-slider {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* Year display row */
-    .journey-display {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 32px;
-      width: 100%;
-      margin-bottom: 20px;
-      position: relative;
-    }
-
-    .journey-arrow {
-      width: 36px;
-      height: 36px;
-      background: rgba(255,255,255,0.12);
-      border: none;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      flex-shrink: 0;
-      transition: background 0.2s;
-    }
-
-    .journey-arrow:hover {
-      background: rgba(255,255,255,0.22);
-    }
-
-    .journey-arrow svg {
-      width: 16px;
-      height: 16px;
-      stroke: #fff;
-      stroke-width: 2.5;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .journey-active-year {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(52px, 8vw, 100px);
-      font-weight: 800;
-      color: #fff;
-      line-height: 1;
-      min-width: 200px;
-      text-align: center;
-      transition: opacity 0.3s;
-    }
-
-    .journey-desc {
-      font-size: clamp(13px, 1.2vw, 15px);
-      color: rgba(255,255,255,0.82);
-      line-height: 1.7;
-      text-align: center;
-      max-width: 540px;
-      margin: 0 auto 40px;
-      min-height: 60px;
-      transition: opacity 0.3s;
-    }
-
-    /* Timeline dots row */
-    .journey-timeline {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0;
-      width: 100%;
-      max-width: 680px;
-      position: relative;
-    }
-
-    .journey-timeline::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 50%;
-      height: 2px;
-      background: rgba(255,255,255,0.25);
-      transform: translateY(-50%);
-      z-index: 0;
-    }
-
-    .journey-stop {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
-      position: relative;
-      z-index: 1;
-    }
-
-    .journey-stop-year {
-      font-family: 'Sora', sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.5);
-      transition: color 0.2s;
-    }
-
-    .journey-stop.active .journey-stop-year {
-      color: #fff;
-    }
-
-    .journey-stop-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.35);
-      border: 2px solid rgba(255,255,255,0.35);
-      transition: background 0.2s, border-color 0.2s, transform 0.2s;
-    }
-
-    .journey-stop.active .journey-stop-dot {
-      background: #fff;
-      border-color: #fff;
-      transform: scale(1.4);
-    }
-
-    /* Mobile vertical journey */
-    .journey-vertical {
-      display: none;
-    }
-
-    /* ---- OUR VALUES ---- */
-    .values-section {
-      background: #fff;
-      padding: 72px 0 80px;
-    }
-
-    .values-heading {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(22px, 2.8vw, 34px);
-      font-weight: 800;
-      color: #0079f3;
-      text-align: center;
-      margin-bottom: 48px;
-      text-transform: uppercase;
-    }
-
-    .values-row1 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-bottom: 18px;
-    }
-
-    .values-row2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-      max-width: calc(66.666% + 9px);
-      margin: 0 auto;
-    }
-
-    .value-card {
-      background: #f4f7fb;
-      border-radius: 16px;
-      padding: 28px 22px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      transition: box-shadow 0.25s, transform 0.25s;
-    }
-
-    .value-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(0,80,200,0.09);
-    }
-
-    .value-icon {
-      width: 52px;
-      height: 52px;
-      background: #e6f0ff;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .value-icon svg {
-      width: 26px;
-      height: 26px;
-    }
-
-    .value-title {
-      font-family: 'Sora', sans-serif;
-      font-size: 15px;
-      font-weight: 700;
-      color: #0d1b2a;
-    }
-
-    .value-desc {
-      font-size: 13px;
-      color: #5a6b80;
-      line-height: 1.65;
-    }
-
-    /* ---- CTA ---- */
-    .about-cta {
-      background: linear-gradient(135deg, #0079f3 0%, #0050cc 100%);
-      padding: 88px 24px;
-      text-align: center;
-    }
-
-    .about-cta h2 {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(28px, 3.5vw, 44px);
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 12px;
-    }
-
-    .about-cta p {
-      font-size: 15px;
-      color: rgba(255,255,255,0.82);
-      margin-bottom: 36px;
-    }
-
-    .btn-about-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: transparent;
-      color: #fff;
-      border: 2px solid rgba(255,255,255,0.65);
-      padding: 14px 38px;
-      border-radius: 100px;
-      font-size: 15px;
-      font-weight: 600;
-      font-family: 'Sora', sans-serif;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background 0.2s, border-color 0.2s;
-    }
-
-    .btn-about-cta:hover {
-      background: rgba(255,255,255,0.13);
-      border-color: #fff;
-    }
-
-    /* ============================================================
-       MOBILE ACCORDION FOOTER
-       ============================================================ */
-    .footer-acc-head {
-      display: none;
-      align-items: center;
-      justify-content: space-between;
-      cursor: pointer;
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .footer-acc-head h4 {
-      font-family: 'Sora', sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .footer-acc-icon {
-      width: 18px;
-      height: 18px;
-      stroke: rgba(255,255,255,0.55);
-      stroke-width: 2;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: transform 0.25s;
-    }
-
-    .footer-col.open .footer-acc-icon {
-      transform: rotate(180deg);
-    }
-
-    .footer-acc-body {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      overflow: hidden;
-    }
-
-    /* ============================================================
-       RESPONSIVE
-       ============================================================ */
-    @media (max-width: 1024px) {
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .who-left { flex: 0 0 40%; }
-
-      .values-row2 {
-        max-width: calc(66.666% + 9px);
-      }
-    }
-
-    @media (max-width: 768px) {
-      /* Hero */
-      .about-hero { padding: 52px 0 52px; }
-
-      /* Who Are We */
-      .who-section { padding: 48px 0 0; }
-      .who-section::before { width: 300px; height: 300px; }
-      .globe-rings { width: 300px; height: 300px; }
-
-      .who-inner {
-        flex-direction: column;
-        gap: 24px;
-      }
-
-      .who-left { flex: none; width: 100%; }
-
-      /* Stats */
-      .stats-section { padding: 32px 0 52px; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-
-      /* Mission/Vision */
-      .mv-section { padding: 48px 0 52px; }
-      .mv-grid { grid-template-columns: 1fr; }
-
-      /* Journey */
-      .journey-section { padding: 48px 0 40px; }
-      .journey-slider { display: none; }
-      .journey-desc  { display: none; }
-      .journey-vertical { display: block; }
-
-      /* Values */
-      .values-section { padding: 52px 0 56px; }
-      .values-row1 { grid-template-columns: repeat(2, 1fr); }
-      .values-row2 { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
-
-      /* CTA */
-      .about-cta { padding: 64px 20px; }
-
-      /* Footer: show accordion headers, hide desktop h4 titles inside link cols */
-      .footer-acc-head { display: flex; }
-      .footer-col h4 { display: none; }
-      .footer-acc-body {
-        max-height: 0;
-        gap: 0;
-        transition: max-height 0.3s ease;
-        padding-top: 0;
-      }
-      .footer-acc-body a {
-        padding: 8px 0;
-      }
-      .footer-col.open .footer-acc-body {
-        max-height: 240px;
-      }
-
-      /* Mobile footer layout */
-      .footer-links {
-        grid-template-columns: 1fr;
-        gap: 0;
-      }
-
-      .footer-top {
-        flex-direction: column;
-        gap: 28px;
-      }
-
-      .footer-brand { flex: none; width: 100%; }
-
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .values-row1 { grid-template-columns: 1fr; }
-      .values-row2 { grid-template-columns: 1fr; max-width: 100%; }
-    }
-
-    /* Mobile journey vertical */
-    .journey-vertical {
-      position: relative;
-      padding-left: 28px;
-    }
-
-    .journey-vertical::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: rgba(255,255,255,0.25);
-    }
-
-    .jv-item {
-      position: relative;
-      padding: 0 0 28px 20px;
-      cursor: pointer;
-    }
-
-    .jv-item::before {
-      content: '';
-      position: absolute;
-      left: -4px;
-      top: 6px;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.35);
-      border: 2px solid rgba(255,255,255,0.35);
-      transition: background 0.2s;
-    }
-
-    .jv-item.active::before {
-      background: #fff;
-      border-color: #fff;
-    }
-
-    .jv-year {
-      font-family: 'Sora', sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      color: rgba(255,255,255,0.5);
-      margin-bottom: 4px;
-      transition: color 0.2s, font-size 0.2s;
-    }
-
-    .jv-item.active .jv-year {
-      font-size: 22px;
-      color: #fff;
-    }
-
-    .jv-text {
-      font-size: 13px;
-      color: rgba(255,255,255,0.72);
-      line-height: 1.65;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
-
-    .jv-item.active .jv-text {
-      max-height: 120px;
-    }
-
-    .jv-nav {
-      display: flex;
-      gap: 12px;
-      margin-top: 8px;
-      padding-left: 20px;
-    }
-
-    .jv-nav-btn {
-      width: 32px;
-      height: 32px;
-      background: rgba(255,255,255,0.12);
-      border: none;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-
-    .jv-nav-btn svg {
-      width: 14px;
-      height: 14px;
-      stroke: #fff;
-      stroke-width: 2.5;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-  </style>
+  <link rel="stylesheet" href="css/about.css">
+  
 </head>
 <body>
 
@@ -766,8 +23,10 @@
   <header class="navbar" id="navbar">
     <div class="nav-inner container">
       <div class="nav-logo">
-        <img src="assets/images/logo white bg (1) 1.png" alt="eLT Edge" class="logo-img" />
-      </div>
+          <a href="./index.html"
+            ><img src="./assets/images/logo white bg (1) 1.png" alt="eLT Edge" class="logo-img"
+          /></a>
+        </div>
       <nav class="nav-links" id="navLinks">
         <a href="approach.html" class="nav-link">Approach</a>
         <a href="#" class="nav-link">Capabilities</a>
@@ -814,35 +73,24 @@
        WHO ARE WE
        ============================================================ -->
   <section class="who-section">
-    <!-- Globe decorative rings -->
-    <div class="globe-rings" aria-hidden="true">
-      <svg viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="260" cy="260" r="255" stroke="#0079f3" stroke-width="1"/>
-        <circle cx="260" cy="260" r="190" stroke="#0079f3" stroke-width="1"/>
-        <circle cx="260" cy="260" r="125" stroke="#0079f3" stroke-width="1"/>
-        <!-- Latitude lines -->
-        <ellipse cx="260" cy="260" rx="255" ry="80" stroke="#0079f3" stroke-width="0.8"/>
-        <ellipse cx="260" cy="200" rx="220" ry="50" stroke="#0079f3" stroke-width="0.8"/>
-        <ellipse cx="260" cy="320" rx="220" ry="50" stroke="#0079f3" stroke-width="0.8"/>
-        <!-- Longitude lines -->
-        <line x1="260" y1="5" x2="260" y2="515" stroke="#0079f3" stroke-width="0.8"/>
-        <line x1="80" y1="80" x2="440" y2="440" stroke="#0079f3" stroke-width="0.8" opacity="0.5"/>
-        <line x1="440" y1="80" x2="80" y2="440" stroke="#0079f3" stroke-width="0.8" opacity="0.5"/>
-      </svg>
+  <div class="who-container">
+    
+    
+    <div class="who-left">
+      <h2>WHO ARE<br>WE ?</h2>
     </div>
 
-    <div class="container">
-      <div class="who-inner">
-        <div class="who-left">
-          <h2 class="who-heading">WHO ARE<br />WE ?</h2>
-        </div>
-        <div class="who-right">
-          <p>We're a team of engineers, designers, and innovators building next-generation products.</p>
-          <p>From idea to deployment, we turn concepts in robotics, electronics, and IoT into real-world solutions.</p>
-        </div>
-      </div>
+    <div class="who-right">
+      <p>
+        We’re a team of engineers, designers, and innovators building next-generation products.
+      </p>
+      <p>
+        From idea to deployment, we turn concepts in robotics, electronics, and IoT into real-world solutions.
+      </p>
     </div>
-  </section>
+
+  </div>
+</section>
 
   <!-- ============================================================
        STATS CARDS
@@ -879,30 +127,14 @@
 
         <!-- Mission -->
         <div class="mv-card mission">
-          <div class="mv-icon">
-            <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="13" cy="13" r="10" stroke="#0079f3" stroke-width="1.8"/>
-              <circle cx="13" cy="13" r="6"  stroke="#0079f3" stroke-width="1.8"/>
-              <circle cx="13" cy="13" r="2.5" fill="#0079f3"/>
-              <line x1="13" y1="1" x2="13" y2="4"   stroke="#0079f3" stroke-width="2" stroke-linecap="round"/>
-              <line x1="13" y1="22" x2="13" y2="25"  stroke="#0079f3" stroke-width="2" stroke-linecap="round"/>
-              <line x1="1" y1="13" x2="4" y2="13"    stroke="#0079f3" stroke-width="2" stroke-linecap="round"/>
-              <line x1="22" y1="13" x2="25" y2="13"  stroke="#0079f3" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
+          <img class="mission-iocn" src="./assets/images/Events/our mission.png" alt="">
           <div class="mv-label">Our Mission</div>
           <div class="mv-text">To turn complex engineering challenges into simple, market-ready solutions.</div>
         </div>
 
         <!-- Vision -->
-        <div class="mv-card vision">
-          <div class="mv-icon">
-            <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13 21V13L7 7l-2-5 5 2 6 6v8" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
-              <path d="M13 21v-8l6-6 2-5-5 2-6 6" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
-              <circle cx="13" cy="22" r="2" fill="#fff"/>
-            </svg>
-          </div>
+        <div  class="mv-card vision">
+          <img class="mission-iocn" src="assets/images/Events/our vision.png" alt="">
           <div class="mv-label">Our Vision</div>
           <div class="mv-text">To power ideas that redefine how the world works through technology and innovation.</div>
         </div>
@@ -918,37 +150,15 @@
     <div class="container journey-inner">
       <div class="journey-heading">OUR JOURNEY</div>
 
-      <!-- DESKTOP SLIDER -->
-      <div class="journey-slider">
-        <div class="journey-display">
-          <button class="journey-arrow" id="journeyPrev" aria-label="Previous year">
-            <svg viewBox="0 0 16 16"><polyline points="10 12 6 8 10 4"/></svg>
-          </button>
-          <div class="journey-active-year" id="journeyYear">2024</div>
-          <button class="journey-arrow" id="journeyNext" aria-label="Next year">
-            <svg viewBox="0 0 16 16"><polyline points="6 4 10 8 6 12"/></svg>
-          </button>
-        </div>
-
-        <p class="journey-desc" id="journeyDesc"></p>
-
-        <div class="journey-timeline" id="journeyTimeline">
-          <!-- Stops built by JS -->
-        </div>
-      </div>
-
-      <!-- MOBILE VERTICAL -->
-      <div class="journey-vertical" id="journeyVertical">
-        <!-- Built by JS -->
-      </div>
-
-      <div class="jv-nav" id="jvNav">
-        <button class="jv-nav-btn" id="jvPrev" aria-label="Previous">
-          <svg viewBox="0 0 14 14"><polyline points="9 11 5 7 9 3"/></svg>
+      <div class="journey-carousel-wrap" id="journeyWrap">
+        <div class="journey-hline"></div>
+        <button class="journey-arrow" id="journeyPrev" aria-label="Previous year">
+          <svg viewBox="0 0 16 16"><polyline points="10 12 6 8 10 4"/></svg>
         </button>
-        <button class="jv-nav-btn" id="jvNext" aria-label="Next">
-          <svg viewBox="0 0 14 14"><polyline points="5 3 9 7 5 11"/></svg>
+        <button class="journey-arrow" id="journeyNext" aria-label="Next year">
+          <svg viewBox="0 0 16 16"><polyline points="6 4 10 8 6 12"/></svg>
         </button>
+        <div class="journey-track" id="journeyTrack"></div>
       </div>
     </div>
   </section>
@@ -965,11 +175,7 @@
         <div class="value-card">
           <div class="value-icon">
             <!-- Target/bulls-eye -->
-            <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="13" cy="13" r="10" stroke="#0079f3" stroke-width="1.8"/>
-              <circle cx="13" cy="13" r="6"  stroke="#0079f3" stroke-width="1.8"/>
-              <circle cx="13" cy="13" r="2.5" fill="#0079f3"/>
-            </svg>
+            <img class="growth-icon" src="assets/images/Events/growth.svg" alt="">
           </div>
           <div class="value-title">Growth Mindset</div>
           <div class="value-desc">We prioritize learning and continuous improvement</div>
@@ -978,13 +184,7 @@
         <div class="value-card">
           <div class="value-icon">
             <!-- Network/share -->
-            <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="21" cy="5"  r="3" stroke="#0079f3" stroke-width="1.8"/>
-              <circle cx="5"  cy="13" r="3" stroke="#0079f3" stroke-width="1.8"/>
-              <circle cx="21" cy="21" r="3" stroke="#0079f3" stroke-width="1.8"/>
-              <line x1="8"  y1="11.5" x2="18" y2="6.5"  stroke="#0079f3" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="8"  y1="14.5" x2="18" y2="19.5" stroke="#0079f3" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
+            <img class="growth-icon" src="assets/images/Events/growthmid.svg" alt="">
           </div>
           <div class="value-title">Growth Mindset</div>
           <div class="value-desc">We prioritize learning and continuous improvement</div>
@@ -993,12 +193,7 @@
         <div class="value-card">
           <div class="value-icon">
             <!-- Laptop -->
-            <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="5" width="18" height="12" rx="2" stroke="#0079f3" stroke-width="1.8"/>
-              <line x1="2" y1="19" x2="24" y2="19" stroke="#0079f3" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="9" y1="22" x2="17" y2="22" stroke="#0079f3" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="13" y1="19" x2="13" y2="22" stroke="#0079f3" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
+            <img class="growth-icon" src="assets/images/Events/growth4.svg" alt="">
           </div>
           <div class="value-title">Growth Mindset</div>
           <div class="value-desc">We prioritize learning and continuous improvement</div>
@@ -1011,12 +206,7 @@
         <div class="value-card">
           <div class="value-icon">
             <!-- Grid/apps -->
-            <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="3"  y="3"  width="8" height="8" rx="2" stroke="#0079f3" stroke-width="1.8"/>
-              <rect x="15" y="3"  width="8" height="8" rx="2" stroke="#0079f3" stroke-width="1.8"/>
-              <rect x="3"  y="15" width="8" height="8" rx="2" stroke="#0079f3" stroke-width="1.8"/>
-              <rect x="15" y="15" width="8" height="8" rx="2" stroke="#0079f3" stroke-width="1.8"/>
-            </svg>
+            <img class="growth-icon" src="assets/images/Events/growth.svg" alt="">
           </div>
           <div class="value-title">Growth Mindset</div>
           <div class="value-desc">We prioritize learning and continuous improvement</div>
@@ -1025,14 +215,7 @@
         <div class="value-card">
           <div class="value-icon">
             <!-- Plus cross with dots -->
-            <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13 3v20M3 13h20" stroke="#0079f3" stroke-width="1.8" stroke-linecap="round"/>
-              <circle cx="13" cy="13" r="3" fill="#0079f3"/>
-              <circle cx="6"  cy="6"  r="1.5" fill="#0079f3" opacity="0.5"/>
-              <circle cx="20" cy="6"  r="1.5" fill="#0079f3" opacity="0.5"/>
-              <circle cx="6"  cy="20" r="1.5" fill="#0079f3" opacity="0.5"/>
-              <circle cx="20" cy="20" r="1.5" fill="#0079f3" opacity="0.5"/>
-            </svg>
+            <img class="growth-icon" src="assets/images/Events/growth.svg" alt="">
           </div>
           <div class="value-title">Growth Mindset</div>
           <div class="value-desc">We prioritize learning and continuous improvement</div>
@@ -1045,11 +228,17 @@
   <!-- ============================================================
        CTA
        ============================================================ -->
-  <section class="about-cta">
-    <h2>Have a Product Idea?</h2>
-    <p>Let's Turn Vision into a production - ready embedded product.</p>
-    <a href="#" class="btn-about-cta">Start your Project &nbsp;→</a>
-  </section>
+   <section class="footer-cta">
+      <div class="container footer-cta-inner">
+        <div class="cta-text">
+          <h2>Have a Product Idea?</h2>
+          <p>
+            Let's turn your vision into a production-ready embedded product.
+          </p>
+        </div>
+        <a href="#" class="btn-cta-white">Start Your Project →</a>
+      </div>
+    </section>
 
   <!-- ============================================================
        FOOTER
@@ -1059,7 +248,7 @@
       <div class="footer-top">
 
         <div class="footer-brand">
-          <img src="logo white bg (1) 1.png" alt="eLT Edge" class="footer-logo" />
+          <img src="/assets/images/logo in white.png" alt="eLT Edge" class="footer-logo" />
           <p>Embedded product development from concept to mass production. Your trusted engineering partner.</p>
           <div class="footer-social">
             <a href="#" aria-label="Twitter" class="social-icon">
@@ -1137,115 +326,94 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="js/main.js"></script>
   <script>
     /* ============================================================
-       ABOUT US — JOURNEY SLIDER + FOOTER ACCORDION
+       OUR JOURNEY — Horizontal Sliding Carousel + Footer Accordion
        ============================================================ */
     (function () {
       'use strict';
 
-      /* ----------------------------------------------------------
-         JOURNEY DATA
-      ---------------------------------------------------------- */
       var stops = [
-        {
-          year: '2021',
-          text: 'Incorporated & the first embedded product delivered to market. Early foundation laid for hardware and firmware capabilities.'
-        },
-        {
-          year: '2022',
-          text: 'First end-to-end hardware solutions delivered to industrial controls & instrumentation clients, achieving key manufacturing milestones.'
-        },
-        {
-          year: '2023',
-          text: 'First consumer electronics solutions moved to high-volume rapid production, serving 10+ clients globally with full compliance.'
-        },
-        {
-          year: '2024',
-          text: 'In-house IoT gateways developed & deployed in field. Industrial IoT cloud platform launched.'
-        },
-        {
-          year: '2025',
-          text: '25 clients and first customer team expansion in embedded engineering. Cloud platform scaling and new product lines initiated.'
-        },
-        {
-          year: '2026',
-          text: 'Working on next-generation product lines, expanding into automotive and defense embedded systems globally.'
-        }
+        { year: '2021', text: 'Incorporated in India & the U.S. Early foundation laid for hardware and firmware capabilities.' },
+        { year: '2022', text: 'First end-to-end Export projects delivered to industrial controls & instrumentation clients.' },
+        { year: '2023', text: 'First consumer electronics project moved to high-volume export production, serving 10+ clients.' },
+        { year: '2024', text: 'In-house IoT gateways developed & deployed in field. Industrial IoT cloud platform launched.' },
+        { year: '2025', text: '5+ clients and their customers\' assets onboarded onto our cloud platform.' },
+        { year: '2026', text: 'Working on multiple clients. Expanding into automotive and defense embedded systems globally.' }
       ];
 
-      var currentStop = 3; // 2024 is default active
+      var currentStop = 3; // default: 2024
+      var wrap  = document.getElementById('journeyWrap');
+      var track = document.getElementById('journeyTrack');
 
-      /* ----------------------------------------------------------
-         BUILD DESKTOP TIMELINE
-      ---------------------------------------------------------- */
-      var timelineEl = document.getElementById('journeyTimeline');
-      var yearEl     = document.getElementById('journeyYear');
-      var descEl     = document.getElementById('journeyDesc');
-
+      /* -- Build slides -- */
       stops.forEach(function (s, i) {
-        var stop = document.createElement('div');
-        stop.className = 'journey-stop' + (i === currentStop ? ' active' : '');
-        stop.innerHTML =
-          '<span class="journey-stop-year">' + s.year + '</span>' +
-          '<div class="journey-stop-dot"></div>';
-        stop.addEventListener('click', function () { goTo(i); });
-        timelineEl.appendChild(stop);
+        var slide = document.createElement('div');
+        slide.className = 'journey-slide' + (i === currentStop ? ' active' : '');
+        slide.innerHTML =
+          '<div class="jslide-year"><span>' + s.year + '</span></div>' +
+          '<div class="jslide-dot"></div>' +
+          '<p class="jslide-desc">' + s.text + '</p>';
+        slide.addEventListener('click', function () { goTo(i); });
+        track.appendChild(slide);
       });
 
-      function goTo(idx) {
-        currentStop = idx;
-        // Update desktop
-        yearEl.textContent = stops[idx].year;
-        descEl.textContent = stops[idx].text;
-        document.querySelectorAll('.journey-stop').forEach(function (el, i) {
-          el.classList.toggle('active', i === idx);
+      /* -- Position track so active slide is centered -- */
+      function updateCarousel(animate) {
+        var slides   = track.children;
+        if (!slides.length) return;
+        var vpWidth  = wrap.offsetWidth;
+        var numVis   = window.innerWidth <= 640 ? 3 : 5;
+        var sw       = vpWidth / numVis;
+
+        /* set every slide's width */
+        Array.prototype.forEach.call(slides, function (slide, i) {
+          slide.style.flexBasis = sw + 'px';
+          slide.classList.toggle('active', i === currentStop);
         });
-        // Update mobile
-        document.querySelectorAll('.jv-item').forEach(function (el, i) {
-          el.classList.toggle('active', i === idx);
-        });
+
+        var tx = (vpWidth - sw) / 2 - currentStop * sw;
+        if (animate === false) {
+          track.style.transition = 'none';
+          track.style.transform  = 'translateX(' + tx + 'px)';
+          /* force reflow then restore transition */
+          track.offsetHeight; // eslint-disable-line no-unused-expressions
+          track.style.transition = '';
+        } else {
+          track.style.transform = 'translateX(' + tx + 'px)';
+        }
       }
 
-      // Init
-      goTo(currentStop);
+      function goTo(idx) {
+        if (idx < 0 || idx >= stops.length) return;
+        currentStop = idx;
+        updateCarousel(true);
+      }
 
-      document.getElementById('journeyPrev').addEventListener('click', function () {
-        goTo((currentStop - 1 + stops.length) % stops.length);
-      });
-      document.getElementById('journeyNext').addEventListener('click', function () {
-        goTo((currentStop + 1) % stops.length);
-      });
+      document.getElementById('journeyPrev').addEventListener('click', function () { goTo(currentStop - 1); });
+      document.getElementById('journeyNext').addEventListener('click', function () { goTo(currentStop + 1); });
 
-      /* ----------------------------------------------------------
-         BUILD MOBILE VERTICAL JOURNEY
-      ---------------------------------------------------------- */
-      var vertEl = document.getElementById('journeyVertical');
-      stops.forEach(function (s, i) {
-        var item = document.createElement('div');
-        item.className = 'jv-item' + (i === currentStop ? ' active' : '');
-        item.innerHTML =
-          '<div class="jv-year">' + s.year + '</div>' +
-          '<div class="jv-text">' + s.text + '</div>';
-        item.addEventListener('click', function () { goTo(i); });
-        vertEl.appendChild(item);
+      /* -- Touch / swipe -- */
+      var touchStartX = 0;
+      track.addEventListener('touchstart', function (e) {
+        touchStartX = e.touches[0].clientX;
+      }, { passive: true });
+      track.addEventListener('touchend', function (e) {
+        var diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) goTo(diff > 0 ? currentStop + 1 : currentStop - 1);
       });
 
-      document.getElementById('jvPrev').addEventListener('click', function () {
-        goTo((currentStop - 1 + stops.length) % stops.length);
-      });
-      document.getElementById('jvNext').addEventListener('click', function () {
-        goTo((currentStop + 1) % stops.length);
-      });
+      /* -- Resize: snap without animation -- */
+      window.addEventListener('resize', function () { updateCarousel(false); });
 
-      /* ----------------------------------------------------------
-         MOBILE FOOTER ACCORDION
-      ---------------------------------------------------------- */
+      /* -- Init -- */
+      updateCarousel(false);
+
+      /* -- Footer accordion -- */
       document.querySelectorAll('.footer-acc-head').forEach(function (head) {
         head.addEventListener('click', function () {
-          var colId = head.getAttribute('data-col');
-          var col   = document.getElementById(colId);
+          var col = document.getElementById(head.getAttribute('data-col'));
           col.classList.toggle('open');
         });
       });

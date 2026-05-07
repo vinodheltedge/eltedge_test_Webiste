@@ -98,9 +98,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* ============================================================
-   TOP BANNER
-   ============================================================ */
+/*TOP BANNER  START FORM HERE (DESIGN)*/
 .top-banner {
   background: var(--blue-grad-90);
   color: #fff;
@@ -125,12 +123,10 @@ body {
 }
 
 .banner-link:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
-/* ============================================================
-   NAVBAR
-   ============================================================ */
+/* NAVBAR */
 .navbar {
   position: sticky;
   top: 0;
@@ -173,7 +169,7 @@ body {
   background: #f0f5fc;
   padding: 6px 12px;
   border-radius: var(--radius-md);
-  border: 1px solid var(--border);
+  /* border: 1px solid var(--border); */
 }
 
 .nav-link {
@@ -190,6 +186,7 @@ body {
 
 .nav-link:hover {
   background: #fff;
+  /* text-decoration: underline; */
   color: var(--blue-primary);
   box-shadow: var(--shadow-sm);
 }
@@ -610,13 +607,6 @@ body {
   margin-top: 10px;
 }
 
-/* .ex-mission {
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 28px 32px;
-  box-shadow: var(--shadow-sm);
-} */
-
 .mission-label {
   font-size: 16 px;
   font-weight: 600;
@@ -637,8 +627,8 @@ body {
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px 50px; /* row gap, column gap */
-  align-items: start; /* 👈 IMPORTANT */
+  gap: 24px 50px;
+  align-items: start;
 }
 /* Zig-Zag Offset */
 .stat-card:nth-child(2),
@@ -652,7 +642,6 @@ body {
 .stat-card {
   background: var(--bg-white);
   border: 1px solid var(--border);
-  /* border-radius: var(--radius-sm); */
   padding: 28px 24px;
   box-shadow: var(--shadow-sm);
   display: flex;
@@ -670,18 +659,11 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  /* left: 0; */
   right: 0;
   width: 8px;
   height: 100%;
   background: linear-gradient(135deg, #012c70, #0050cc);
-  /* border-radius: 4px 0 0 4px; */
 }
-
-/* .stat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-} */
 
 .stat-label {
   font-size: 20px;
@@ -877,113 +859,112 @@ body {
 /* FLEX LAYOUT */
 .works-flex {
   display: flex;
-  gap: 20px;
-  height: 320px;
+  gap: 16px;
+  height: 340px;
+  align-items: stretch;
 }
 
 /* CARD BASE */
 .work-card {
   flex: 1;
   background: #fff;
-  border: 1px solid #d9e6ff;
+  border: 1.5px solid #d9e6ff;
   border-radius: 18px;
-  padding: 20px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition:
-    flex 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 0.4s ease,
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
   cursor: pointer;
   overflow: hidden;
+  /* All transitions driven by .active class — no :hover overrides */
+  transition:
+    flex 0.52s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.44s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.44s ease,
+    transform 0.38s cubic-bezier(0.34, 1.2, 0.64, 1),
+    border-color 0.38s ease;
+  will-change: flex, transform;
 }
 
-/* DEFAULT ACTIVE */
+/* ACTIVE STATE — JS-managed only, no CSS :hover override */
 .work-card.active {
-  flex: 2;
-  background: linear-gradient(135deg, #0088ff, #0066cc);
+  flex: 2.4;
+  background: linear-gradient(145deg, #0079f3 0%, #0050cc 100%);
   color: #fff;
+  box-shadow: 0 18px 52px rgba(0, 121, 243, 0.30);
+  transform: translateY(-5px);
+  border-color: transparent;
 }
 
 /* IMAGE */
 .img-wrap {
-  height: 120px;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .img-wrap img {
   max-width: 100%;
-  transition: transform 0.4s ease;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.48s cubic-bezier(0.34, 1.2, 0.64, 1);
+}
+
+.work-card.active .img-wrap img {
+  transform: scale(1.08);
 }
 
 /* TITLE */
 .work-card h3 {
-  font-size: 16px;
-  color: #007bff;
-  transition: color 0.3s ease;
+  font-size: 22px;
+  font-weight: 600;
+  color: #0079f3;
+  line-height: 1.35;
+  transition: color 0.38s ease;
 }
 
-/* SUBTEXT */
-.subtext {
-  font-size: 13px;
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-/* HOVER MAGIC */
-.works-flex:hover .work-card {
-  flex: 1;
-  transition-delay: 0.1s;
-}
-
-.works-flex .work-card:hover {
-  flex: 2;
-  background: linear-gradient(135deg, #0088ff, #0066cc);
-  color: #fff;
-  transform: translateY(-5px);
-  transition-delay: 0s;
-}
-
-/* TEXT CHANGE */
-.work-card:hover h3,
 .work-card.active h3 {
   color: #fff;
 }
 
-/* SHOW TEXT */
-.work-card:hover .subtext,
+/* SUBTEXT */
+.subtext {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    opacity 0.38s ease,
+    max-height 0.38s ease;
+}
+
 .work-card.active .subtext {
   opacity: 1;
-  max-height: 100px;
-  color: rgba(255, 255, 255, 0.9);
+  max-height: 80px;
+  color: rgba(255, 255, 255, 0.88);
 }
 
-/* IMAGE ZOOM */
-.work-card:hover img {
-  transform: scale(1.05);
-}
-
-/* SHADOW */
-.work-card:hover {
-  box-shadow: 0 12px 40px rgba(0, 136, 255, 0.35);
-}
-
-/* RESPONSIVE */
+/* RESPONSIVE — mobile: stack vertically, disable expansion */
 @media (max-width: 768px) {
   .works-flex {
     flex-direction: column;
     height: auto;
+    gap: 12px;
   }
 
   .work-card,
   .work-card.active {
     flex: unset;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .work-card.active .subtext {
+    opacity: 1;
+    max-height: 80px;
   }
 }
 /* ============================================================
@@ -1443,19 +1424,23 @@ body {
     margin: 0 auto;
   }
 
-  /* Works */
+  /* Works — tablet: 2×2 grid */
   .works-flex {
     flex-wrap: wrap;
     height: auto;
+    gap: 14px;
   }
 
   .work-card {
     flex: 0 0 calc(50% - 7px);
     height: 280px;
+    transform: none !important;
   }
 
   .work-card.active {
     flex: 0 0 calc(50% - 7px);
+    transform: none !important;
+    box-shadow: 0 8px 28px rgba(0, 121, 243, 0.22);
   }
 
   /* Capabilities */
@@ -1546,13 +1531,15 @@ body {
   .works-flex {
     flex-direction: column;
     height: auto;
-    gap: 14px;
+    gap: 12px;
   }
 
   .work-card,
   .work-card.active {
     flex: none;
-    height: 260px;
+    height: 240px;
+    transform: none !important;
+    box-shadow: none !important;
   }
 
   .work-tag,

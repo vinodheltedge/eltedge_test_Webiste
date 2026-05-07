@@ -63,41 +63,48 @@
   });
 
   /* ----------------------------------------------------------
-     OUR WORKS — Flex Expansion
-     Hover on desktop, click on tablet, disabled on mobile
+     OUR WORKS — Active card switching
+     • Hover on desktop/tablet  → move active to hovered card
+     • Click on all sizes       → move active to clicked card
+     • Mouse leaves grid        → restore active to card 0
   ---------------------------------------------------------- */
-  const worksGrid = document.getElementById('worksGrid');
-  const workCards = worksGrid ? Array.from(worksGrid.querySelectorAll('.work-card')) : [];
-
-  function setActiveCard(index) {
-    workCards.forEach(function (card, i) {
-      card.classList.toggle('active', i === index);
-    });
-  }
+  var worksFlex = document.querySelector('.works-flex');
+  var workCards = worksFlex
+    ? Array.from(worksFlex.querySelectorAll('.work-card'))
+    : [];
 
   function isMobile() {
     return window.innerWidth <= 768;
   }
 
+  function setActiveCard(targetCard) {
+    workCards.forEach(function (card) {
+      card.classList.toggle('active', card === targetCard);
+    });
+  }
+
   if (workCards.length) {
-    workCards.forEach(function (card, i) {
-      // Hover (desktop & tablet)
+    /* Ensure first card starts active */
+    setActiveCard(workCards[0]);
+
+    workCards.forEach(function (card) {
+      /* Hover — desktop & tablet only */
       card.addEventListener('mouseenter', function () {
         if (!isMobile()) {
-          setActiveCard(i);
+          setActiveCard(card);
         }
       });
 
-      // Click (all sizes)
+      /* Click — all sizes (touch-friendly) */
       card.addEventListener('click', function () {
-        setActiveCard(i);
+        setActiveCard(card);
       });
     });
 
-    // Reset to first card when mouse leaves the whole grid
-    worksGrid.addEventListener('mouseleave', function () {
+    /* When the cursor leaves the whole row, return to card 0 */
+    worksFlex.addEventListener('mouseleave', function () {
       if (!isMobile()) {
-        setActiveCard(0);
+        setActiveCard(workCards[0]);
       }
     });
   }
