@@ -12,145 +12,262 @@
 }
 
 /* ============================================================
-   HERO SECTION
+   HERO SECTION — Premium animated showcase
    ============================================================ */
 .works-hero {
-  background: linear-gradient(125deg, #1565e8 0%, #0d4fd4 40%, #0a3fb8 70%, #0d2e8c 100%);
+  background:
+    linear-gradient(145deg,
+      #04081c 0%,
+      #070e3a 22%,
+      #0c1c72 48%,
+      #0e2488 68%,
+      #080d3c 86%,
+      #04081c 100%);
   position: relative;
   overflow: hidden;
-  min-height: 400px;
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Subtle light orbs in background */
-.works-hero::before {
-  content: '';
+/* === Ambient glow orbs === */
+.wh-glow {
   position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 55% 70% at 80% 50%, rgba(255, 255, 255, 0.07) 0%, transparent 60%),
-    radial-gradient(ellipse 30% 40% at 20% 30%, rgba(0, 150, 255, 0.14) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 50% at 60% 80%, rgba(0, 60, 200, 0.12) 0%, transparent 60%);
+  border-radius: 50%;
   pointer-events: none;
 }
 
+.wh-glow--1 {
+  width: 680px;
+  height: 680px;
+  background: radial-gradient(circle at center, rgba(50, 110, 255, 0.22) 0%, transparent 60%);
+  top: -220px;
+  right: -120px;
+  filter: blur(64px);
+}
+
+.wh-glow--2 {
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle at center, rgba(0, 90, 230, 0.18) 0%, transparent 62%);
+  bottom: -160px;
+  left: 4%;
+  filter: blur(72px);
+}
+
+.wh-glow--3 {
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle at center, rgba(110, 50, 255, 0.13) 0%, transparent 65%);
+  top: 50%;
+  left: 42%;
+  transform: translateY(-50%);
+  filter: blur(52px);
+}
+
+/* === Two-column layout === */
 .works-hero-inner {
   display: flex;
   align-items: center;
-  gap: 40px;
-  padding-top: 58px;
-  padding-bottom: 72px;
+  gap: 52px;
+  padding-top: 80px;
+  padding-bottom: 64px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  flex: 1;
 }
 
-/* ---- Hero Text Column ---- */
+/* ---- LEFT: Text column ---- */
 .hero-text-col {
-  flex: 1;
+  flex: 0 0 44%;
   min-width: 0;
 }
 
 .hero-main-title {
-  font-family: 'Graphik Trial', 'DM Sans', sans-serif;
-  font-size: clamp(34px, 4vw, 56px);
-  font-weight: 600;
+  font-family: 'Sora', 'DM Sans', sans-serif;
+  font-size: clamp(38px, 4.6vw, 66px);
+  font-weight: 700;
   color: #fff;
-  line-height: 1.08;
-  margin-bottom: 16px;
-  letter-spacing: -0.01em;
+  line-height: 1.04;
+  margin-bottom: 20px;
+  letter-spacing: -0.025em;
 }
 
 .hero-main-subtitle {
-  font-size: clamp(13px, 1.25vw, 18px);
-  color: rgba(255, 255, 255, 0.82);
-  line-height: 1.7;
-  margin-bottom: 36px;
-  max-width: 500px;
+  font-size: clamp(13px, 1.2vw, 17px);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  margin-bottom: 44px;
+  max-width: 480px;
   font-weight: 300;
 }
 
 .hero-overview-label {
-  font-family: 'Graphik Trial', 'DM Sans', sans-serif;
-  font-size: clamp(20px, 2.2vw, 30px);
+  font-family: 'Sora', 'DM Sans', sans-serif;
+  font-size: clamp(19px, 2vw, 28px);
   font-weight: 600;
   color: #fff;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
 }
 
 .hero-overview-body {
-  font-size: clamp(13px, 1.1vw, 16px);
-  color: rgba(255, 255, 255, 0.78);
-  line-height: 1.7;
-  max-width: 460px;
+  font-size: clamp(13px, 1.05vw, 15px);
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.8;
+  max-width: 420px;
   font-weight: 300;
 }
 
-/* ---- Hero Orbit Column ---- */
-.hero-orbit-col {
-  flex: 0 0 460px;
+/* ---- RIGHT: Showcase column ---- */
+.hero-showcase-col {
+  flex: 1;
+  min-width: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   position: relative;
-  min-height: 340px;
+  will-change: transform;
 }
 
-.orbit-stage {
+/* Slide category label pill */
+.showcase-label-wrap {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.showcase-label-text {
+  display: inline-block;
+  font-family: 'Sora', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.52);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 6px 18px;
+  border-radius: 100px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.showcase-label-text.is-changing {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* === Stage === */
+.showcase-stage {
   position: relative;
-  width: 340px;
-  height: 340px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  max-width: 530px;
+  height: 410px;
+  margin: 0 auto;
 }
 
-/* Center main image */
-.orbit-center {
+/* Bottom glow pool */
+.stage-glow-pool {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  pointer-events: none;
-}
-
-.orbit-center-img {
-  width: 220px;
-  height: 220px;
-  object-fit: contain;
-  filter: drop-shadow(0 28px 56px rgba(0, 0, 80, 0.45)) drop-shadow(0 8px 16px rgba(0, 30, 120, 0.3));
-}
-
-/* Orbiting satellites */
-.orbit-sat {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -50px 0 0 -50px; /* half of sat size to center */
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-  pointer-events: none;
-  will-change: transform, opacity;
-}
-
-.orbit-sat img {
-  width: 90px;
-  height: 70px;
-  object-fit: contain;
-  filter: drop-shadow(0 6px 16px rgba(0, 20, 100, 0.35));
-}
-
-/* ---- Hero Dots ---- */
-.hero-dots {
-  position: absolute;
-  bottom: 20px;
+  bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
+  width: 72%;
+  height: 90px;
+  background: radial-gradient(ellipse at center,
+    rgba(70, 150, 255, 0.4) 0%,
+    transparent 70%);
+  filter: blur(24px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* === Floating orbit carousel — all 4 images visible simultaneously === */
+
+/* Back layer hidden; only main product image per slide is shown */
+.slide-layer--back {
+  display: none;
+}
+
+/* All slides: smooth orbit transitions (CSS handles position, GSAP handles float) */
+.showcase-slide {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  will-change: transform, opacity, filter;
+  transition:
+    transform 1.4s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity   1.2s ease,
+    filter    1.2s ease;
+}
+
+/* Shared image layer base */
+.slide-layer {
+  position: absolute;
+}
+
+/* Main image: centered in stage via margin, no CSS transform so GSAP can float freely */
+.slide-layer--main {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -150px; /* half of 300px image width */
+  z-index: 2;
+}
+
+.slide-layer--main img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter:
+    drop-shadow(0 32px 64px rgba(0, 8, 100, 0.72))
+    drop-shadow(0 8px 20px rgba(0, 30, 160, 0.55));
+}
+
+/* ── Orbit position classes ─────────────────────────────── */
+
+/* Active: front-center, full size, crisp, pointer events on */
+.img-pos--active {
+  opacity: 1;
+  transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
+  filter: blur(0px);
+  z-index: 4;
+  pointer-events: auto;
+}
+
+/* Next (+1): right side, medium depth */
+.img-pos--next {
+  opacity: 0.38;
+  transform: translateX(125px) translateY(-8px) scale(0.80) rotate(2.5deg);
+  filter: blur(2.8px);
+  z-index: 3;
+}
+
+/* Far (+2): furthest back */
+.img-pos--far {
+  opacity: 0.15;
+  transform: translateX(58px) translateY(-22px) scale(0.60) rotate(1.5deg);
+  filter: blur(5px);
+  z-index: 1;
+}
+
+/* Prev (-1): left side, medium depth */
+.img-pos--prev {
+  opacity: 0.26;
+  transform: translateX(-128px) translateY(-14px) scale(0.74) rotate(-3deg);
+  filter: blur(3.5px);
+  z-index: 2;
+}
+
+/* === Navigation dots === */
+.hero-dots {
   display: flex;
-  gap: 8px;
+  gap: 10px;
+  justify-content: center;
+  padding-bottom: 38px;
+  position: relative;
   z-index: 10;
 }
 
@@ -158,18 +275,22 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.28);
   border: none;
   padding: 0;
   cursor: pointer;
-  transition: background 0.25s, transform 0.25s, width 0.25s;
+  transition: background 0.3s ease, width 0.3s ease;
+  outline: none;
 }
 
 .hero-dot.active {
   background: #fff;
-  transform: scale(1.25);
-  width: 20px;
+  width: 26px;
   border-radius: 4px;
+}
+
+.hero-dot:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.55);
 }
 
 /* ============================================================
@@ -614,18 +735,37 @@
    RESPONSIVE — TABLET (≤ 1100px)
    ============================================================ */
 @media (max-width: 1100px) {
-  .hero-orbit-col {
-    flex: 0 0 380px;
+  .works-hero-inner {
+    gap: 36px;
   }
 
-  .orbit-stage {
-    width: 290px;
-    height: 290px;
+  .hero-text-col {
+    flex: 0 0 46%;
   }
 
-  .orbit-center-img {
-    width: 185px;
-    height: 185px;
+  .showcase-stage {
+    max-width: 420px;
+    height: 360px;
+  }
+
+  .slide-layer--main {
+    margin-left: -121px; /* half of 242px */
+  }
+
+  .slide-layer--main img {
+    width: 242px;
+  }
+
+  .img-pos--next {
+    transform: translateX(94px) translateY(-7px) scale(0.80) rotate(2.5deg);
+  }
+
+  .img-pos--prev {
+    transform: translateX(-96px) translateY(-12px) scale(0.74) rotate(-3deg);
+  }
+
+  .img-pos--far {
+    transform: translateX(44px) translateY(-18px) scale(0.60) rotate(1.5deg);
   }
 
   .works-grid {
@@ -641,18 +781,18 @@
   /* Hero */
   .works-hero {
     min-height: auto;
-    overflow: hidden;
   }
 
   .works-hero-inner {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    padding-top: 40px;
-    padding-bottom: 64px;
+    align-items: center;
+    gap: 32px;
+    padding-top: 48px;
+    padding-bottom: 40px;
   }
 
   .hero-text-col {
+    flex: none;
     width: 100%;
   }
 
@@ -664,31 +804,49 @@
     max-width: none;
   }
 
-  /* On mobile: hide satellite orbit, show only center image */
-  .hero-orbit-col {
-    flex: none;
+  .hero-showcase-col {
     width: 100%;
-    min-height: 200px;
-    margin-top: 20px;
   }
 
-  .orbit-stage {
-    width: 220px;
-    height: 220px;
-    margin: 0 auto;
+  .showcase-stage {
+    max-width: 340px;
+    height: 284px;
   }
 
-  .orbit-center-img {
-    width: 170px;
-    height: 170px;
+  .slide-layer--main {
+    margin-left: -96px; /* half of 192px */
   }
 
-  .orbit-sat {
-    display: none;
+  .slide-layer--main img {
+    width: 192px;
+  }
+
+  .img-pos--next {
+    transform: translateX(72px) translateY(-6px) scale(0.80) rotate(2deg);
+  }
+
+  .img-pos--prev {
+    transform: translateX(-74px) translateY(-10px) scale(0.74) rotate(-2.5deg);
+  }
+
+  .img-pos--far {
+    transform: translateX(32px) translateY(-15px) scale(0.60) rotate(1.5deg);
+  }
+
+  .wh-glow--1 {
+    width: 340px;
+    height: 340px;
+    top: -100px;
+    right: -60px;
+  }
+
+  .wh-glow--2 {
+    width: 240px;
+    height: 240px;
   }
 
   .hero-dots {
-    bottom: 16px;
+    padding-bottom: 28px;
   }
 
   /* Filter bar */

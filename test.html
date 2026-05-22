@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stacked Cards — eLT Edge</title>
+
+    <!-- Fonts (same as project) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="test.css" />
+  </head>
+  <body>
+
+    <!-- ── Intro ─────────────────────────────────────────────── -->
+    <section class="sc-intro">
+      <div class="sc-intro-inner">
+        <p class="sc-intro-eyebrow">What We Build</p>
+        <h1 class="sc-intro-heading">Engineering Solutions<br />That Scale</h1>
+        <p class="sc-intro-sub">
+          From silicon to software — we design, build, and deploy intelligent
+          embedded systems ready for the real world.
+        </p>
+        <div class="sc-intro-scroll-hint">
+          <span>Scroll to explore</span>
+          <div class="sc-scroll-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Stacked Cards Section ─────────────────────────────── -->
+    <section class="sc-section" id="sc-section">
+      <div class="sc-cards-wrapper" id="sc-wrapper">
+
+        <!-- Progress indicator -->
+        <div class="sc-progress" id="sc-progress" aria-hidden="true">
+          <span class="sc-progress-dot sc-progress-dot--active" data-index="0"></span>
+          <span class="sc-progress-dot" data-index="1"></span>
+          <span class="sc-progress-dot" data-index="2"></span>
+        </div>
+
+        <!-- ── Card 1: Embedded Hardware Design ── -->
+        <article class="sc-card" id="card-0" aria-label="Embedded Hardware Design">
+          <div class="sc-card-body">
+
+            <div class="sc-card-content">
+              <span class="sc-tag sc-tag--blue">Hardware</span>
+              <h2 class="sc-card-heading">Embedded Hardware<br />Design</h2>
+              <p class="sc-card-desc">
+                End-to-end embedded hardware development — from architecture
+                and circuit design to multi-layer PCB layout, prototyping, and
+                real-world validation.
+              </p>
+              <div class="sc-features sc-features--grid">
+                <div class="sc-feature">
+                  <div class="sc-feature-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                  </div>
+                  <div>
+                    <h4 class="sc-feature-title">PCB Design</h4>
+                    <p class="sc-feature-desc">
+                      Multi-layer layout with signal integrity and EMC
+                      optimisation.
+                    </p>
+                  </div>
+                </div>
+                <div class="sc-feature">
+                  <div class="sc-feature-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                  </div>
+                  <div>
+                    <h4 class="sc-feature-title">Rapid Prototyping</h4>
+                    <p class="sc-feature-desc">
+                      Breadboard to validated hardware prototype, fast.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sc-card-image">
+              <img
+                src="assets/images/Our Capabilities/Our Capabilities1.png"
+                alt="Embedded hardware design"
+                loading="lazy"
+              />
+            </div>
+
+          </div>
+        </article>
+
+        <!-- ── Card 2: Firmware Development (image left) ── -->
+        <article class="sc-card" id="card-1" aria-label="Firmware Development">
+          <div class="sc-card-body sc-card-body--reverse">
+
+            <div class="sc-card-image">
+              <img
+                src="assets/images/Our Capabilities/Our Capabilities4.png"
+                alt="Firmware development"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="sc-card-content">
+              <span class="sc-tag sc-tag--green">Software</span>
+              <h2 class="sc-card-heading">Firmware<br />Development</h2>
+              <p class="sc-card-desc">
+                Bare-metal to RTOS-based architectures — we craft reliable,
+                optimised firmware for safety-critical and resource-constrained
+                systems.
+              </p>
+              <div class="sc-features sc-features--pills">
+                <div class="sc-pills-row">
+                  <span class="sc-pill">RTOS</span>
+                  <span class="sc-pill">HAL / BSP</span>
+                  <span class="sc-pill">Bootloaders</span>
+                </div>
+                <div class="sc-pills-row">
+                  <span class="sc-pill">Device Drivers</span>
+                  <span class="sc-pill">OTA Updates</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- ── Card 3: IoT & Connected Systems ── -->
+        <article class="sc-card" id="card-2" aria-label="IoT and Connected Systems">
+          <div class="sc-card-body">
+
+            <div class="sc-card-content">
+              <span class="sc-tag sc-tag--purple">IoT</span>
+              <h2 class="sc-card-heading">IoT &amp; Connected<br />Systems</h2>
+              <p class="sc-card-desc">
+                Deploy reliable, scalable connected devices using modern
+                wireless protocols and cloud platforms — secure from edge to
+                cloud.
+              </p>
+              <ul class="sc-features sc-features--list">
+                <li class="sc-list-item">
+                  BLE, Wi-Fi, LoRaWAN &amp; Zigbee connectivity
+                </li>
+                <li class="sc-list-item">
+                  AWS IoT &amp; Azure IoT Hub integration
+                </li>
+                <li class="sc-list-item">
+                  Secure OTA firmware update pipelines
+                </li>
+              </ul>
+            </div>
+
+            <div class="sc-card-image">
+              <img
+                src="assets/images/Our Capabilities/Our Capabilities7.png"
+                alt="IoT and connected systems"
+                loading="lazy"
+              />
+            </div>
+
+          </div>
+        </article>
+        <!-- ── Card 3: IoT & Connected Systems ── -->
+        <article class="sc-card" id="card-3" aria-label="IoT and Connected Systems">
+          <div class="sc-card-body">
+
+            <div class="sc-card-content">
+              <span class="sc-tag sc-tag--purple">IoT</span>
+              <h2 class="sc-card-heading">IoT &amp; Connected<br />Systems</h2>
+              <p class="sc-card-desc">
+                Deploy reliable, scalable connected devices using modern
+                wireless protocols and cloud platforms — secure from edge to
+                cloud.
+              </p>
+              <ul class="sc-features sc-features--list">
+                <li class="sc-list-item">
+                  BLE, Wi-Fi, LoRaWAN &amp; Zigbee connectivity
+                </li>
+                <li class="sc-list-item">
+                  AWS IoT &amp; Azure IoT Hub integration
+                </li>
+                <li class="sc-list-item">
+                  Secure OTA firmware update pipelines
+                </li>
+              </ul>
+            </div>
+
+            <div class="sc-card-image">
+              <img
+                src="assets/images/Our Capabilities/Our Capabilities7.png"
+                alt="IoT and connected systems"
+                loading="lazy"
+              />
+            </div>
+
+          </div>
+        </article>
+
+      </div><!-- /sc-cards-wrapper -->
+    </section>
+
+    <!-- ── Outro / CTA ────────────────────────────────────────── -->
+    <section class="sc-outro">
+      <div class="sc-outro-inner">
+        <p class="sc-outro-eyebrow">Ready to Build?</p>
+        <h2 class="sc-outro-heading">Turn Your Product Idea<br />Into Reality</h2>
+        <p class="sc-outro-sub">
+          Let's talk about your embedded system — from concept to
+          mass-production-ready hardware.
+        </p>
+        <a href="contact.html" class="sc-outro-btn">Start a Project &nbsp;→</a>
+      </div>
+    </section>
+
+    <!-- ── GSAP CDN ───────────────────────────────────────────── -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="test.js"></script>
+  </body>
+</html>

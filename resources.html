@@ -38,9 +38,34 @@
         </div>
         <nav class="nav-links" id="navLinks">
           <a href="approach.html" class="nav-link">Approach</a>
-          <a href="#" class="nav-link">Capabilities</a>
+          <a href="capabilities-scroll.html" class="nav-link">Capabilities</a>
           <a href="ourworks.html" class="nav-link">Our Works</a>
-          <a href="aboutus.html" class="nav-link">About Us</a>
+          <div class="nav-dropdown">
+            <a href="aboutus.html" class="nav-link dropdown-toggle">
+              About Us
+
+              <span class="dropdown-arrow">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </a>
+
+            <div class="dropdown-menu">
+              <a href="our-team.html">Our Team</a>
+              <a href="careers.html">Careers</a>
+            </div>
+          </div>
           <a
             href="resources.html"
             class="nav-link"
@@ -74,7 +99,7 @@
         </button>
         <nav class="drawer-links">
           <a href="approach.html">Approach</a>
-          <a href="#">Capabilities</a>
+          <a href="capabilities.html">Capabilities</a>
           <a href="ourworks.html">Our Works</a>
           <a href="aboutus.html">About Us</a>
           <a href="resources.html">Resources</a>
@@ -161,7 +186,12 @@
       <div class="blog-detail-wrap">
         <!-- Top hero image -->
         <div class="blog-detail-hero-img">
-          <img id="detailHeroImg" src="assets/images/Events/bloghero.png" alt="" class="detail-hero-img-el" />
+          <img
+            id="detailHeroImg"
+            src="assets/images/Events/bloghero.png"
+            alt=""
+            class="detail-hero-img-el"
+          />
         </div>
 
         <!-- Content -->
@@ -800,32 +830,66 @@
 
         var eventRowDefs = [
           {
-            images: ["evnets1","evnets2","evnets3","evnets4","evnets5","evnets6","evnets7","evnets8","evnets9"],
-            dir: "left"
+            images: [
+              "evnets1",
+              "evnets2",
+              "evnets3",
+              "evnets4",
+              "evnets5",
+              "evnets6",
+              "evnets7",
+              "evnets8",
+              "evnets9",
+            ],
+            dir: "left",
           },
           {
-            images: ["evnets9","evnets8","evnets7","evnets6","evnets5","evnets4","evnets3","evnets2","evnets1"],
-            dir: "right"
+            images: [
+              "evnets9",
+              "evnets8",
+              "evnets7",
+              "evnets6",
+              "evnets5",
+              "evnets4",
+              "evnets3",
+              "evnets2",
+              "evnets1",
+            ],
+            dir: "right",
           },
           {
-            images: ["evnets5","evnets6","evnets7","evnets8","evnets9","evnets1","evnets2","evnets3","evnets4"],
-            dir: "left"
-          }
+            images: [
+              "evnets5",
+              "evnets6",
+              "evnets7",
+              "evnets8",
+              "evnets9",
+              "evnets1",
+              "evnets2",
+              "evnets3",
+              "evnets4",
+            ],
+            dir: "left",
+          },
         ];
 
-        eventRowDefs.forEach(function(rowDef) {
+        eventRowDefs.forEach(function (rowDef) {
           var rowEl = document.createElement("div");
           rowEl.className = "events-scroll-row";
 
           var trackEl = document.createElement("div");
-          trackEl.className = "events-track " + (rowDef.dir === "right" ? "scroll-right" : "scroll-left");
+          trackEl.className =
+            "events-track " +
+            (rowDef.dir === "right" ? "scroll-right" : "scroll-left");
 
           /* duplicate images once for seamless loop (animate -50% = one full set) */
           var html = "";
-          [0, 1].forEach(function() {
-            rowDef.images.forEach(function(name) {
-              html += '<div class="event-img-cell"><img src="assets/images/Events/' +
-                name + '.png" alt="Event photo" loading="lazy" /></div>';
+          [0, 1].forEach(function () {
+            rowDef.images.forEach(function (name) {
+              html +=
+                '<div class="event-img-cell"><img src="assets/images/Events/' +
+                name +
+                '.png" alt="Event photo" loading="lazy" /></div>';
             });
           });
 

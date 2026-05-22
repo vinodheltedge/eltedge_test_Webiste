@@ -1,546 +1,912 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us — eLT Edge</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/contact.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us — eLT Edge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <!-- TOP BANNER -->
+    <div class="top-banner">
+      <span
+        >Looking for Smart Factory &amp; Industrial Intelligence
+        Solutions?</span
+      >
+      <a href="https://factis.in" target="_blank" class="banner-link"
+        >Visit factis.in by eLT Edge</a
+      >
+    </div>
 
-  <!-- TOP BANNER -->
-  <div class="top-banner">
-    <span>Looking for Smart Factory &amp; Industrial Intelligence Solutions?</span>
-    <a href="https://factis.in" target="_blank" class="banner-link">Visit factis.in by eLT Edge</a>
-  </div>
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+      <div class="nav-inner container">
+        <div class="nav-logo">
+          <a href="./index.html">
+            <img
+              src="assets/images/logo white bg (1) 1.png"
+              alt="eLT Edge"
+              class="logo-img"
+            />
+          </a>
+        </div>
+        <nav class="nav-links" id="navLinks">
+          <a href="approach.html" class="nav-link">Approach</a>
+          <a href="capabilities-scroll.html" class="nav-link">Capabilities</a>
+          <a href="ourworks.html" class="nav-link">Our Works</a>
+          <div class="nav-dropdown">
+            <a href="aboutus.html" class="nav-link dropdown-toggle">
+              About Us
 
-  <!-- NAVBAR -->
-  <header class="navbar" id="navbar">
-    <div class="nav-inner container">
-      <div class="nav-logo">
-        <a href="./index.html">
-          <img src="assets/images/logo white bg (1) 1.png" alt="eLT Edge" class="logo-img" />
-        </a>
+              <span class="dropdown-arrow">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </a>
+
+            <div class="dropdown-menu">
+              <a href="our-team.html">Our Team</a>
+              <a href="careers.html">Careers</a>
+            </div>
+          </div>
+          <a href="resources.html" class="nav-link">Resources</a>
+        </nav>
+        <div class="nav-actions">
+          <a href="contact.html" class="btn-contact">Contact US</a>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
-      <nav class="nav-links" id="navLinks">
-        <a href="approach.html" class="nav-link">Approach</a>
-        <a href="#" class="nav-link">Capabilities</a>
-        <a href="ourworks.html" class="nav-link">Our Works</a>
-        <a href="aboutus.html" class="nav-link">About Us</a>
-        <a href="resources.html" class="nav-link">Resources</a>
-      </nav>
-      <div class="nav-actions">
-        <a href="contact.html" class="btn-contact">Contact US</a>
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
+    </header>
+
+    <!-- MOBILE DRAWER -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="drawer-inner">
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+          ✕
         </button>
+        <nav class="drawer-links">
+          <a href="approach.html">Approach</a>
+          <a href="capabilities.html">Capabilities</a>
+          <a href="ourworks.html">Our Works</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="resources.html">Resources</a>
+        </nav>
+        <a href="contact.html" class="btn-contact">Contact Us</a>
       </div>
     </div>
-  </header>
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
 
-  <!-- MOBILE DRAWER -->
-  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
-    <div class="drawer-inner">
-      <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
-      <nav class="drawer-links">
-        <a href="approach.html">Approach</a>
-        <a href="#">Capabilities</a>
-        <a href="ourworks.html">Our Works</a>
-        <a href="aboutus.html">About Us</a>
-        <a href="resources.html">Resources</a>
-      </nav>
-      <a href="contact.html" class="btn-contact">Contact Us</a>
-    </div>
-  </div>
-  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <!-- HERO -->
+    <section class="c-hero">
+      <div class="c-hero-overlay"></div>
+      <div class="c-hero-content container">
+        <h1>Contact Us</h1>
+        <p>Let's build something impactful</p>
+      </div>
+    </section>
 
-  <!-- HERO -->
-  <section class="c-hero">
-    <div class="c-hero-overlay"></div>
-    <div class="c-hero-content container">
-      <h1>Contact Us</h1>
-      <p>Let's build something impactful</p>
-    </div>
-  </section>
+    <!-- CONTACT SECTION -->
+    <section class="c-section">
+      <div class="container">
+        <h2 class="c-section-heading">What You Give Us</h2>
 
-  <!-- CONTACT SECTION -->
-  <section class="c-section">
-    <div class="container">
-      <h2 class="c-section-heading">What You Give Us</h2>
+        <div class="c-grid">
+          <!-- FORM CARD -->
+          <div class="c-form-card">
+            <h3 class="c-form-title">
+              Have An Idea, Project, Or Partnership In Mind?
+            </h3>
+            <p class="c-form-sub">
+              Reach out — our team will get back to you quickly.
+            </p>
 
-      <div class="c-grid">
+            <!-- TABS -->
+            <div class="c-tabs" role="tablist">
+              <button class="c-tab active" role="tab" data-tab="service">
+                Service
+              </button>
+              <button class="c-tab" role="tab" data-tab="partnership">
+                Partnership
+              </button>
+              <button class="c-tab" role="tab" data-tab="career">Career</button>
+              <button class="c-tab" role="tab" data-tab="solution">
+                Solution
+              </button>
+            </div>
 
-        <!-- FORM CARD -->
-        <div class="c-form-card">
-          <h3 class="c-form-title">Have An Idea, Project, Or Partnership In Mind?</h3>
-          <p class="c-form-sub">Reach out — our team will get back to you quickly.</p>
-
-          <!-- TABS -->
-          <div class="c-tabs" role="tablist">
-            <button class="c-tab active" role="tab" data-tab="service">Service</button>
-            <button class="c-tab" role="tab" data-tab="partnership">Partnership</button>
-            <button class="c-tab" role="tab" data-tab="career">Career</button>
-            <button class="c-tab" role="tab" data-tab="solution">Solution</button>
-          </div>
-
-          <!-- TAB: SERVICE -->
-          <div class="c-panel active" id="panel-service">
-            <form class="c-form" novalidate>
-              <div class="c-row-2">
-                <div class="c-field">
-                  <label class="c-label">Name</label>
-                  <input class="c-input" type="text" placeholder="Enter Your Name" autocomplete="name" />
+            <!-- TAB: SERVICE -->
+            <div class="c-panel active" id="panel-service">
+              <form class="c-form" novalidate>
+                <div class="c-row-2">
+                  <div class="c-field">
+                    <label class="c-label">Name</label>
+                    <input
+                      class="c-input"
+                      type="text"
+                      placeholder="Enter Your Name"
+                      autocomplete="name"
+                    />
+                  </div>
+                  <div class="c-field">
+                    <label class="c-label">Company Name</label>
+                    <input
+                      class="c-input"
+                      type="text"
+                      placeholder="Enter Your Company Name"
+                      autocomplete="organization"
+                    />
+                  </div>
                 </div>
-                <div class="c-field">
-                  <label class="c-label">Company Name</label>
-                  <input class="c-input" type="text" placeholder="Enter Your Company Name" autocomplete="organization" />
-                </div>
-              </div>
-              <div class="c-row-2">
-                <div class="c-field">
-                  <label class="c-label">Phone Number</label>
-                  <div class="c-phone">
-                    <select class="c-phone-code" aria-label="Country code">
-                      <option value="+91">+91</option>
-                      <option value="+1">+1</option>
-                      <option value="+44">+44</option>
-                      <option value="+971">+971</option>
-                      <option value="+65">+65</option>
-                      <option value="+61">+61</option>
-                    </select>
-                    <input class="c-phone-num" type="tel" placeholder="" autocomplete="tel-national" />
+                <div class="c-row-2">
+                  <div class="c-field">
+                    <label class="c-label">Phone Number</label>
+                    <div class="c-phone">
+                      <select class="c-phone-code" aria-label="Country code">
+                        <option value="+91">+91</option>
+                        <option value="+1">+1</option>
+                        <option value="+44">+44</option>
+                        <option value="+971">+971</option>
+                        <option value="+65">+65</option>
+                        <option value="+61">+61</option>
+                      </select>
+                      <input
+                        class="c-phone-num"
+                        type="tel"
+                        placeholder=""
+                        autocomplete="tel-national"
+                      />
+                    </div>
+                  </div>
+                  <div class="c-field">
+                    <label class="c-label">Email</label>
+                    <input
+                      class="c-input"
+                      type="email"
+                      placeholder="Enter Your Email"
+                      autocomplete="email"
+                    />
                   </div>
                 </div>
                 <div class="c-field">
-                  <label class="c-label">Email</label>
-                  <input class="c-input" type="email" placeholder="Enter Your Email" autocomplete="email" />
-                </div>
-              </div>
-              <div class="c-field">
-                <label class="c-label">Choose a Service</label>
-                <div class="c-select-wrap">
-                  <select class="c-select">
-                    <option value="" disabled selected>Select</option>
-                    <option>Hardware Design &amp; Development</option>
-                    <option>Firmware Development</option>
-                    <option>IoT Solutions</option>
-                    <option>PCB Design &amp; Manufacturing</option>
-                    <option>Rapid Prototyping</option>
-                    <option>Mass Production Support</option>
-                  </select>
-                </div>
-              </div>
-              <div class="c-field">
-                <label class="c-label">Tell About Your Project</label>
-                <textarea class="c-textarea" placeholder="&#9998;  Enter Description" rows="4"></textarea>
-              </div>
-              <div class="c-submit-row">
-                <button type="submit" class="c-btn-submit">Submit</button>
-              </div>
-            </form>
-          </div>
-
-          <!-- TAB: PARTNERSHIP -->
-          <div class="c-panel" id="panel-partnership">
-            <form class="c-form" novalidate>
-              <div class="c-row-2">
-                <div class="c-field">
-                  <label class="c-label">Name</label>
-                  <input class="c-input" type="text" placeholder="Enter Your Name" autocomplete="name" />
-                </div>
-                <div class="c-field">
-                  <label class="c-label">Company</label>
-                  <input class="c-input" type="text" placeholder="Enter Your Company Name" autocomplete="organization" />
-                </div>
-              </div>
-              <div class="c-row-2">
-                <div class="c-field">
-                  <label class="c-label">Email</label>
-                  <input class="c-input" type="email" placeholder="Enter Your Email" autocomplete="email" />
-                </div>
-                <div class="c-field">
-                  <label class="c-label">Phone Number</label>
-                  <div class="c-phone">
-                    <select class="c-phone-code" aria-label="Country code">
-                      <option value="+91">+91</option>
-                      <option value="+1">+1</option>
-                      <option value="+44">+44</option>
-                      <option value="+971">+971</option>
+                  <label class="c-label">Choose a Service</label>
+                  <div class="c-select-wrap">
+                    <select class="c-select">
+                      <option value="" disabled selected>Select</option>
+                      <option>Hardware Design &amp; Development</option>
+                      <option>Firmware Development</option>
+                      <option>IoT Solutions</option>
+                      <option>PCB Design &amp; Manufacturing</option>
+                      <option>Rapid Prototyping</option>
+                      <option>Mass Production Support</option>
                     </select>
-                    <input class="c-phone-num" type="tel" placeholder="" autocomplete="tel-national" />
                   </div>
                 </div>
-              </div>
-              <div class="c-field">
-                <label class="c-label">Description</label>
-                <textarea class="c-textarea" placeholder="&#9998;  Enter Description" rows="5"></textarea>
-              </div>
-              <div class="c-submit-row">
-                <button type="submit" class="c-btn-submit">Submit</button>
-              </div>
-            </form>
-          </div>
+                <div class="c-field">
+                  <label class="c-label">Tell About Your Project</label>
+                  <textarea
+                    class="c-textarea"
+                    placeholder="&#9998;  Enter Description"
+                    rows="4"
+                  ></textarea>
+                </div>
+                <div class="c-submit-row">
+                  <button type="submit" class="c-btn-submit">Submit</button>
+                </div>
+              </form>
+            </div>
 
-          <!-- TAB: CAREER -->
-          <div class="c-panel" id="panel-career">
-            <form class="c-form" novalidate>
-              <div class="c-row-2">
-                <div class="c-field">
-                  <label class="c-label">Name</label>
-                  <input class="c-input" type="text" placeholder="Enter Your Name" autocomplete="name" />
-                </div>
-                <div class="c-field">
-                  <label class="c-label">Company</label>
-                  <input class="c-input" type="text" placeholder="Enter Your Company Name" autocomplete="organization" />
-                </div>
-              </div>
-              <div class="c-row-2">
-                <div class="c-field">
-                  <label class="c-label">Email</label>
-                  <input class="c-input" type="email" placeholder="Enter Your Email" autocomplete="email" />
-                </div>
-                <div class="c-field">
-                  <label class="c-label">Phone Number</label>
-                  <div class="c-phone">
-                    <select class="c-phone-code" aria-label="Country code">
-                      <option value="+91">+91</option>
-                      <option value="+1">+1</option>
-                      <option value="+44">+44</option>
-                    </select>
-                    <input class="c-phone-num" type="tel" placeholder="" autocomplete="tel-national" />
+            <!-- TAB: PARTNERSHIP -->
+            <div class="c-panel" id="panel-partnership">
+              <form class="c-form" novalidate>
+                <div class="c-row-2">
+                  <div class="c-field">
+                    <label class="c-label">Name</label>
+                    <input
+                      class="c-input"
+                      type="text"
+                      placeholder="Enter Your Name"
+                      autocomplete="name"
+                    />
+                  </div>
+                  <div class="c-field">
+                    <label class="c-label">Company</label>
+                    <input
+                      class="c-input"
+                      type="text"
+                      placeholder="Enter Your Company Name"
+                      autocomplete="organization"
+                    />
                   </div>
                 </div>
-              </div>
-              <div class="c-field">
-                <label class="c-label">Role</label>
-                <input class="c-input" type="text" placeholder="Enter Role" />
-              </div>
-              <div class="c-field">
-                <label class="c-label">Upload Resume</label>
-                <label class="c-file-label" id="resumeLabel">
-                  <input type="file" class="c-file-input" id="resumeInput" accept=".pdf,.doc,.docx" />
-                  <svg class="c-file-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                    <polyline points="17 8 12 3 7 8"/>
-                    <line x1="12" y1="3" x2="12" y2="15"/>
+                <div class="c-row-2">
+                  <div class="c-field">
+                    <label class="c-label">Email</label>
+                    <input
+                      class="c-input"
+                      type="email"
+                      placeholder="Enter Your Email"
+                      autocomplete="email"
+                    />
+                  </div>
+                  <div class="c-field">
+                    <label class="c-label">Phone Number</label>
+                    <div class="c-phone">
+                      <select class="c-phone-code" aria-label="Country code">
+                        <option value="+91">+91</option>
+                        <option value="+1">+1</option>
+                        <option value="+44">+44</option>
+                        <option value="+971">+971</option>
+                      </select>
+                      <input
+                        class="c-phone-num"
+                        type="tel"
+                        placeholder=""
+                        autocomplete="tel-national"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="c-field">
+                  <label class="c-label">Description</label>
+                  <textarea
+                    class="c-textarea"
+                    placeholder="&#9998;  Enter Description"
+                    rows="5"
+                  ></textarea>
+                </div>
+                <div class="c-submit-row">
+                  <button type="submit" class="c-btn-submit">Submit</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- TAB: CAREER -->
+            <div class="c-panel" id="panel-career">
+              <form class="c-form" novalidate>
+                <div class="c-row-2">
+                  <div class="c-field">
+                    <label class="c-label">Name</label>
+                    <input
+                      class="c-input"
+                      type="text"
+                      placeholder="Enter Your Name"
+                      autocomplete="name"
+                    />
+                  </div>
+                  <div class="c-field">
+                    <label class="c-label">Company</label>
+                    <input
+                      class="c-input"
+                      type="text"
+                      placeholder="Enter Your Company Name"
+                      autocomplete="organization"
+                    />
+                  </div>
+                </div>
+                <div class="c-row-2">
+                  <div class="c-field">
+                    <label class="c-label">Email</label>
+                    <input
+                      class="c-input"
+                      type="email"
+                      placeholder="Enter Your Email"
+                      autocomplete="email"
+                    />
+                  </div>
+                  <div class="c-field">
+                    <label class="c-label">Phone Number</label>
+                    <div class="c-phone">
+                      <select class="c-phone-code" aria-label="Country code">
+                        <option value="+91">+91</option>
+                        <option value="+1">+1</option>
+                        <option value="+44">+44</option>
+                      </select>
+                      <input
+                        class="c-phone-num"
+                        type="tel"
+                        placeholder=""
+                        autocomplete="tel-national"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="c-field">
+                  <label class="c-label">Role</label>
+                  <div class="c-select-wrap">
+                    <select class="c-select" id="careerRoleSelect">
+                      <option value="" disabled selected>Select a Role</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="c-field">
+                  <label class="c-label">Upload Resume</label>
+                  <label class="c-file-label" id="resumeLabel">
+                    <input
+                      type="file"
+                      class="c-file-input"
+                      id="resumeInput"
+                      accept=".pdf,.doc,.docx"
+                    />
+                    <svg
+                      class="c-file-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="17 8 12 3 7 8" />
+                      <line x1="12" y1="3" x2="12" y2="15" />
+                    </svg>
+                    <span class="c-file-text">Upload Resume</span>
+                  </label>
+                  <span class="c-file-helper">Max 4MB</span>
+                </div>
+                <div class="c-row-2 c-row-2--align">
+                  <div class="c-field">
+                    <label class="c-label">Experience (Years)</label>
+                    <input
+                      class="c-input"
+                      type="number"
+                      placeholder="e.g. 3"
+                      min="0"
+                      max="50"
+                    />
+                  </div>
+                  <div class="c-field c-field--center">
+                    <label class="c-checkbox-label">
+                      <input type="checkbox" class="c-checkbox-input" />
+                      <span class="c-checkbox-box"></span>
+                      <span class="c-checkbox-text"
+                        >My experience is not relevant</span
+                      >
+                    </label>
+                  </div>
+                </div>
+                <div class="c-submit-row">
+                  <button type="submit" class="c-btn-submit">Submit</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- TAB: SOLUTION -->
+            <div class="c-panel" id="panel-solution">
+              <form class="c-form" novalidate>
+                <div class="c-row-2">
+                  <div class="c-field">
+                    <label class="c-label">Name</label>
+                    <input
+                      class="c-input"
+                      type="text"
+                      placeholder="Enter your Name"
+                      autocomplete="name"
+                    />
+                  </div>
+                  <div class="c-field">
+                    <label class="c-label">Company</label>
+                    <input
+                      class="c-input"
+                      type="text"
+                      placeholder="Enter your company name"
+                      autocomplete="organization"
+                    />
+                  </div>
+                </div>
+                <div class="c-row-2">
+                  <div class="c-field">
+                    <label class="c-label">Email</label>
+                    <input
+                      class="c-input"
+                      type="email"
+                      placeholder="Enter your email"
+                      autocomplete="email"
+                    />
+                  </div>
+                  <div class="c-field">
+                    <label class="c-label">Phone Number</label>
+                    <input
+                      class="c-input"
+                      type="tel"
+                      placeholder="Enter your phone number"
+                      autocomplete="tel"
+                    />
+                  </div>
+                </div>
+                <div class="c-field">
+                  <label class="c-label">Solutions</label>
+                  <div class="c-chip-group">
+                    <label class="c-chip">
+                      <input type="checkbox" hidden />
+                      <span>IIoT</span>
+                    </label>
+                    <label class="c-chip">
+                      <input type="checkbox" hidden />
+                      <span>Mobility</span>
+                    </label>
+                    <label class="c-chip">
+                      <input type="checkbox" hidden />
+                      <span>Smart buildings solutions</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="c-field">
+                  <label class="c-label">You Are</label>
+                  <div class="c-chip-group">
+                    <label class="c-chip">
+                      <input type="checkbox" hidden />
+                      <span>Factory or manufacturing plant</span>
+                    </label>
+                    <label class="c-chip">
+                      <input type="checkbox" hidden />
+                      <span>Plant EPC contractor or system integrator</span>
+                    </label>
+                    <label class="c-chip">
+                      <input type="checkbox" hidden />
+                      <span>Industrial machine or instrument maker</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="c-field">
+                  <label class="c-label">Tell Us About Your Project</label>
+                  <textarea
+                    class="c-textarea"
+                    placeholder="Enter description"
+                    rows="4"
+                  ></textarea>
+                </div>
+                <div class="c-submit-row">
+                  <button type="submit" class="c-btn-submit">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- /c-form-card -->
+
+          <!-- INFO CARD -->
+          <div class="c-info-card">
+            <div class="c-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4!2d78.4081!3d17.4399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb971bb8ae74b1%3A0xd63f7cad8c2d9a23!2sAshoka%20HiTech%20Chambers!5e0!3m2!1sen!2sin!4v1715000000000!5m2!1sen!2sin"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="eLT Edge Location — Hyderabad"
+              ></iframe>
+            </div>
+            <div class="c-info-body">
+              <div class="c-info-row">
+                <div class="c-info-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <polyline points="2,4 12,13 22,4" />
                   </svg>
-                  <span class="c-file-text">Upload Resume</span>
-                </label>
-                <span class="c-file-helper">Max 4MB</span>
-              </div>
-              <div class="c-row-2 c-row-2--align">
-                <div class="c-field">
-                  <label class="c-label">Experience (Years)</label>
-                  <input class="c-input" type="number" placeholder="e.g. 3" min="0" max="50" />
                 </div>
-                <div class="c-field c-field--center">
-                  <label class="c-checkbox-label">
-                    <input type="checkbox" class="c-checkbox-input" />
-                    <span class="c-checkbox-box"></span>
-                    <span class="c-checkbox-text">My experience is not relevant</span>
-                  </label>
+                <span class="c-info-val">info@eltedge.io</span>
+              </div>
+              <div class="c-info-row">
+                <div class="c-info-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11.23 19.79 19.79 0 0 1 1.61 2.64 2 2 0 0 1 3.6.46h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.1a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 15.5z"
+                    />
+                  </svg>
                 </div>
+                <span class="c-info-val">+91 9177444992</span>
               </div>
-              <div class="c-submit-row">
-                <button type="submit" class="c-btn-submit">Submit</button>
-              </div>
-            </form>
-          </div>
-
-          <!-- TAB: SOLUTION -->
-          <div class="c-panel" id="panel-solution">
-            <form class="c-form" novalidate>
-              <div class="c-row-2">
-                <div class="c-field">
-                  <label class="c-label">Name</label>
-                  <input class="c-input" type="text" placeholder="Enter your Name" autocomplete="name" />
+              <div class="c-info-row c-info-row--top">
+                <div class="c-info-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
                 </div>
-                <div class="c-field">
-                  <label class="c-label">Company</label>
-                  <input class="c-input" type="text" placeholder="Enter your company name" autocomplete="organization" />
-                </div>
+                <span class="c-info-val"
+                  >2nd Floor, Ashoka HiTech Chambers, Road No. 2, opp. KBR Park,
+                  Banjara Hills, Hyderabad, Telangana 500034</span
+                >
               </div>
-              <div class="c-row-2">
-                <div class="c-field">
-                  <label class="c-label">Email</label>
-                  <input class="c-input" type="email" placeholder="Enter your email" autocomplete="email" />
-                </div>
-                <div class="c-field">
-                  <label class="c-label">Phone Number</label>
-                  <input class="c-input" type="tel" placeholder="Enter your phone number" autocomplete="tel" />
-                </div>
+              <div class="c-info-btn">
+                <a href="mailto:info@eltedge.io" class="c-btn-touch"
+                  >Get in Touch</a
+                >
               </div>
-              <div class="c-field">
-                <label class="c-label">Solutions</label>
-                <div class="c-chip-group">
-                  <label class="c-chip">
-                    <input type="checkbox" hidden />
-                    <span>IIoT</span>
-                  </label>
-                  <label class="c-chip">
-                    <input type="checkbox" hidden />
-                    <span>Mobility</span>
-                  </label>
-                  <label class="c-chip">
-                    <input type="checkbox" hidden />
-                    <span>Smart buildings solutions</span>
-                  </label>
-                </div>
-              </div>
-              <div class="c-field">
-                <label class="c-label">You Are</label>
-                <div class="c-chip-group">
-                  <label class="c-chip">
-                    <input type="checkbox" hidden />
-                    <span>Factory or manufacturing plant</span>
-                  </label>
-                  <label class="c-chip">
-                    <input type="checkbox" hidden />
-                    <span>Plant EPC contractor or system integrator</span>
-                  </label>
-                  <label class="c-chip">
-                    <input type="checkbox" hidden />
-                    <span>Industrial machine or instrument maker</span>
-                  </label>
-                </div>
-              </div>
-              <div class="c-field">
-                <label class="c-label">Tell Us About Your Project</label>
-                <textarea class="c-textarea" placeholder="Enter description" rows="4"></textarea>
-              </div>
-              <div class="c-submit-row">
-                <button type="submit" class="c-btn-submit">Submit</button>
-              </div>
-            </form>
-          </div>
-        </div><!-- /c-form-card -->
-
-        <!-- INFO CARD -->
-        <div class="c-info-card">
-          <div class="c-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4!2d78.4081!3d17.4399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb971bb8ae74b1%3A0xd63f7cad8c2d9a23!2sAshoka%20HiTech%20Chambers!5e0!3m2!1sen!2sin!4v1715000000000!5m2!1sen!2sin"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="eLT Edge Location — Hyderabad"
-            ></iframe>
-          </div>
-          <div class="c-info-body">
-            <div class="c-info-row">
-              <div class="c-info-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="4" width="20" height="16" rx="2"/>
-                  <polyline points="2,4 12,13 22,4"/>
-                </svg>
-              </div>
-              <span class="c-info-val">info@eltedge.io</span>
-            </div>
-            <div class="c-info-row">
-              <div class="c-info-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11.23 19.79 19.79 0 0 1 1.61 2.64 2 2 0 0 1 3.6.46h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.1a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 15.5z"/>
-                </svg>
-              </div>
-              <span class="c-info-val">+91 9177444992</span>
-            </div>
-            <div class="c-info-row c-info-row--top">
-              <div class="c-info-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
-                  <circle cx="12" cy="10" r="3"/>
-                </svg>
-              </div>
-              <span class="c-info-val">2nd Floor, Ashoka HiTech Chambers, Road No. 2, opp. KBR Park, Banjara Hills, Hyderabad, Telangana 500034</span>
-            </div>
-            <div class="c-info-btn">
-              <a href="mailto:info@eltedge.io" class="c-btn-touch">Get in Touch</a>
             </div>
           </div>
         </div>
+        <!-- /c-grid -->
+      </div>
+    </section>
 
-      </div><!-- /c-grid -->
-    </div>
-  </section>
+    <!-- CTA SECTION -->
+    <section class="c-cta">
+      <div class="c-cta-inner">
+        <h2>Have a Product Idea?</h2>
+        <p>Let's Turn Vision into a production - ready embedded product.</p>
+        <a href="contact.html" class="c-cta-btn"
+          >Start your Project &nbsp;&#8594;</a
+        >
+      </div>
+    </section>
 
-  <!-- CTA SECTION -->
-  <section class="c-cta">
-    <div class="c-cta-inner">
-      <h2>Have a Product Idea?</h2>
-      <p>Let's Turn Vision into a production - ready embedded product.</p>
-      <a href="contact.html" class="c-cta-btn">Start your Project &nbsp;&#8594;</a>
-    </div>
-  </section>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img
+              src="assets/images/logo in white.png"
+              alt="eLT Edge"
+              class="footer-logo"
+            />
+            <p>
+              Embedded product development from concept to mass production. Your
+              trusted engineering partner.
+            </p>
+            <!-- Social icons: visible on mobile inside brand, hidden on desktop -->
+            <div class="footer-social footer-social--brand">
+              <a href="#" aria-label="Twitter" class="social-icon">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"
+                  />
+                </svg>
+              </a>
+              <a href="#" aria-label="Instagram" class="social-icon">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069Zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881Z"
+                  />
+                </svg>
+              </a>
+              <a href="#" aria-label="LinkedIn" class="social-icon">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065Zm1.782 13.019H3.555V9h3.564v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z"
+                  />
+                </svg>
+              </a>
+              <a href="#" aria-label="Facebook" class="social-icon">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073Z"
+                  />
+                </svg>
+              </a>
+              <a href="#" aria-label="Discord" class="social-icon">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.08.114 18.1.138 18.116a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-top">
+          <div class="footer-links c-footer-links">
+            <div class="footer-col" id="fc-company">
+              <div class="footer-acc-head" data-col="fc-company">
+                <h4>Company</h4>
+                <svg class="footer-acc-icon" viewBox="0 0 16 16">
+                  <polyline points="4 6 8 10 12 6" />
+                </svg>
+              </div>
+              <h4 class="footer-col-title">Company</h4>
+              <div class="footer-acc-body">
+                <a href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Blogs</a>
+                <a href="contact.html">Contact</a>
+              </div>
+            </div>
+            <div class="footer-col" id="fc-services">
+              <div class="footer-acc-head" data-col="fc-services">
+                <h4>Services</h4>
+                <svg class="footer-acc-icon" viewBox="0 0 16 16">
+                  <polyline points="4 6 8 10 12 6" />
+                </svg>
+              </div>
+              <h4 class="footer-col-title">Services</h4>
+              <div class="footer-acc-body">
+                <a href="#">Hardware Design</a>
+                <a href="#">Firmware Development</a>
+                <a href="#">IoT Solutions</a>
+                <a href="#">Manufacturing</a>
+              </div>
+            </div>
+            <div class="footer-col" id="fc-resources">
+              <div class="footer-acc-head" data-col="fc-resources">
+                <h4>Resources</h4>
+                <svg class="footer-acc-icon" viewBox="0 0 16 16">
+                  <polyline points="4 6 8 10 12 6" />
+                </svg>
+              </div>
+              <h4 class="footer-col-title">Resources</h4>
+              <div class="footer-acc-body">
+                <a href="#">Case Studies</a>
+                <a href="#">Technical Articles</a>
+                <a href="#">FAQs</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /footer-top -->
 
-        <div class="footer-brand">
-          <img src="assets/images/logo in white.png" alt="eLT Edge" class="footer-logo" />
-          <p>Embedded product development from concept to mass production. Your trusted engineering partner.</p>
-          <!-- Social icons: visible on mobile inside brand, hidden on desktop -->
-          <div class="footer-social footer-social--brand">
+        <div class="footer-bottom">
+          <p>©2026 eLT Edge. All rights reserved</p>
+          <div class="footer-bottom-links">
+            <a href="#">Terms of use</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+          <!-- Social icons: visible on desktop in footer-bottom, hidden on mobile -->
+          <div class="footer-social footer-social--bottom">
             <a href="#" aria-label="Twitter" class="social-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"
+                />
+              </svg>
             </a>
             <a href="#" aria-label="Instagram" class="social-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069Zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881Z"/></svg>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069Zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881Z"
+                />
+              </svg>
             </a>
             <a href="#" aria-label="LinkedIn" class="social-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065Zm1.782 13.019H3.555V9h3.564v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z"/></svg>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065Zm1.782 13.019H3.555V9h3.564v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z"
+                />
+              </svg>
             </a>
             <a href="#" aria-label="Facebook" class="social-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073Z"/></svg>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073Z"
+                />
+              </svg>
             </a>
             <a href="#" aria-label="Discord" class="social-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.08.114 18.1.138 18.116a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"/></svg>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.08.114 18.1.138 18.116a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"
+                />
+              </svg>
             </a>
           </div>
         </div>
-
-        <div class="footer-links c-footer-links">
-          <div class="footer-col" id="fc-company">
-            <div class="footer-acc-head" data-col="fc-company">
-              <h4>Company</h4>
-              <svg class="footer-acc-icon" viewBox="0 0 16 16"><polyline points="4 6 8 10 12 6"/></svg>
-            </div>
-            <h4 class="footer-col-title">Company</h4>
-            <div class="footer-acc-body">
-              <a href="index.html">Home</a>
-              <a href="aboutus.html">About Us</a>
-              <a href="#">Careers</a>
-              <a href="#">Blogs</a>
-              <a href="contact.html">Contact</a>
-            </div>
-          </div>
-          <div class="footer-col" id="fc-services">
-            <div class="footer-acc-head" data-col="fc-services">
-              <h4>Services</h4>
-              <svg class="footer-acc-icon" viewBox="0 0 16 16"><polyline points="4 6 8 10 12 6"/></svg>
-            </div>
-            <h4 class="footer-col-title">Services</h4>
-            <div class="footer-acc-body">
-              <a href="#">Hardware Design</a>
-              <a href="#">Firmware Development</a>
-              <a href="#">IoT Solutions</a>
-              <a href="#">Manufacturing</a>
-            </div>
-          </div>
-          <div class="footer-col" id="fc-resources">
-            <div class="footer-acc-head" data-col="fc-resources">
-              <h4>Resources</h4>
-              <svg class="footer-acc-icon" viewBox="0 0 16 16"><polyline points="4 6 8 10 12 6"/></svg>
-            </div>
-            <h4 class="footer-col-title">Resources</h4>
-            <div class="footer-acc-body">
-              <a href="#">Case Studies</a>
-              <a href="#">Technical Articles</a>
-              <a href="#">FAQs</a>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /footer-top -->
-
-      <div class="footer-bottom">
-        <p>©2026 eLT Edge. All rights reserved</p>
-        <div class="footer-bottom-links">
-          <a href="#">Terms of use</a>
-          <a href="#">Privacy Policy</a>
-        </div>
-        <!-- Social icons: visible on desktop in footer-bottom, hidden on mobile -->
-        <div class="footer-social footer-social--bottom">
-          <a href="#" aria-label="Twitter" class="social-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
-          </a>
-          <a href="#" aria-label="Instagram" class="social-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069Zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881Z"/></svg>
-          </a>
-          <a href="#" aria-label="LinkedIn" class="social-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065Zm1.782 13.019H3.555V9h3.564v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z"/></svg>
-          </a>
-          <a href="#" aria-label="Facebook" class="social-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073Z"/></svg>
-          </a>
-          <a href="#" aria-label="Discord" class="social-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.08.114 18.1.138 18.116a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"/></svg>
-          </a>
-        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="js/main.js"></script>
-  <script>
-    (function () {
-      'use strict';
+    <script src="js/main.js"></script>
+    <script>
+      (function () {
+        "use strict";
 
-      /* ---- TAB SWITCHING ---- */
-      var tabs = document.querySelectorAll('.c-tab');
-      var panels = document.querySelectorAll('.c-panel');
+        /* ---- TAB SWITCHING ---- */
+        var tabs = document.querySelectorAll(".c-tab");
+        var panels = document.querySelectorAll(".c-panel");
 
-      tabs.forEach(function (tab) {
-        tab.addEventListener('click', function () {
-          var target = tab.getAttribute('data-tab');
-          tabs.forEach(function (t) { t.classList.remove('active'); });
-          panels.forEach(function (p) { p.classList.remove('active'); });
-          tab.classList.add('active');
-          var panel = document.getElementById('panel-' + target);
-          if (panel) panel.classList.add('active');
+        tabs.forEach(function (tab) {
+          tab.addEventListener("click", function () {
+            var target = tab.getAttribute("data-tab");
+            tabs.forEach(function (t) {
+              t.classList.remove("active");
+            });
+            panels.forEach(function (p) {
+              p.classList.remove("active");
+            });
+            tab.classList.add("active");
+            var panel = document.getElementById("panel-" + target);
+            if (panel) panel.classList.add("active");
+          });
         });
-      });
 
-      /* ---- SOLUTION CHIP CARDS ---- */
-      document.querySelectorAll('.c-chip').forEach(function (chip) {
-        chip.addEventListener('click', function () {
-          var inp = chip.querySelector('input[type="checkbox"]');
-          if (inp) {
-            inp.checked = !inp.checked;
-            chip.classList.toggle('selected', inp.checked);
+        /* ---- SOLUTION CHIP CARDS ---- */
+        document.querySelectorAll(".c-chip").forEach(function (chip) {
+          chip.addEventListener("click", function () {
+            var inp = chip.querySelector('input[type="checkbox"]');
+            if (inp) {
+              inp.checked = !inp.checked;
+              chip.classList.toggle("selected", inp.checked);
+            }
+          });
+        });
+
+        /* ---- FILE UPLOAD ---- */
+        var resumeInput = document.getElementById("resumeInput");
+        if (resumeInput) {
+          resumeInput.addEventListener("change", function () {
+            var label = document.getElementById("resumeLabel");
+            var text = label ? label.querySelector(".c-file-text") : null;
+            if (text && resumeInput.files.length) {
+              text.textContent = resumeInput.files[0].name;
+            }
+          });
+        }
+
+        /* ---- FORM SUBMIT ---- */
+        document.querySelectorAll(".c-form").forEach(function (form) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Thank you! We will get back to you shortly.");
+            form.reset();
+            form.querySelectorAll(".c-chip").forEach(function (c) {
+              c.classList.remove("selected");
+            });
+            var ft = form.querySelector(".c-file-text");
+            if (ft) ft.textContent = "Upload Resume";
+          });
+        });
+
+        /* ---- FOOTER ACCORDION (MOBILE) ---- */
+        document.querySelectorAll(".footer-acc-head").forEach(function (head) {
+          head.addEventListener("click", function () {
+            var colId = head.getAttribute("data-col");
+            var col = document.getElementById(colId);
+            if (col) col.classList.toggle("open");
+          });
+        });
+
+        /* ---- CAREER ROLE DROPDOWN — populated from careers page via localStorage ---- */
+        (function () {
+          var fallbackJobs = [
+            "Senior FinOps Engineer",
+            "Embedded Firmware Engineer",
+            "IoT Solutions Developer",
+            "Hardware Design Engineer",
+            "Business Development Manager",
+          ];
+
+          var roleSelect = document.getElementById("careerRoleSelect");
+          if (!roleSelect) return;
+
+          var storedJobs = null;
+          try {
+            storedJobs = JSON.parse(
+              localStorage.getItem("eltEdgeJobs") || "null",
+            );
+          } catch (e) {}
+          var jobs =
+            storedJobs && storedJobs.length ? storedJobs : fallbackJobs;
+
+          jobs.forEach(function (title) {
+            var opt = document.createElement("option");
+            opt.value = title;
+            opt.textContent = title;
+            roleSelect.appendChild(opt);
+          });
+
+          /* Read URL params: ?tab=career&role=<title> */
+          var params = new URLSearchParams(window.location.search);
+          var tabParam = params.get("tab");
+          var roleParam = params.get("role");
+
+          if (tabParam === "career") {
+            /* Switch to Career tab */
+            document.querySelectorAll(".c-tab").forEach(function (t) {
+              t.classList.remove("active");
+            });
+            document.querySelectorAll(".c-panel").forEach(function (p) {
+              p.classList.remove("active");
+            });
+            var careerTab = document.querySelector('[data-tab="career"]');
+            var careerPanel = document.getElementById("panel-career");
+            if (careerTab) careerTab.classList.add("active");
+            if (careerPanel) careerPanel.classList.add("active");
+
+            setTimeout(function () {
+              var formCard = document.querySelector(".c-form-card");
+              if (formCard)
+                formCard.scrollIntoView({ behavior: "smooth", block: "start" });
+            }, 200);
           }
-        });
-      });
 
-      /* ---- FILE UPLOAD ---- */
-      var resumeInput = document.getElementById('resumeInput');
-      if (resumeInput) {
-        resumeInput.addEventListener('change', function () {
-          var label = document.getElementById('resumeLabel');
-          var text = label ? label.querySelector('.c-file-text') : null;
-          if (text && resumeInput.files.length) {
-            text.textContent = resumeInput.files[0].name;
+          if (roleParam) {
+            roleSelect.value = decodeURIComponent(roleParam);
           }
-        });
-      }
-
-      /* ---- FORM SUBMIT ---- */
-      document.querySelectorAll('.c-form').forEach(function (form) {
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
-          alert('Thank you! We will get back to you shortly.');
-          form.reset();
-          form.querySelectorAll('.c-chip').forEach(function (c) { c.classList.remove('selected'); });
-          var ft = form.querySelector('.c-file-text');
-          if (ft) ft.textContent = 'Upload Resume';
-        });
-      });
-
-      /* ---- FOOTER ACCORDION (MOBILE) ---- */
-      document.querySelectorAll('.footer-acc-head').forEach(function (head) {
-        head.addEventListener('click', function () {
-          var colId = head.getAttribute('data-col');
-          var col = document.getElementById(colId);
-          if (col) col.classList.toggle('open');
-        });
-      });
-
-    })();
-  </script>
-</body>
+        })();
+      })();
+    </script>
+  </body>
 </html>

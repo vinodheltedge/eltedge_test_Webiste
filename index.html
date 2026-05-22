@@ -34,16 +34,44 @@
         <!-- Logo -->
         <div class="nav-logo">
           <a href="./index.html"
-            ><img src="./assets/images/logo white bg (1) 1.png" alt="eLT Edge" class="logo-img"
+            ><img
+              src="./assets/images/logo white bg (1) 1.png"
+              alt="eLT Edge"
+              class="logo-img"
           /></a>
         </div>
 
         <!-- Center Nav -->
         <nav class="nav-links" id="navLinks">
           <a href="./approach.html" class="nav-link">Approach</a>
-          <a href="#" class="nav-link">Capabilities</a>
+          <a href="capabilities-scroll.html" class="nav-link">Capabilities</a>
           <a href="./ourworks.html" class="nav-link">Our Works</a>
-          <a href="aboutus.html" class="nav-link">About Us</a>
+          <div class="nav-dropdown">
+            <a href="aboutus.html" class="nav-link dropdown-toggle">
+              About Us
+
+              <span class="dropdown-arrow">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </a>
+
+            <div class="dropdown-menu">
+              <a href="our-team.html">Our Team</a>
+              <a href="careers.html">Careers</a>
+            </div>
+          </div>
           <a href="resources.html" class="nav-link">Resources</a>
         </nav>
 
@@ -72,9 +100,16 @@
         </button>
         <nav class="drawer-links">
           <a href="./approach.html">Approach</a>
-          <a href="#">Capabilities</a>
+          <a href="capabilities.html">Capabilities</a>
           <a href="./ourworks.html">Our Works</a>
-          <a href="./aboutus.html">About Us</a>
+          <div class="mobile-dropdown">
+            <button class="mobile-dropdown-toggle">About Us</button>
+
+            <div class="mobile-dropdown-menu">
+              <a href="our-team.html">Our Team</a>
+              <a href="careers.html">Careers</a>
+            </div>
+          </div>
           <a href="./resources.html">Resources</a>
         </nav>
         <button class="btn-contact drawer-cta">Contact Us</button>
@@ -99,9 +134,12 @@
             One partner from concept to mass production.
           </p>
           <div class="hero-buttons">
-            <a href="./contact.html"><button class="btn-primary">Start Your Project</button></a>
-            <a href="./aboutus.html"><button class="btn-ghost">About Us</button></a>
-            
+            <a href="./contact.html"
+              ><button class="btn-primary">Start Your Project</button></a
+            >
+            <a href="./aboutus.html"
+              ><button class="btn-ghost">About Us</button></a
+            >
           </div>
           <p class="hero-subtitle-sub">
             We handle product design, prototyping, engineering, compliances &
@@ -280,7 +318,8 @@
             <div class="stat-text">
               <p class="stat-label">Clients</p>
               <span class="stat-sub"
-                >80% of who <br> we continue to <br>work with today!</span
+                >80% of who <br />
+                we continue to <br />work with today!</span
               >
             </div>
             <div class="stat-number">20<span>+</span></div>
@@ -292,7 +331,7 @@
     <!-- Why Us -->
     <section class="why">
       <video autoplay muted loop playsinline class="why-bg-video">
-        <source src="assets/videos/0_Cat_Halloween_3840x2160.mp4" type="video/mp4" />
+        <source src="assets/videos/whyUs.mp4" type="video/mp4" />
       </video>
       <div class="why-overlay"></div>
       <div class="container why-inner">
@@ -301,89 +340,98 @@
         </div>
 
         <div class="why-grid">
+          <!-- LEFT COLUMN -->
+          <div class="why-left">
+            <div class="why-card top-card">
+              <img src="assets/images/image 38.png" class="why-icon" />
+              <p>
+                We de-risk embedded products built for messy, real-world
+                environments.
+              </p>
+            </div>
 
-  <!-- LEFT COLUMN -->
-  <div class="why-left">
-    <div class="why-card top-card">
-      <img src="assets/images/image 38.png" class="why-icon" />
-      <p>We de-risk embedded products built for messy, real-world environments.</p>
-    </div>
+            <div class="why-card bottom-card">
+              <img src="assets/images/image 38.png" class="why-icon" />
+              <p>
+                We bridge product concept to production & compliance realities
+                early.
+              </p>
+            </div>
+          </div>
 
-    <div class="why-card bottom-card">
-      <img src="assets/images/image 38.png" class="why-icon" />
-      <p>We bridge product concept to production & compliance realities early.</p>
-    </div>
-  </div>
-
-  <!-- RIGHT MAIN CARD -->
-  <div class="why-main-card">
-    <div class="why-main-tag">Our Core Advantage</div>
-    <h3>We take system-level ownership, not just module-level delivery</h3>
-    <p>We don’t optimize isolated components. We take responsibility for how the entire embedded system behaves across hardware, firmware, protocols, connectivity, including integration failures that typically show up late in the development cycle.</p>
-  </div>
-
-</div>
+          <!-- RIGHT MAIN CARD -->
+          <div class="why-main-card">
+            <div class="why-main-tag">Our Core Advantage</div>
+            <h3>
+              We take system-level ownership, not just module-level delivery
+            </h3>
+            <p>
+              We don’t optimize isolated components. We take responsibility for
+              how the entire embedded system behaves across hardware, firmware,
+              protocols, connectivity, including integration failures that
+              typically show up late in the development cycle.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Our Works -->
     <section class="works">
-  <div class="container">
-
-    <div class="works-header">
-      <h2>Our Works</h2>
-      <a href="./ourworks.html" class="btn-outline">View Portfolio →</a>
-    </div>
-
-    <div class="works-flex">
-
-      <!-- Card 1 -->
-      <div class="work-card active">
-        <div class="img-wrap">
-          <img src="assets/images/ourworks/ourworks1.png" alt="">
+      <div class="container">
+        <div class="works-header">
+          <h2>Our Works</h2>
+          <a href="./ourworks.html" class="btn-outline">View Portfolio →</a>
         </div>
-        <h3>Industrial Controls & Instrumentation</h3>
-        <p class="subtext">
-          Monitoring and controlling industrial processes using automated systems.
-        </p>
-      </div>
 
-      <!-- Card 2 -->
-      <div class="work-card">
-        <div class="img-wrap">
-          <img src="assets/images/ourworks/ourworks2.png" alt="">
+        <div class="works-flex">
+          <!-- Card 1 -->
+          <div class="work-card active">
+            <div class="img-wrap">
+              <img src="assets/images/ourworks/ourworks1.png" alt="" />
+            </div>
+            <h3>Industrial Controls & Instrumentation</h3>
+            <p class="subtext">
+              Monitoring and controlling industrial processes using automated
+              systems.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="work-card">
+            <div class="img-wrap">
+              <img src="assets/images/ourworks/ourworks2.png" alt="" />
+            </div>
+            <h3>Consumer Electronics</h3>
+            <p class="subtext">
+              Advanced consumer devices focusing on user experience.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="work-card">
+            <div class="img-wrap">
+              <img src="assets/images/ourworks/ourworks3.png" alt="" />
+            </div>
+            <h3>Commercial Equipment</h3>
+            <p class="subtext">
+              Ruggedized hardware solutions for commercial environments.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="work-card">
+            <div class="img-wrap">
+              <img src="assets/images/ourworks/ourworks4.png" alt="" />
+            </div>
+            <h3>IoT & Edge Computing</h3>
+            <p class="subtext">
+              Intelligent connected systems with edge processing.
+            </p>
+          </div>
         </div>
-        <h3>Consumer Electronics</h3>
-        <p class="subtext">
-          Advanced consumer devices focusing on user experience.
-        </p>
       </div>
-
-      <!-- Card 3 -->
-      <div class="work-card">
-        <div class="img-wrap">
-          <img src="assets/images/ourworks/ourworks3.png" alt="">
-        </div>
-        <h3>Commercial Equipment</h3>
-        <p class="subtext">
-          Ruggedized hardware solutions for commercial environments.
-        </p>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="work-card">
-        <div class="img-wrap">
-          <img src="assets/images/ourworks/ourworks4.png" alt="">
-        </div>
-        <h3>IoT & Edge Computing</h3>
-        <p class="subtext">
-          Intelligent connected systems with edge processing.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- Our Capabilities -->
     <section class="capabilities">

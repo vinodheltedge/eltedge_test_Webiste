@@ -1,0 +1,544 @@
+/* ============================================================
+   test.css — Stacked Scroll Cards
+   ============================================================ */
+
+/* ── Reset & Base ───────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: #eef2ff;
+  color: #0f172a;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   INTRO SECTION
+   ============================================================ */
+.sc-intro {
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2ff;
+  padding: 100px 24px;
+}
+
+.sc-intro-inner {
+  text-align: center;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.sc-intro-eyebrow {
+  font-family: "Sora", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0079f3;
+  margin-bottom: 20px;
+}
+
+.sc-intro-heading {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #0b1526;
+  margin-bottom: 24px;
+}
+
+.sc-intro-sub {
+  font-size: clamp(15px, 1.6vw, 18px);
+  color: #4a5a72;
+  line-height: 1.65;
+  max-width: 520px;
+  margin-bottom: 0px;
+}
+
+.sc-intro-scroll-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #94a3b8;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.sc-scroll-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid #cbd5e1;
+  animation: sc-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes sc-bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(6px); }
+}
+
+/* ============================================================
+   STACKED CARDS SECTION
+   ============================================================ */
+.sc-section {
+  position: relative;
+  background: #eef2ff;
+  /* GSAP will expand this with pinSpacing */
+}
+
+/* Cards wrapper — pinned by GSAP on desktop */
+.sc-cards-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 60px 24px;
+}
+
+/* ── Progress dots (visible on desktop during pin) ── */
+.sc-progress {
+  position: absolute;
+  right: clamp(16px, 3vw, 48px);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 100;
+  opacity: 0;           /* revealed by JS on desktop */
+  transition: opacity 0.3s;
+}
+
+.sc-progress-dot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  transition: background 0.3s, transform 0.3s;
+  cursor: default;
+}
+
+.sc-progress-dot--active {
+  background: #0079f3;
+  transform: scale(1.35);
+}
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+.sc-card {
+  width: 100%;
+  max-width: 1080px;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    0 8px 32px rgba(0, 0, 0, 0.07),
+    0 24px 64px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  will-change: transform, opacity;
+  /* GPU-accelerated layer */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Two-column layout inside card */
+.sc-card-body {
+  display: flex;
+  min-height: 440px;
+}
+
+/* Reverse: image on left */
+.sc-card-body--reverse {
+  flex-direction: row-reverse;
+}
+
+/* Content column */
+.sc-card-content {
+  flex: 0 0 52%;
+  padding: 52px 44px 52px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sc-card-body--reverse .sc-card-content {
+  padding: 52px 52px 52px 44px;
+}
+
+/* Image column */
+.sc-card-image {
+  flex: 0 0 48%;
+  padding: 20px 20px 20px 0;
+}
+
+.sc-card-body--reverse .sc-card-image {
+  padding: 20px 0 20px 20px;
+}
+
+.sc-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+/* ── Tag badge ── */
+.sc-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-family: "Sora", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  width: fit-content;
+}
+
+.sc-tag--blue {
+  background: #e8f0fe;
+  color: #1565f0;
+}
+
+.sc-tag--green {
+  background: #e6f7f0;
+  color: #0d7a4e;
+}
+
+.sc-tag--purple {
+  background: #f0ebff;
+  color: #6b21a8;
+}
+
+/* ── Heading ── */
+.sc-card-heading {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(26px, 3.2vw, 38px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0b1526;
+  margin-bottom: 16px;
+}
+
+/* ── Description ── */
+.sc-card-desc {
+  font-size: clamp(14px, 1.3vw, 15.5px);
+  color: #4a5a72;
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 420px;
+}
+
+/* ============================================================
+   FEATURE VARIANTS
+   ============================================================ */
+
+/* Grid (2-col, Card 1) */
+.sc-features--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.sc-feature {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.sc-feature-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #eef2ff;
+  color: #0079f3;
+  margin-top: 1px;
+}
+
+.sc-feature-title {
+  font-family: "Sora", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0b1526;
+  margin-bottom: 5px;
+}
+
+.sc-feature-desc {
+  font-size: 12.5px;
+  color: #64748b;
+  line-height: 1.55;
+}
+
+/* Pills (Card 2) */
+.sc-features--pills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sc-pills-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sc-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 100px;
+  border: 1.5px solid #e2e8f0;
+  font-family: "Sora", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #334155;
+  background: #f8fafc;
+  white-space: nowrap;
+}
+
+/* Bullet list (Card 3) */
+.sc-features--list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sc-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(13.5px, 1.2vw, 15px);
+  color: #334155;
+  line-height: 1.5;
+}
+
+.sc-list-item::before {
+  content: "";
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #0079f3;
+}
+
+/* ============================================================
+   OUTRO / CTA
+   ============================================================ */
+.sc-outro {
+  background: linear-gradient(135deg, #1565f0 0%, #0e4ecf 40%, #0a3ab8 100%);
+  padding: 100px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sc-outro-inner {
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.sc-outro-eyebrow {
+  font-family: "Sora", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
+}
+
+.sc-outro-heading {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(28px, 4.5vw, 50px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.sc-outro-sub {
+  font-size: clamp(14px, 1.4vw, 17px);
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.65;
+  margin-bottom: 40px;
+}
+
+.sc-outro-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 40px;
+  border-radius: 100px;
+  background: #fff;
+  color: #0050cc;
+  font-family: "Sora", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.sc-outro-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 36px rgba(0, 0, 0, 0.22);
+}
+
+/* ============================================================
+   DESKTOP OVERRIDES — cards become absolutely positioned
+   (JS adds .sc-desktop class to body when matchMedia fires)
+   ============================================================ */
+@media (min-width: 768px) {
+  body.sc-desktop .sc-cards-wrapper {
+    height: 100vh;
+    padding: 0;
+    overflow: visible;
+  }
+
+  body.sc-desktop .sc-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* GSAP will set xPercent:-50, yPercent:-50 to center */
+  }
+
+  body.sc-desktop .sc-progress {
+    opacity: 1;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET (≤ 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+  .sc-card-content {
+    padding: 40px 32px 40px 40px;
+  }
+  .sc-card-body--reverse .sc-card-content {
+    padding: 40px 40px 40px 32px;
+  }
+  .sc-card-heading {
+    font-size: 30px;
+  }
+  .sc-features--grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (≤ 767px)
+   ============================================================ */
+@media (max-width: 767px) {
+  .sc-intro {
+    padding: 80px 24px;
+  }
+
+  .sc-intro-heading {
+    font-size: 36px;
+  }
+
+  .sc-cards-wrapper {
+    gap: 20px;
+    padding: 48px 16px 60px;
+  }
+
+  /* Stack image below content on mobile */
+  .sc-card-body,
+  .sc-card-body--reverse {
+    flex-direction: column;
+    min-height: unset;
+  }
+
+  .sc-card-content,
+  .sc-card-body--reverse .sc-card-content {
+    padding: 32px 28px 24px;
+  }
+
+  .sc-card-image,
+  .sc-card-body--reverse .sc-card-image {
+    padding: 0 16px 16px;
+    height: 220px;
+  }
+
+  .sc-card-image img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .sc-card-heading {
+    font-size: 24px;
+  }
+
+  .sc-card-desc {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .sc-features--grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .sc-progress {
+    display: none;
+  }
+
+  .sc-outro {
+    padding: 72px 24px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — SMALL MOBILE (≤ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .sc-card-content,
+  .sc-card-body--reverse .sc-card-content {
+    padding: 28px 22px 20px;
+  }
+
+  .sc-card-image,
+  .sc-card-body--reverse .sc-card-image {
+    padding: 0 12px 12px;
+    height: 190px;
+  }
+
+  .sc-pill {
+    font-size: 11px;
+    padding: 5px 13px;
+  }
+}

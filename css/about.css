@@ -4,7 +4,13 @@
 
 /* ---- HERO ---- */
 .about-hero {
-  background: #050a14;
+  background: url(../assets/videos/ourprocessvid.gif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 700px;
+
   padding: 80px 0 72px;
   position: relative;
   overflow: hidden;

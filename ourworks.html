@@ -14,11 +14,15 @@
     <link rel="stylesheet" href="css/ourworks.css" />
   </head>
   <body>
-
     <!-- Top Banner -->
     <div class="top-banner">
-      <span>Looking for Smart Factory &amp; Industrial Intelligence Solutions?</span>
-      <a href="https://factis.in" target="_blank" class="banner-link">Visit factis.in by eLT Edge</a>
+      <span
+        >Looking for Smart Factory &amp; Industrial Intelligence
+        Solutions?</span
+      >
+      <a href="https://factis.in" target="_blank" class="banner-link"
+        >Visit factis.in by eLT Edge</a
+      >
     </div>
 
     <!-- Navbar -->
@@ -26,19 +30,55 @@
       <div class="nav-inner container">
         <div class="nav-logo">
           <a href="./index.html">
-            <img src="assets/images/logo white bg (1) 1.png" alt="eLT Edge" class="logo-img" />
+            <img
+              src="assets/images/logo white bg (1) 1.png"
+              alt="eLT Edge"
+              class="logo-img"
+            />
           </a>
         </div>
         <nav class="nav-links" id="navLinks">
           <a href="approach.html" class="nav-link">Approach</a>
-          <a href="#" class="nav-link">Capabilities</a>
-          <a href="ourworks.html" class="nav-link nav-link--active">Our Works</a>
-          <a href="./aboutus.html" class="nav-link">About Us</a>
+          <a href="capabilities-scroll.html" class="nav-link">Capabilities</a>
+          <a href="ourworks.html" class="nav-link nav-link--active"
+            >Our Works</a
+          >
+          <div class="nav-dropdown">
+            <a href="aboutus.html" class="nav-link dropdown-toggle">
+              About Us
+
+              <span class="dropdown-arrow">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </a>
+
+            <div class="dropdown-menu">
+              <a href="our-team.html">Our Team</a>
+              <a href="careers.html">Careers</a>
+            </div>
+          </div>
           <a href="resources.html" class="nav-link">Resources</a>
         </nav>
         <div class="nav-actions">
           <button class="btn-contact">Contact Us</button>
-          <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
             <span></span><span></span><span></span>
           </button>
         </div>
@@ -48,10 +88,12 @@
     <!-- Mobile Drawer -->
     <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
       <div class="drawer-inner">
-        <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+          ✕
+        </button>
         <nav class="drawer-links">
           <a href="approach.html">Approach</a>
-          <a href="#">Capabilities</a>
+          <a href="capabilities.html">Capabilities</a>
           <a href="./ourworks.html">Our Works</a>
           <a href="./aboutus.html">About Us</a>
           <a href="#">Resources</a>
@@ -65,15 +107,18 @@
          HERO SECTION
          ============================================================ -->
     <section class="works-hero" id="worksHero">
-      <div class="works-hero-inner container">
+      <!-- Ambient background glow orbs -->
+      <div class="wh-glow wh-glow--1"></div>
+      <div class="wh-glow wh-glow--2"></div>
+      <div class="wh-glow wh-glow--3"></div>
 
-        <!-- Left: Static Text -->
-        <div class="hero-text-col">
+      <div class="works-hero-inner container">
+        <!-- LEFT: Text Content -->
+        <div class="hero-text-col" id="heroTextCol">
           <h1 class="hero-main-title">Our Works</h1>
           <p class="hero-main-subtitle">
-            A Collection of Our Work, From Conceptual Thinking to
-            Engineering, Development, and Deployment of Intelligent,
-            Market-Ready Solutions
+            A Collection of Our Work, From Conceptual Thinking to Engineering,
+            Development, and Deployment of Intelligent, Market-Ready Solutions
           </p>
           <div class="hero-overview-label">Overview</div>
           <p class="hero-overview-body">
@@ -82,37 +127,71 @@
           </p>
         </div>
 
-        <!-- Right: Orbit Visual -->
-        <div class="hero-orbit-col">
-          <div class="orbit-stage" id="orbitStage">
-            <!-- Center main image -->
-            <div class="orbit-center" id="orbitCenter">
-              <img
-                src="assets/images/ourworks/ourworks1.png"
-                alt="Featured Product"
-                class="orbit-center-img"
-              />
-            </div>
-            <!-- Orbiting satellites -->
-            <div class="orbit-sat" id="sat0">
-              <img src="assets/images/ourworks/ourworks2.png" alt="" />
-            </div>
-            <div class="orbit-sat" id="sat1">
-              <img src="assets/images/ourworks/ourworks3.png" alt="" />
-            </div>
-            <div class="orbit-sat" id="sat2">
-              <img src="assets/images/ourworks/ourworks4.png" alt="" />
-            </div>
+        <!-- RIGHT: Animated Product Showcase -->
+        <div class="hero-showcase-col" id="heroShowcaseCol">
+          <!-- Slide category label -->
+          <div class="showcase-label-wrap">
+            <span class="showcase-label-text" id="showcaseLabelText">Code Design</span>
           </div>
-        </div>
-      </div>
 
-      <!-- Dots -->
+          <!-- Stage — all slides stacked, only one visible at a time -->
+          <div class="showcase-stage" id="showcaseStage">
+
+            <!-- Slide 0 · Code Design -->
+            <div class="showcase-slide" data-slide="0">
+              <div class="slide-layer slide-layer--back">
+                <img src="assets/images/ourworks/ourworks2.png" alt="" />
+              </div>
+              <div class="slide-layer slide-layer--main">
+                <img src="assets/images/ourworks/ourworks1.png" alt="Code Design" />
+              </div>
+            </div>
+
+            <!-- Slide 1 · Prototype Design -->
+            <div class="showcase-slide" data-slide="1">
+              <div class="slide-layer slide-layer--back">
+                <img src="assets/images/ourworks/ourworks3.png" alt="" />
+              </div>
+              <div class="slide-layer slide-layer--main">
+                <img src="assets/images/ourworks/ourworks2.png" alt="Prototype Design" />
+              </div>
+            </div>
+
+            <!-- Slide 2 · Product Engineering -->
+            <div class="showcase-slide" data-slide="2">
+              <div class="slide-layer slide-layer--back">
+                <img src="assets/images/ourworks/ourworks4.png" alt="" />
+              </div>
+              <div class="slide-layer slide-layer--main">
+                <img src="assets/images/ourworks/ourworks3.png" alt="Product Engineering" />
+              </div>
+            </div>
+
+            <!-- Slide 3 · Manufacturing & Deployment -->
+            <div class="showcase-slide" data-slide="3">
+              <div class="slide-layer slide-layer--back">
+                <img src="assets/images/ourworks/ourworks1.png" alt="" />
+              </div>
+              <div class="slide-layer slide-layer--main">
+                <img src="assets/images/ourworks/ourworks4.png" alt="Manufacturing &amp; Deployment" />
+              </div>
+            </div>
+
+            <!-- Bottom ambient glow pool -->
+            <div class="stage-glow-pool"></div>
+          </div>
+          <!-- /.showcase-stage -->
+        </div>
+        <!-- /.hero-showcase-col -->
+      </div>
+      <!-- /.works-hero-inner -->
+
+      <!-- Navigation dots -->
       <div class="hero-dots" id="heroDots">
-        <button class="hero-dot active" data-dot="0"></button>
-        <button class="hero-dot" data-dot="1"></button>
-        <button class="hero-dot" data-dot="2"></button>
-        <button class="hero-dot" data-dot="3"></button>
+        <button class="hero-dot active" data-dot="0" aria-label="Code Design"></button>
+        <button class="hero-dot" data-dot="1" aria-label="Prototype Design"></button>
+        <button class="hero-dot" data-dot="2" aria-label="Product Engineering"></button>
+        <button class="hero-dot" data-dot="3" aria-label="Manufacturing &amp; Deployment"></button>
       </div>
     </section>
 
@@ -123,10 +202,18 @@
       <div class="container">
         <div class="filter-inner" id="filterInner">
           <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="consumer">Consumer Electronics</button>
-          <button class="filter-btn" data-filter="industrial">Industrial Controls &amp; Instrumentation</button>
-          <button class="filter-btn" data-filter="iot">IoT &amp; Edge Computing</button>
-          <button class="filter-btn" data-filter="commercial">Commercial equipment</button>
+          <button class="filter-btn" data-filter="consumer">
+            Consumer Electronics
+          </button>
+          <button class="filter-btn" data-filter="industrial">
+            Industrial Controls &amp; Instrumentation
+          </button>
+          <button class="filter-btn" data-filter="iot">
+            IoT &amp; Edge Computing
+          </button>
+          <button class="filter-btn" data-filter="commercial">
+            Commercial equipment
+          </button>
         </div>
       </div>
     </div>
@@ -145,8 +232,12 @@
     <!-- ============================================================
          POPUP MODAL
          ============================================================ -->
-    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
-
+    <div
+      class="modal-overlay"
+      id="modalOverlay"
+      role="dialog"
+      aria-modal="true"
+    >
       <!--
         modal-scene: flex column — stacks float-img on top of modal-rail.
         modal-rail:  position:relative — the arrows are absolute-positioned
@@ -154,7 +245,6 @@
                      not on the full scene height.
       -->
       <div class="modal-scene" id="modalWrapper">
-
         <!-- Floating image card — overlaps the box below -->
         <div class="modal-float-img" id="modalFloatImg">
           <div class="modal-img-card">
@@ -164,29 +254,63 @@
 
         <!-- Rail: transparent, same size as box, anchors arrows -->
         <div class="modal-rail">
-
           <!-- Left arrow — absolute, centered on rail/box height -->
-          <button class="modal-nav modal-nav-prev" id="modalPrev" aria-label="Previous project">
+          <button
+            class="modal-nav modal-nav-prev"
+            id="modalPrev"
+            aria-label="Previous project"
+          >
             <svg viewBox="0 0 24 24" fill="none" width="18" height="18">
-              <polyline points="15 18 9 12 15 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <polyline
+                points="15 18 9 12 15 6"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
           </button>
 
           <!-- Right arrow -->
-          <button class="modal-nav modal-nav-next" id="modalNext" aria-label="Next project">
+          <button
+            class="modal-nav modal-nav-next"
+            id="modalNext"
+            aria-label="Next project"
+          >
             <svg viewBox="0 0 24 24" fill="none" width="18" height="18">
-              <polyline points="9 18 15 12 9 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <polyline
+                points="9 18 15 12 9 6"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
           </button>
 
           <!-- Blue gradient popup box -->
           <div class="modal-box" id="modalBox">
-
             <!-- Close -->
             <button class="modal-close" id="modalClose" aria-label="Close">
               <svg viewBox="0 0 24 24" fill="none" width="13" height="13">
-                <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <line
+                  x1="18"
+                  y1="6"
+                  x2="6"
+                  y2="18"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="6"
+                  y1="6"
+                  x2="18"
+                  y2="18"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                />
               </svg>
             </button>
 
@@ -200,11 +324,12 @@
               <div class="modal-section-label">Engineering Spotlight</div>
               <div class="modal-spotlight" id="modalSpotlight"></div>
             </div>
-
-          </div><!-- .modal-box -->
-        </div><!-- .modal-rail -->
-      </div><!-- .modal-scene -->
-
+          </div>
+          <!-- .modal-box -->
+        </div>
+        <!-- .modal-rail -->
+      </div>
+      <!-- .modal-scene -->
     </div>
 
     <!-- ============================================================
@@ -228,35 +353,74 @@
       <div class="container footer-inner">
         <div class="footer-top">
           <div class="footer-brand">
-            <img src="assets/images/logo in white.png" alt="eLT Edge" class="footer-logo" />
+            <img
+              src="assets/images/logo in white.png"
+              alt="eLT Edge"
+              class="footer-logo"
+            />
             <p>
               Embedded product development from concept to mass production. Your
               trusted engineering partner.
             </p>
             <div class="footer-social">
               <a href="#" aria-label="Twitter" class="social-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117Z" />
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"
+                  />
                 </svg>
               </a>
               <a href="#" aria-label="Instagram" class="social-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069Zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881Z" />
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069Zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881Z"
+                  />
                 </svg>
               </a>
               <a href="#" aria-label="LinkedIn" class="social-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065Zm1.782 13.019H3.555V9h3.564v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z" />
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065Zm1.782 13.019H3.555V9h3.564v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z"
+                  />
                 </svg>
               </a>
               <a href="#" aria-label="Facebook" class="social-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073Z" />
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073Z"
+                  />
                 </svg>
               </a>
               <a href="#" aria-label="Discord" class="social-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.08.114 18.1.138 18.116a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z" />
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.08.114 18.1.138 18.116a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"
+                  />
                 </svg>
               </a>
             </div>
@@ -302,326 +466,488 @@
          ============================================================ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/ourworks.js"></script>
     <script>
       (function () {
-        'use strict';
+        "use strict";
 
         /* ----------------------------------------------------------
            PROJECT DATA
         ---------------------------------------------------------- */
         var IMGS = [
-          'assets/images/ourworks/ourworks1.png',
-          'assets/images/ourworks/ourworks2.png',
-          'assets/images/ourworks/ourworks3.png',
-          'assets/images/ourworks/ourworks4.png'
+          "assets/images/ourworks/ourworks1.png",
+          "assets/images/ourworks/ourworks2.png",
+          "assets/images/ourworks/ourworks3.png",
+          "assets/images/ourworks/ourworks4.png",
         ];
 
         var projects = [
           {
             id: 1,
-            category: 'consumer',
-            catLabel: 'Consumer Electronics',
-            title: 'Smart Home Automation Controller',
-            tags: ['Hardware Design', 'PCB layout & routing', 'Power integrity analysis', 'Lab prototyping'],
+            category: "consumer",
+            catLabel: "Consumer Electronics",
+            title: "Smart Home Automation Controller",
+            tags: [
+              "Hardware Design",
+              "PCB layout & routing",
+              "Power integrity analysis",
+              "Lab prototyping",
+            ],
             img: IMGS[0],
-            challenge: 'Our custom IoT application development service delivers end-to-end solutions for connected devices and systems. We specialize in creating secure, scalable, and efficient IoT applications that bridge edge devices with cloud infrastructure, enabling data-driven insights and remote control capabilities across industrial, commercial, and scientific applications.',
-            capabilities: 'Hardware design, firmware development, mechanical design, UI design, PCB layout & routing, wireless protocol implementation, 3D rendering',
-            spotlight: 'INTUITIVE MINIMAL USER INTERFACE DESIGN'
+            challenge:
+              "Our custom IoT application development service delivers end-to-end solutions for connected devices and systems. We specialize in creating secure, scalable, and efficient IoT applications that bridge edge devices with cloud infrastructure, enabling data-driven insights and remote control capabilities across industrial, commercial, and scientific applications.",
+            capabilities:
+              "Hardware design, firmware development, mechanical design, UI design, PCB layout & routing, wireless protocol implementation, 3D rendering",
+            spotlight: "INTUITIVE MINIMAL USER INTERFACE DESIGN",
           },
           {
             id: 2,
-            category: 'industrial',
-            catLabel: 'Industrial Controls & Instrumentation',
-            title: 'Linux Single-Board Computer',
-            tags: ['Mechanical design', 'DFM optimization', 'System-on-module', 'True kernel'],
+            category: "industrial",
+            catLabel: "Industrial Controls & Instrumentation",
+            title: "Linux Single-Board Computer",
+            tags: [
+              "Mechanical design",
+              "DFM optimization",
+              "System-on-module",
+              "True kernel",
+            ],
             img: IMGS[1],
-            challenge: 'Designed a compact, high-performance Linux SBC tailored for industrial environments requiring real-time processing, extensive I/O interfaces, and long-term supply chain stability. The platform supports custom Linux BSPs with full kernel-level customization.',
-            capabilities: 'System-on-module integration, BSP development, mechanical design, DFM optimization, Linux kernel customization, hardware bring-up',
-            spotlight: 'CUSTOM LINUX BSP WITH REAL-TIME KERNEL PATCHES'
+            challenge:
+              "Designed a compact, high-performance Linux SBC tailored for industrial environments requiring real-time processing, extensive I/O interfaces, and long-term supply chain stability. The platform supports custom Linux BSPs with full kernel-level customization.",
+            capabilities:
+              "System-on-module integration, BSP development, mechanical design, DFM optimization, Linux kernel customization, hardware bring-up",
+            spotlight: "CUSTOM LINUX BSP WITH REAL-TIME KERNEL PATCHES",
           },
           {
             id: 3,
-            category: 'iot',
-            catLabel: 'IoT & Edge Computing',
-            title: 'Digital IoT-enabled Gas Detection Module',
-            tags: ['Firmware development', 'PCB layout & routing', 'User interface design', 'Cellular connectivity'],
+            category: "iot",
+            catLabel: "IoT & Edge Computing",
+            title: "Digital IoT-enabled Gas Detection Module",
+            tags: [
+              "Firmware development",
+              "PCB layout & routing",
+              "User interface design",
+              "Cellular connectivity",
+            ],
             img: IMGS[2],
-            challenge: 'Developed an IoT gas detection module with multi-sensor fusion, real-time alert systems, and cloud connectivity. The system integrates with industrial safety protocols and provides remote monitoring capabilities through a web dashboard.',
-            capabilities: 'Firmware development, multi-sensor fusion, cellular modem integration, PCB layout & routing, cloud backend, user interface design',
-            spotlight: 'MULTI-SENSOR FUSION WITH AI-BASED ANOMALY DETECTION'
+            challenge:
+              "Developed an IoT gas detection module with multi-sensor fusion, real-time alert systems, and cloud connectivity. The system integrates with industrial safety protocols and provides remote monitoring capabilities through a web dashboard.",
+            capabilities:
+              "Firmware development, multi-sensor fusion, cellular modem integration, PCB layout & routing, cloud backend, user interface design",
+            spotlight: "MULTI-SENSOR FUSION WITH AI-BASED ANOMALY DETECTION",
           },
           {
             id: 4,
-            category: 'consumer',
-            catLabel: 'Consumer Electronics',
-            title: 'Wireless Audience Polling System',
-            tags: ['RF protocol design', 'DFM-OTA optimization', 'Power & signal integrity', 'Custom wireless protocol'],
+            category: "consumer",
+            catLabel: "Consumer Electronics",
+            title: "Wireless Audience Polling System",
+            tags: [
+              "RF protocol design",
+              "DFM-OTA optimization",
+              "Power & signal integrity",
+              "Custom wireless protocol",
+            ],
             img: IMGS[3],
-            challenge: 'Created a proprietary sub-GHz wireless polling system capable of handling thousands of simultaneous responses with sub-second latency. The system includes base station hardware, handheld response units, and real-time results visualization software.',
-            capabilities: 'RF protocol design, custom wireless stack, firmware development, PCB design, power optimization, DFM, OTA firmware updates',
-            spotlight: 'PROPRIETARY SUB-GHz PROTOCOL WITH 2000+ CONCURRENT DEVICES'
+            challenge:
+              "Created a proprietary sub-GHz wireless polling system capable of handling thousands of simultaneous responses with sub-second latency. The system includes base station hardware, handheld response units, and real-time results visualization software.",
+            capabilities:
+              "RF protocol design, custom wireless stack, firmware development, PCB design, power optimization, DFM, OTA firmware updates",
+            spotlight:
+              "PROPRIETARY SUB-GHz PROTOCOL WITH 2000+ CONCURRENT DEVICES",
           },
           {
             id: 5,
-            category: 'industrial',
-            catLabel: 'Industrial Controls & Instrumentation',
-            title: 'Battery Management System for Autonomous Mobile Robots',
-            tags: ['Analog & digital hardware', 'Firmware development', 'PCB layout & routing', 'Mechanical design'],
+            category: "industrial",
+            catLabel: "Industrial Controls & Instrumentation",
+            title: "Battery Management System for Autonomous Mobile Robots",
+            tags: [
+              "Analog & digital hardware",
+              "Firmware development",
+              "PCB layout & routing",
+              "Mechanical design",
+            ],
             img: IMGS[0],
-            challenge: 'Engineered a high-precision BMS for autonomous mobile robot fleets, supporting lithium-ion pack management with cell balancing, state-of-charge estimation, thermal management, and safety protection circuits for 24/7 industrial operation.',
-            capabilities: 'Analog mixed-signal design, BMS firmware, cell balancing algorithms, CAN bus integration, thermal management, PCB layout & routing',
-            spotlight: 'COULOMB COUNTING WITH ADAPTIVE SOC ESTIMATION ALGORITHM'
+            challenge:
+              "Engineered a high-precision BMS for autonomous mobile robot fleets, supporting lithium-ion pack management with cell balancing, state-of-charge estimation, thermal management, and safety protection circuits for 24/7 industrial operation.",
+            capabilities:
+              "Analog mixed-signal design, BMS firmware, cell balancing algorithms, CAN bus integration, thermal management, PCB layout & routing",
+            spotlight:
+              "COULOMB COUNTING WITH ADAPTIVE SOC ESTIMATION ALGORITHM",
           },
           {
             id: 6,
-            category: 'industrial',
-            catLabel: 'Industrial Controls & Instrumentation',
-            title: 'Industrial Single-Board Computer',
-            tags: ['Cellular IoT integration', 'Driver development', 'Linux kernel & driver development'],
+            category: "industrial",
+            catLabel: "Industrial Controls & Instrumentation",
+            title: "Industrial Single-Board Computer",
+            tags: [
+              "Cellular IoT integration",
+              "Driver development",
+              "Linux kernel & driver development",
+            ],
             img: IMGS[1],
-            challenge: 'Developed a ruggedized industrial SBC with extended temperature range, multiple industrial interfaces (CAN, RS-485, Ethernet), cellular connectivity, and a custom Linux distribution optimized for industrial edge computing workloads.',
-            capabilities: 'Hardware design, Linux kernel development, device driver development, cellular IoT integration, industrial protocol stack, thermal design',
-            spotlight: 'EXTENDED TEMPERATURE RANGE -40°C TO +85°C OPERATION'
+            challenge:
+              "Developed a ruggedized industrial SBC with extended temperature range, multiple industrial interfaces (CAN, RS-485, Ethernet), cellular connectivity, and a custom Linux distribution optimized for industrial edge computing workloads.",
+            capabilities:
+              "Hardware design, Linux kernel development, device driver development, cellular IoT integration, industrial protocol stack, thermal design",
+            spotlight: "EXTENDED TEMPERATURE RANGE -40°C TO +85°C OPERATION",
           },
           {
             id: 7,
-            category: 'industrial',
-            catLabel: 'Industrial Controls & Instrumentation',
-            title: 'PLC Panel Opacity Control Module',
-            tags: ['Firmware development', 'Wireless implementation', 'Mixed signal PCB layout', 'Analog & digital hardware'],
+            category: "industrial",
+            catLabel: "Industrial Controls & Instrumentation",
+            title: "PLC Panel Opacity Control Module",
+            tags: [
+              "Firmware development",
+              "Wireless implementation",
+              "Mixed signal PCB layout",
+              "Analog & digital hardware",
+            ],
             img: IMGS[2],
-            challenge: 'Designed a PLC-compatible opacity control module for industrial panel applications, featuring precise analog output control, wireless configuration capability, and seamless integration with existing automation infrastructure.',
-            capabilities: 'Mixed-signal PCB design, firmware development, PLC protocol integration, wireless module implementation, analog signal conditioning',
-            spotlight: 'WIRELESS PLC INTEGRATION WITH 0.1% OPACITY RESOLUTION'
+            challenge:
+              "Designed a PLC-compatible opacity control module for industrial panel applications, featuring precise analog output control, wireless configuration capability, and seamless integration with existing automation infrastructure.",
+            capabilities:
+              "Mixed-signal PCB design, firmware development, PLC protocol integration, wireless module implementation, analog signal conditioning",
+            spotlight: "WIRELESS PLC INTEGRATION WITH 0.1% OPACITY RESOLUTION",
           },
           {
             id: 8,
-            category: 'industrial',
-            catLabel: 'Industrial Controls & Instrumentation',
-            title: 'Chemical Testing Lab Equipment',
-            tags: ['Signal integrity analysis', 'Linux kernel customization', 'SDM hardware design', 'Analog front-end design'],
+            category: "industrial",
+            catLabel: "Industrial Controls & Instrumentation",
+            title: "Chemical Testing Lab Equipment",
+            tags: [
+              "Signal integrity analysis",
+              "Linux kernel customization",
+              "SDM hardware design",
+              "Analog front-end design",
+            ],
             img: IMGS[3],
-            challenge: 'Built precision analog front-end measurement equipment for chemical laboratory analysis, requiring ultra-low noise signal chains, high-resolution ADCs, and robust data acquisition software with calibration and traceability features.',
-            capabilities: 'Analog front-end design, SDM hardware, signal integrity analysis, Linux kernel customization, data acquisition software, calibration systems',
-            spotlight: 'SUB-MICROVOLT NOISE FLOOR WITH 24-BIT SIGMA-DELTA ADC'
+            challenge:
+              "Built precision analog front-end measurement equipment for chemical laboratory analysis, requiring ultra-low noise signal chains, high-resolution ADCs, and robust data acquisition software with calibration and traceability features.",
+            capabilities:
+              "Analog front-end design, SDM hardware, signal integrity analysis, Linux kernel customization, data acquisition software, calibration systems",
+            spotlight: "SUB-MICROVOLT NOISE FLOOR WITH 24-BIT SIGMA-DELTA ADC",
           },
           {
             id: 9,
-            category: 'industrial',
-            catLabel: 'Industrial Controls & Instrumentation',
-            title: 'Industrial I/O Module',
-            tags: ['Protocol implementation', 'Linux kernel development', 'Microprocessor hardware design', 'Signal PCB design'],
+            category: "industrial",
+            catLabel: "Industrial Controls & Instrumentation",
+            title: "Industrial I/O Module",
+            tags: [
+              "Protocol implementation",
+              "Linux kernel development",
+              "Microprocessor hardware design",
+              "Signal PCB design",
+            ],
             img: IMGS[0],
-            challenge: 'Developed a versatile industrial I/O expansion module supporting multiple fieldbuses (Modbus, Profibus, EtherCAT), with configurable analog/digital I/O channels and real-time processing for deterministic control applications.',
-            capabilities: 'Industrial fieldbus protocols, microprocessor hardware design, Linux kernel development, real-time firmware, signal PCB design, EMC compliance',
-            spotlight: 'MULTI-PROTOCOL FIELDBUS WITH <1μS DETERMINISTIC LATENCY'
+            challenge:
+              "Developed a versatile industrial I/O expansion module supporting multiple fieldbuses (Modbus, Profibus, EtherCAT), with configurable analog/digital I/O channels and real-time processing for deterministic control applications.",
+            capabilities:
+              "Industrial fieldbus protocols, microprocessor hardware design, Linux kernel development, real-time firmware, signal PCB design, EMC compliance",
+            spotlight:
+              "MULTI-PROTOCOL FIELDBUS WITH <1μS DETERMINISTIC LATENCY",
           },
           {
             id: 10,
-            category: 'industrial',
-            catLabel: 'Industrial Controls & Instrumentation',
-            title: 'Industrial Chemical Process Analyzer',
-            tags: ['Linux kernel customization', 'Modular Analog Design', 'Touch UI design', 'Signal integrity analysis'],
+            category: "industrial",
+            catLabel: "Industrial Controls & Instrumentation",
+            title: "Industrial Chemical Process Analyzer",
+            tags: [
+              "Linux kernel customization",
+              "Modular Analog Design",
+              "Touch UI design",
+              "Signal integrity analysis",
+            ],
             img: IMGS[1],
-            challenge: 'Created an integrated chemical process analyzer with modular sensor inputs, real-time data processing, and a ruggedized touchscreen interface for harsh industrial environments. The system provides continuous process monitoring with alarm management.',
-            capabilities: 'Modular analog hardware design, Linux kernel customization, touch UI development, signal integrity analysis, industrial enclosure design',
-            spotlight: 'MODULAR SENSOR ARCHITECTURE WITH HOT-SWAP CAPABILITY'
+            challenge:
+              "Created an integrated chemical process analyzer with modular sensor inputs, real-time data processing, and a ruggedized touchscreen interface for harsh industrial environments. The system provides continuous process monitoring with alarm management.",
+            capabilities:
+              "Modular analog hardware design, Linux kernel customization, touch UI development, signal integrity analysis, industrial enclosure design",
+            spotlight: "MODULAR SENSOR ARCHITECTURE WITH HOT-SWAP CAPABILITY",
           },
           {
             id: 11,
-            category: 'commercial',
-            catLabel: 'Commercial Equipment',
-            title: 'Thermal Imaging Camouflage System',
-            tags: ['Closed-loop control development', 'Field testing', 'Thermal & power simulations', 'PCB layout & routing'],
+            category: "commercial",
+            catLabel: "Commercial Equipment",
+            title: "Thermal Imaging Camouflage System",
+            tags: [
+              "Closed-loop control development",
+              "Field testing",
+              "Thermal & power simulations",
+              "PCB layout & routing",
+            ],
             img: IMGS[2],
-            challenge: 'Engineered an advanced thermal management system using adaptive material control for thermal signature management. The system uses closed-loop feedback with IR sensors to dynamically adjust thermal emission patterns in real time.',
-            capabilities: 'Thermal simulation, closed-loop control firmware, power electronics design, field testing, PCB layout & routing, EMI/EMC compliance',
-            spotlight: 'REAL-TIME ADAPTIVE THERMAL SIGNATURE CONTROL SYSTEM'
+            challenge:
+              "Engineered an advanced thermal management system using adaptive material control for thermal signature management. The system uses closed-loop feedback with IR sensors to dynamically adjust thermal emission patterns in real time.",
+            capabilities:
+              "Thermal simulation, closed-loop control firmware, power electronics design, field testing, PCB layout & routing, EMI/EMC compliance",
+            spotlight: "REAL-TIME ADAPTIVE THERMAL SIGNATURE CONTROL SYSTEM",
           },
           {
             id: 12,
-            category: 'iot',
-            catLabel: 'IoT & Edge Computing',
-            title: 'Smart Residential Energy Meter',
-            tags: ['Analog front-end design', 'Linux kernel development', 'Microprocessor hardware design', 'Signal PCB & routing'],
+            category: "iot",
+            catLabel: "IoT & Edge Computing",
+            title: "Smart Residential Energy Meter",
+            tags: [
+              "Analog front-end design",
+              "Linux kernel development",
+              "Microprocessor hardware design",
+              "Signal PCB & routing",
+            ],
             img: IMGS[3],
-            challenge: 'Developed a smart energy metering solution with tamper detection, bidirectional metering for solar installations, real-time consumption analytics, and over-the-air update capability for large-scale residential deployment.',
-            capabilities: 'Analog front-end design, energy measurement IC integration, Linux kernel development, cloud connectivity, OTA updates, microprocessor hardware design',
-            spotlight: 'CLASS 1 METERING ACCURACY WITH BIDIRECTIONAL SOLAR SUPPORT'
+            challenge:
+              "Developed a smart energy metering solution with tamper detection, bidirectional metering for solar installations, real-time consumption analytics, and over-the-air update capability for large-scale residential deployment.",
+            capabilities:
+              "Analog front-end design, energy measurement IC integration, Linux kernel development, cloud connectivity, OTA updates, microprocessor hardware design",
+            spotlight:
+              "CLASS 1 METERING ACCURACY WITH BIDIRECTIONAL SOLAR SUPPORT",
           },
           {
             id: 13,
-            category: 'industrial',
-            catLabel: 'Industrial Controls & Instrumentation',
-            title: 'Paper Tube Rolling Special Purpose Machine',
-            tags: ['PLC to embedded conversion', 'Firmware development', 'System integration', 'Field testing'],
+            category: "industrial",
+            catLabel: "Industrial Controls & Instrumentation",
+            title: "Paper Tube Rolling Special Purpose Machine",
+            tags: [
+              "PLC to embedded conversion",
+              "Firmware development",
+              "System integration",
+              "Field testing",
+            ],
             img: IMGS[0],
-            challenge: 'Converted a legacy PLC-based paper tube rolling machine to a modern embedded control platform, improving precision, adding recipe management, real-time diagnostics, and remote monitoring while maintaining backward compatibility.',
-            capabilities: 'PLC migration, embedded controller design, motor control firmware, HMI development, system integration, field testing and commissioning',
-            spotlight: 'LEGACY PLC MIGRATION WITH ZERO PRODUCTION DOWNTIME'
+            challenge:
+              "Converted a legacy PLC-based paper tube rolling machine to a modern embedded control platform, improving precision, adding recipe management, real-time diagnostics, and remote monitoring while maintaining backward compatibility.",
+            capabilities:
+              "PLC migration, embedded controller design, motor control firmware, HMI development, system integration, field testing and commissioning",
+            spotlight: "LEGACY PLC MIGRATION WITH ZERO PRODUCTION DOWNTIME",
           },
           {
             id: 14,
-            category: 'industrial',
-            catLabel: 'Industrial Controls & Instrumentation',
-            title: 'Wire-Bending Machine Embedded Controller',
-            tags: ['Closed-loop control development', 'Field testing', 'Thermal & power simulations', 'PCB layout & routing'],
+            category: "industrial",
+            catLabel: "Industrial Controls & Instrumentation",
+            title: "Wire-Bending Machine Embedded Controller",
+            tags: [
+              "Closed-loop control development",
+              "Field testing",
+              "Thermal & power simulations",
+              "PCB layout & routing",
+            ],
             img: IMGS[1],
-            challenge: 'Designed a high-speed closed-loop motion controller for precision wire-bending machinery, achieving sub-millimeter bending accuracy at production speeds. The system includes servo drive integration, recipe storage, and quality monitoring.',
-            capabilities: 'Closed-loop control development, servo drive integration, firmware development, thermal & power simulations, PCB layout & routing, field testing',
-            spotlight: 'SUB-MILLIMETER BENDING ACCURACY AT 200 CYCLES/MINUTE'
+            challenge:
+              "Designed a high-speed closed-loop motion controller for precision wire-bending machinery, achieving sub-millimeter bending accuracy at production speeds. The system includes servo drive integration, recipe storage, and quality monitoring.",
+            capabilities:
+              "Closed-loop control development, servo drive integration, firmware development, thermal & power simulations, PCB layout & routing, field testing",
+            spotlight: "SUB-MILLIMETER BENDING ACCURACY AT 200 CYCLES/MINUTE",
           },
           {
             id: 15,
-            category: 'industrial',
-            catLabel: 'Industrial Controls & Instrumentation',
-            title: 'Industrial Single-Board Computer',
-            tags: ['SOM-based hardware design'],
+            category: "industrial",
+            catLabel: "Industrial Controls & Instrumentation",
+            title: "Industrial Single-Board Computer",
+            tags: ["SOM-based hardware design"],
             img: IMGS[2],
-            challenge: 'Developed a cost-optimized industrial SBC using SOM (System-on-Module) architecture, providing standardized compute with customizable carrier boards for rapid deployment across multiple industrial automation applications.',
-            capabilities: 'SOM-based hardware design, carrier board development, BSP customization, industrial interface integration, production test framework',
-            spotlight: 'SOM ARCHITECTURE REDUCING TIME-TO-MARKET BY 40%'
-          }
+            challenge:
+              "Developed a cost-optimized industrial SBC using SOM (System-on-Module) architecture, providing standardized compute with customizable carrier boards for rapid deployment across multiple industrial automation applications.",
+            capabilities:
+              "SOM-based hardware design, carrier board development, BSP customization, industrial interface integration, production test framework",
+            spotlight: "SOM ARCHITECTURE REDUCING TIME-TO-MARKET BY 40%",
+          },
         ];
 
         /* ----------------------------------------------------------
            BUILD CARDS
         ---------------------------------------------------------- */
-        var grid = document.getElementById('worksGrid');
-        var currentFilter = 'all';
+        var grid = document.getElementById("worksGrid");
+        var currentFilter = "all";
         var currentIndex = 0;
         var filteredProjects = [];
 
         function buildCards(filter) {
           currentFilter = filter;
-          filteredProjects = filter === 'all'
-            ? projects.slice()
-            : projects.filter(function (p) { return p.category === filter; });
+          filteredProjects =
+            filter === "all"
+              ? projects.slice()
+              : projects.filter(function (p) {
+                  return p.category === filter;
+                });
 
-          grid.innerHTML = '';
+          grid.innerHTML = "";
 
           filteredProjects.forEach(function (p, idx) {
-            var card = document.createElement('div');
-            card.className = 'project-card';
-            card.setAttribute('data-index', idx);
-            card.setAttribute('role', 'button');
-            card.setAttribute('tabindex', '0');
-            card.setAttribute('aria-label', 'Open ' + p.title);
+            var card = document.createElement("div");
+            card.className = "project-card";
+            card.setAttribute("data-index", idx);
+            card.setAttribute("role", "button");
+            card.setAttribute("tabindex", "0");
+            card.setAttribute("aria-label", "Open " + p.title);
 
-            var tagsHtml = p.tags.map(function (t) {
-              return '<span class="card-tag">' + t + '</span>';
-            }).join('');
+            var tagsHtml = p.tags
+              .map(function (t) {
+                return '<span class="card-tag">' + t + "</span>";
+              })
+              .join("");
 
             card.innerHTML =
               '<button class="card-arrow-btn" tabindex="-1" aria-hidden="true">' +
-                '<svg viewBox="0 0 14 14" fill="none">' +
-                  '<polyline points="3 11 11 3" stroke="#0079f3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
-                  '<polyline points="5 3 11 3 11 9" stroke="#0079f3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
-                '</svg>' +
-              '</button>' +
+              '<svg viewBox="0 0 14 14" fill="none">' +
+              '<polyline points="3 11 11 3" stroke="#0079f3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
+              '<polyline points="5 3 11 3 11 9" stroke="#0079f3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
+              "</svg>" +
+              "</button>" +
               '<div class="card-img-zone">' +
-                '<img src="' + p.img + '" alt="' + p.title + '" loading="lazy" />' +
-              '</div>' +
+              '<img src="' +
+              p.img +
+              '" alt="' +
+              p.title +
+              '" loading="lazy" />' +
+              "</div>" +
               '<div class="card-body">' +
-                '<div class="card-title">' + p.title + '</div>' +
-                '<div class="card-tags">' + tagsHtml + '</div>' +
-              '</div>';
+              '<div class="card-title">' +
+              p.title +
+              "</div>" +
+              '<div class="card-tags">' +
+              tagsHtml +
+              "</div>" +
+              "</div>";
 
-            card.addEventListener('click', function () { openModal(idx); });
-            card.addEventListener('keydown', function (e) {
-              if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(idx); }
+            card.addEventListener("click", function () {
+              openModal(idx);
+            });
+            card.addEventListener("keydown", function (e) {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                openModal(idx);
+              }
             });
 
             grid.appendChild(card);
           });
 
           /* GSAP card entrance animation */
-          if (typeof gsap !== 'undefined') {
-            gsap.fromTo('.project-card',
+          if (typeof gsap !== "undefined") {
+            gsap.fromTo(
+              ".project-card",
               { opacity: 0, y: 24 },
-              { opacity: 1, y: 0, duration: 0.45, stagger: 0.06, ease: 'power2.out' }
+              {
+                opacity: 1,
+                y: 0,
+                duration: 0.45,
+                stagger: 0.06,
+                ease: "power2.out",
+              },
             );
           }
         }
 
-        buildCards('all');
+        buildCards("all");
 
         /* ----------------------------------------------------------
            FILTER TABS
         ---------------------------------------------------------- */
-        var filterBtns = document.querySelectorAll('.filter-btn');
+        var filterBtns = document.querySelectorAll(".filter-btn");
         filterBtns.forEach(function (btn) {
-          btn.addEventListener('click', function () {
-            filterBtns.forEach(function (b) { b.classList.remove('active'); });
-            btn.classList.add('active');
-            buildCards(btn.getAttribute('data-filter'));
+          btn.addEventListener("click", function () {
+            filterBtns.forEach(function (b) {
+              b.classList.remove("active");
+            });
+            btn.classList.add("active");
+            buildCards(btn.getAttribute("data-filter"));
           });
         });
 
         /* ----------------------------------------------------------
            MODAL
         ---------------------------------------------------------- */
-        var overlay = document.getElementById('modalOverlay');
-        var modalWrapper = document.getElementById('modalWrapper');
-        var modalBox = document.getElementById('modalBox');
-        var modalFloatImg = document.getElementById('modalFloatImg');
-        var modalImg = document.getElementById('modalImg');
-        var modalCat = document.getElementById('modalCategory');
-        var modalChal = document.getElementById('modalChallenge');
-        var modalCap = document.getElementById('modalCapabilities');
-        var modalSpot = document.getElementById('modalSpotlight');
+        var overlay = document.getElementById("modalOverlay");
+        var modalWrapper = document.getElementById("modalWrapper");
+        var modalBox = document.getElementById("modalBox");
+        var modalFloatImg = document.getElementById("modalFloatImg");
+        var modalImg = document.getElementById("modalImg");
+        var modalCat = document.getElementById("modalCategory");
+        var modalChal = document.getElementById("modalChallenge");
+        var modalCap = document.getElementById("modalCapabilities");
+        var modalSpot = document.getElementById("modalSpotlight");
 
         function populateModal(p) {
           modalImg.src = p.img;
           modalImg.alt = p.title;
-          modalCat.textContent = p.catLabel.toUpperCase() + ' – ' + p.title.toUpperCase();
+          modalCat.textContent =
+            p.catLabel.toUpperCase() + " – " + p.title.toUpperCase();
           modalChal.textContent = p.challenge;
           modalCap.textContent = p.capabilities;
           modalSpot.textContent = p.spotlight;
-          document.getElementById('modalContent').scrollTop = 0;
+          document.getElementById("modalContent").scrollTop = 0;
         }
 
         function openModal(idx) {
           currentIndex = idx;
           populateModal(filteredProjects[idx]);
-          overlay.style.display = 'flex';
+          overlay.style.display = "flex";
 
-          if (typeof gsap !== 'undefined') {
-            gsap.fromTo(overlay, { opacity: 0 }, { opacity: 1, duration: 0.28 });
-            gsap.fromTo(modalBox,
-              { scale: 0.88, opacity: 0, y: 30 },
-              { scale: 1, opacity: 1, y: 0, duration: 0.42, ease: 'back.out(1.4)' }
+          if (typeof gsap !== "undefined") {
+            gsap.fromTo(
+              overlay,
+              { opacity: 0 },
+              { opacity: 1, duration: 0.28 },
             );
-            gsap.fromTo(modalFloatImg,
+            gsap.fromTo(
+              modalBox,
+              { scale: 0.88, opacity: 0, y: 30 },
+              {
+                scale: 1,
+                opacity: 1,
+                y: 0,
+                duration: 0.42,
+                ease: "back.out(1.4)",
+              },
+            );
+            gsap.fromTo(
+              modalFloatImg,
               { y: -20, opacity: 0, scale: 0.9 },
-              { y: 0, opacity: 1, scale: 1, duration: 0.4, delay: 0.18, ease: 'back.out(1.3)' }
+              {
+                y: 0,
+                opacity: 1,
+                scale: 1,
+                duration: 0.4,
+                delay: 0.18,
+                ease: "back.out(1.3)",
+              },
             );
           }
 
-          document.body.style.overflow = 'hidden';
+          document.body.style.overflow = "hidden";
         }
 
         function closeModal() {
-          if (typeof gsap !== 'undefined') {
-            gsap.to(modalFloatImg, { y: -14, opacity: 0, scale: 0.9, duration: 0.2, ease: 'power2.in' });
+          if (typeof gsap !== "undefined") {
+            gsap.to(modalFloatImg, {
+              y: -14,
+              opacity: 0,
+              scale: 0.9,
+              duration: 0.2,
+              ease: "power2.in",
+            });
             gsap.to(modalBox, {
-              scale: 0.88, opacity: 0, y: 20, duration: 0.25, ease: 'power2.in',
+              scale: 0.88,
+              opacity: 0,
+              y: 20,
+              duration: 0.25,
+              ease: "power2.in",
               onComplete: function () {
                 gsap.to(overlay, {
-                  opacity: 0, duration: 0.18,
+                  opacity: 0,
+                  duration: 0.18,
                   onComplete: function () {
-                    overlay.style.display = 'none';
-                    document.body.style.overflow = '';
-                    gsap.set(modalBox, { clearProps: 'all' });
-                    gsap.set(modalFloatImg, { clearProps: 'all' });
-                    gsap.set(overlay, { clearProps: 'all' });
-                  }
+                    overlay.style.display = "none";
+                    document.body.style.overflow = "";
+                    gsap.set(modalBox, { clearProps: "all" });
+                    gsap.set(modalFloatImg, { clearProps: "all" });
+                    gsap.set(overlay, { clearProps: "all" });
+                  },
                 });
-              }
+              },
             });
           } else {
-            overlay.style.display = 'none';
-            document.body.style.overflow = '';
+            overlay.style.display = "none";
+            document.body.style.overflow = "";
           }
         }
 
@@ -631,128 +957,52 @@
           if (next >= filteredProjects.length) next = 0;
           currentIndex = next;
 
-          if (typeof gsap !== 'undefined') {
+          if (typeof gsap !== "undefined") {
             gsap.to(modalWrapper, {
-              x: dir * -32, opacity: 0, duration: 0.18, ease: 'power2.in',
+              x: dir * -32,
+              opacity: 0,
+              duration: 0.18,
+              ease: "power2.in",
               onComplete: function () {
                 populateModal(filteredProjects[next]);
-                gsap.fromTo(modalWrapper,
+                gsap.fromTo(
+                  modalWrapper,
                   { x: dir * 32, opacity: 0 },
-                  { x: 0, opacity: 1, duration: 0.26, ease: 'power2.out' }
+                  { x: 0, opacity: 1, duration: 0.26, ease: "power2.out" },
                 );
-              }
+              },
             });
           } else {
             populateModal(filteredProjects[next]);
           }
         }
 
-        document.getElementById('modalClose').addEventListener('click', closeModal);
-        document.getElementById('modalPrev').addEventListener('click', function () { navigate(-1); });
-        document.getElementById('modalNext').addEventListener('click', function () { navigate(1); });
+        document
+          .getElementById("modalClose")
+          .addEventListener("click", closeModal);
+        document
+          .getElementById("modalPrev")
+          .addEventListener("click", function () {
+            navigate(-1);
+          });
+        document
+          .getElementById("modalNext")
+          .addEventListener("click", function () {
+            navigate(1);
+          });
 
-        overlay.addEventListener('click', function (e) {
+        overlay.addEventListener("click", function (e) {
           if (e.target === overlay) closeModal();
         });
 
-        document.addEventListener('keydown', function (e) {
-          if (overlay.style.display !== 'flex') return;
-          if (e.key === 'Escape') closeModal();
-          if (e.key === 'ArrowLeft') navigate(-1);
-          if (e.key === 'ArrowRight') navigate(1);
+        document.addEventListener("keydown", function (e) {
+          if (overlay.style.display !== "flex") return;
+          if (e.key === "Escape") closeModal();
+          if (e.key === "ArrowLeft") navigate(-1);
+          if (e.key === "ArrowRight") navigate(1);
         });
 
-        /* ----------------------------------------------------------
-           HERO ORBIT (GSAP)
-        ---------------------------------------------------------- */
-        function initOrbit() {
-          if (typeof gsap === 'undefined') return;
-
-          var sats = document.querySelectorAll('.orbit-sat');
-          var orbitCenter = document.getElementById('orbitCenter');
-          var dots = document.querySelectorAll('.hero-dot');
-          var N = sats.length;
-          var currentDot = 0;
-
-          /* Orbit radii - ellipse for 3-D depth feel */
-          var rx = 145;
-          var ry = 78;
-
-          /* Initial positions */
-          sats.forEach(function (sat, i) {
-            var angle = (i / N) * Math.PI * 2 + Math.PI / 6;
-            gsap.set(sat, {
-              x: Math.cos(angle) * rx,
-              y: Math.sin(angle) * ry,
-              scale: 0.72,
-              opacity: 0.65
-            });
-          });
-
-          /* Continuous orbit animation */
-          var orbitTime = { t: 0 };
-          gsap.to(orbitTime, {
-            t: 1,
-            duration: 14,
-            repeat: -1,
-            ease: 'none',
-            onUpdate: function () {
-              sats.forEach(function (sat, i) {
-                var baseAngle = (i / N) * Math.PI * 2 + Math.PI / 6;
-                var a = baseAngle + orbitTime.t * Math.PI * 2;
-                var x = Math.cos(a) * rx;
-                var y = Math.sin(a) * ry;
-                var depth = (Math.sin(a) + 1) / 2; /* 0=back, 1=front */
-                var sc = 0.62 + depth * 0.34;
-                var op = 0.48 + depth * 0.52;
-
-                gsap.set(sat, {
-                  x: x,
-                  y: y,
-                  scale: sc,
-                  opacity: op,
-                  zIndex: Math.round(depth * 8)
-                });
-              });
-            }
-          });
-
-          /* Center image gentle float */
-          gsap.to(orbitCenter, {
-            y: -18,
-            duration: 3.8,
-            repeat: -1,
-            yoyo: true,
-            ease: 'sine.inOut'
-          });
-
-          /* Dots auto-cycle */
-          var dotTimer = setInterval(cycleDot, 3200);
-
-          function cycleDot() {
-            currentDot = (currentDot + 1) % dots.length;
-            setActiveDot(currentDot);
-          }
-
-          function setActiveDot(idx) {
-            dots.forEach(function (d, i) {
-              d.classList.toggle('active', i === idx);
-            });
-            currentDot = idx;
-          }
-
-          dots.forEach(function (dot, i) {
-            dot.addEventListener('click', function () {
-              clearInterval(dotTimer);
-              setActiveDot(i);
-              dotTimer = setInterval(cycleDot, 3200);
-            });
-          });
-        }
-
-        /* Run orbit — GSAP is loaded synchronously above */
-        initOrbit();
-
+        /* Hero slider & parallax handled by js/ourworks.js */
       })();
     </script>
   </body>
