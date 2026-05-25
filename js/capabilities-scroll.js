@@ -195,3 +195,42 @@ gsap.fromTo('.cap-cta-inner',
 
 /* Recalculate after all assets load */
 window.addEventListener('load', () => ScrollTrigger.refresh());
+
+
+/* ============================================================
+   FILTER SCROLL NAVIGATION
+============================================================ */
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+const filterBtns = document.querySelectorAll('.csc-filter-btn');
+
+filterBtns.forEach((btn) => {
+
+  btn.addEventListener('click', () => {
+
+    /* active state */
+    filterBtns.forEach((b) => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    /* target */
+    const targetId = btn.getAttribute('data-target');
+    const targetEl = document.getElementById(targetId);
+
+    if (targetEl) {
+
+      const targetPosition =
+        targetEl.getBoundingClientRect().top +
+        window.pageYOffset -
+        120;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+
+    }
+
+  });
+
+});

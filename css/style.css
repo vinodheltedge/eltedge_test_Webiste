@@ -104,7 +104,7 @@ body {
   color: #fff;
   text-align: center;
   padding: 12px 20px;
-  font-size: 16px;
+  font-size: 18px;
   font-family: var(--font-body);
   display: flex;
   align-items: center;
@@ -117,7 +117,7 @@ body {
 .banner-link {
   color: #fff;
   font-weight: 300;
-  text-decoration: none;
+  text-decoration: underline;
   text-underline-offset: 2px;
   transition: opacity 0.2s;
 }
@@ -131,7 +131,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.92);
+  background: linear-gradient(160deg, #f0f7ff 0%, var(--bg-page) 60%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(221, 230, 240, 0.6);
@@ -166,17 +166,17 @@ body {
   display: flex;
   align-items: center;
   gap: 4px;
-  background: #f0f5fc;
-  padding: 6px 12px;
+  background: #ffffff;
+  padding: 10px 12px;
   border-radius: var(--radius-md);
   /* border: 1px solid var(--border); */
 }
 
 .nav-link {
   text-decoration: none;
-  color: var(--text-secondary);
-  font-size: 13.5px;
-  font-weight: 500;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
   font-family: var(--font-main);
   padding: 6px 14px;
   border-radius: var(--radius-sm);
@@ -185,7 +185,7 @@ body {
 }
 
 .nav-link:hover {
-  background: #fff;
+  background: #E3EDFF;
   /* text-decoration: underline; */
   color: var(--blue-primary);
   box-shadow: var(--shadow-sm);
@@ -204,10 +204,10 @@ body {
   background: var(--blue-grad);
   color: #fff;
   border: none;
-  padding: 10px 22px;
+  padding: 14px 32px;
   border-radius: var(--radius-md);
-  font-size: 13.5px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   font-family: var(--font-main);
   cursor: pointer;
   transition:
@@ -428,9 +428,9 @@ body {
   background: var(--blue-grad);
   color: #fff;
   border: none;
-  padding: 13px 30px;
+  padding: 20px 40px;
   border-radius: var(--radius-md);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   font-family: var(--font-main);
   cursor: pointer;
@@ -448,9 +448,9 @@ body {
   background: transparent;
   color: var(--blue-primary);
   border: 1.5px solid var(--blue-primary);
-  padding: 13px 30px;
+  padding: 20px 40px;
   border-radius: var(--radius-md);
-  font-size: 14px;
+  font-size:20px;
   font-weight: 500;
   font-family: var(--font-main);
   cursor: pointer;
@@ -518,7 +518,7 @@ body {
 
 .clients-label {
   text-align: center;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 600;
   letter-spacing: 0em;
   color: var(--blue-primary);
@@ -617,7 +617,7 @@ body {
 .mission-statement {
   font-family: var(--font-main);
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--blue-primary);
   line-height: 1.4;
 }
@@ -791,7 +791,7 @@ body {
 
 .why-main-card h3 {
   font-family: var(--font-main);
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 500;
   line-height: 1.35;
   margin-bottom: 18px;
@@ -810,10 +810,12 @@ body {
 
 .top-card {
   transform: translateY(-40px);
+  font-size: 20px;
 }
 
 .bottom-card {
   transform: translateY(40px);
+  font-size: 20px;
 }
 
 /* ============================================================
@@ -840,12 +842,14 @@ body {
 
 .works-header h2 {
   color: #007bff;
+  font-size: 40px;
+  font-weight: 600;
 }
 
 .btn-outline {
   border: 1px solid #007bff;
   padding: 10px 18px;
-  border-radius: 20px;
+  border-radius: 12px;
   color: #007bff;
   text-decoration: none;
   transition: 0.3s;
@@ -919,7 +923,7 @@ body {
 /* TITLE */
 .work-card h3 {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 500;
   color: #0079f3;
   line-height: 1.35;
   transition: color 0.38s ease;
@@ -980,7 +984,7 @@ body {
   margin-bottom: 50px;
 }
 .section-title {
-  color: var(--blue-primary);
+  color: black;
 }
 
 .cap-desc {
@@ -996,25 +1000,22 @@ body {
 }
 
 .cap-card {
-  background: rgba(255, 255, 255, 0.08); /* glass transparency */
+  background: rgba(255, 254, 254, 0.162); /* glass transparency */
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 16px;
-
   padding: 30px 22px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
   transition:
     transform 0.25s,
     box-shadow 0.25s,
     border-color 0.25s;
-  cursor: default;
-
+  cursor: pointer;
   box-shadow:
     0 8px 30px rgba(0, 0, 0, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -1189,7 +1190,7 @@ body {
 }
 
 .test-text {
-  font-size: 10px;
+  font-size: 20px;
   color: #555;
   /* line-height: 1.8; */
 }
@@ -1360,7 +1361,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0 28px;
-  font-size: 12.5px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.35);
   flex-wrap: wrap;
   gap: 12px;
@@ -1374,7 +1375,7 @@ body {
 .footer-bottom-links a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.35);
-  font-size: 12.5px;
+  font-size: 16px;
   transition: color 0.2s;
 }
 

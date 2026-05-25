@@ -6,19 +6,27 @@
     <title>Capabilities — eLT Edge</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/capabilities.css" />
     <link rel="stylesheet" href="css/capabilities-scroll.css" />
   </head>
   <body>
-
     <!-- ══════════════════════════════════════════════════════
          TOP BANNER (UNCHANGED)
     ══════════════════════════════════════════════════════ -->
     <div class="top-banner">
-      <span>Looking for Smart Factory &amp; Industrial Intelligence Solutions?</span>
-      <a href="https://factis.in" target="_blank" class="banner-link">Visit factis.in by eLT Edge</a>
+      <span
+        >Looking for Smart Factory &amp; Industrial Intelligence
+        Solutions?</span
+      >
+      <a href="https://factis.in" target="_blank" class="banner-link"
+        >Visit factis.in by eLT Edge</a
+      >
     </div>
 
     <!-- ══════════════════════════════════════════════════════
@@ -27,13 +35,20 @@
     <header class="navbar" id="navbar">
       <div class="nav-inner container">
         <div class="nav-logo">
-          <a href="./index.html"><img src="assets/images/logo white bg (1) 1.png" alt="eLT Edge" class="logo-img" /></a>
+          <a href="./index.html"
+            ><img
+              src="assets/images/logo white bg (1) 1.png"
+              alt="eLT Edge"
+              class="logo-img"
+          /></a>
         </div>
         <nav class="nav-links" id="navLinks">
           <a href="approach.html" class="nav-link">Approach</a>
-          <a href="capabilities-scroll.html" class="nav-link nav-link--active">Capabilities</a>
+          <a href="capabilities-scroll.html" class="nav-link nav-link--active"
+            >Capabilities</a
+          >
           <a href="ourworks.html" class="nav-link">Our Works</a>
-           <div class="nav-dropdown">
+          <div class="nav-dropdown">
             <a href="aboutus.html" class="nav-link dropdown-toggle">
               About Us
 
@@ -63,7 +78,12 @@
         </nav>
         <div class="nav-actions">
           <a href="contact.html" class="btn-contact">Contact Us</a>
-          <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
             <span></span><span></span><span></span>
           </button>
         </div>
@@ -75,10 +95,14 @@
     ══════════════════════════════════════════════════════ -->
     <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
       <div class="drawer-inner">
-        <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+          ✕
+        </button>
         <nav class="drawer-links">
           <a href="approach.html">Approach</a>
-          <a href="capabilities-scroll.html" class="drawer-link--active">Capabilities</a>
+          <a href="capabilities-scroll.html" class="drawer-link--active"
+            >Capabilities</a
+          >
           <a href="ourworks.html">Our Works</a>
           <a href="aboutus.html">About Us</a>
           <a href="resources.html">Resources</a>
@@ -87,6 +111,8 @@
       </div>
     </div>
     <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+    
 
     <!-- ══════════════════════════════════════════════════════
          CAPABILITIES INTRO
@@ -97,29 +123,61 @@
         <h1 class="csc-intro-heading">Engineering Solutions<br />That Scale</h1>
         <p class="csc-intro-sub">
           From silicon to software — we design, build, and deploy intelligent
-          embedded systems ready for the real world. Scroll to explore our
-          8 core capability domains.
+          embedded systems ready for the real world. Scroll to explore our 8
+          core capability domains.
         </p>
-        <div class="csc-intro-scroll-hint">
-          <span>Scroll to explore</span>
-          <div class="csc-scroll-arrow">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 5v14M5 12l7 7 7-7"/>
-            </svg>
-          </div>
-        </div>
+       
       </div>
     </section>
+<!-- ═════════ FILTER NAV ═════════ -->
+<section class="csc-filter">
+  <div class="csc-filter-wrap">
 
+    <button class="csc-filter-btn active" data-target="csc-card-0">
+      Embedded Hardware Design
+    </button>
+
+    <button class="csc-filter-btn" data-target="csc-card-1">
+      Embedded Software Design
+    </button>
+
+    <button class="csc-filter-btn" data-target="csc-card-2">
+      Interface System Design
+    </button>
+
+    <button class="csc-filter-btn" data-target="csc-card-3">
+      Wireless System Design
+    </button>
+
+    <button class="csc-filter-btn" data-target="csc-card-4">
+      Mechanical System Design
+    </button>
+
+    <button class="csc-filter-btn" data-target="csc-card-5">
+      Manufacturing System Design
+    </button>
+
+    <button class="csc-filter-btn" data-target="csc-card-6">
+      IoT System Design
+    </button>
+
+    <button class="csc-filter-btn" data-target="csc-card-7">
+      Technology System Design
+    </button>
+
+  </div>
+</section>
     <!-- ══════════════════════════════════════════════════════
          STACKED SCROLLING CAPABILITIES SECTION
     ══════════════════════════════════════════════════════ -->
     <section class="csc-section" id="csc-section">
       <div class="csc-wrapper" id="csc-wrapper">
-
         <!-- Progress dots -->
         <div class="csc-progress" id="csc-progress" aria-hidden="true">
-          <span class="csc-progress-dot csc-progress-dot--active" data-index="0"></span>
+          <span
+            class="csc-progress-dot csc-progress-dot--active"
+            data-index="0"
+          ></span>
           <span class="csc-progress-dot" data-index="1"></span>
           <span class="csc-progress-dot" data-index="2"></span>
           <span class="csc-progress-dot" data-index="3"></span>
@@ -130,9 +188,12 @@
         </div>
 
         <!-- ══ CARD 1: Embedded Hardware Design ═════════════ -->
-        <article class="csc-card" id="csc-card-0" aria-label="Embedded Hardware Design">
+        <article
+          class="csc-card"
+          id="csc-card-0"
+          aria-label="Embedded Hardware Design"
+        >
           <div class="csc-card-bg">
-            <img src="assets/images/Our Capabilities/Our Capabilities1.png" alt="" aria-hidden="true" />
             <div class="csc-card-overlay"></div>
           </div>
           <div class="csc-card-inner">
@@ -143,26 +204,54 @@
             <div class="csc-card-body">
               <div class="csc-view-col">
                 <span class="csc-section-label">Our View</span>
-                <p class="csc-view-desc">End-to-end embedded hardware development covering architecture, circuit design, PCB layout, prototyping, and validation for reliable electronic products.</p>
+                <p class="csc-view-desc">
+                  End-to-end embedded hardware development covering
+                  architecture, circuit design, PCB layout, prototyping, and
+                  validation for reliable electronic products.
+                </p>
+                <img src="./assets/images/image 38.png" alt="">
               </div>
               <div class="csc-caps-col">
                 <span class="csc-section-label">Our Core Capabilities</span>
                 <div class="csc-caps-grid">
                   <div class="csc-glass">
-                    <h4 class="csc-glass-title">Architecture &amp; System Design</h4>
-                    <p class="csc-glass-body">System architecture &amp; block diagrams, power &amp; performance optimization, interface &amp; protocol planning, memory &amp; data flow design, reliability-focused engineering.</p>
+                    <h4 class="csc-glass-title">
+                      Architecture &amp; System Design
+                    </h4>
+                    <p class="csc-glass-body">
+                      System architecture &amp; block diagrams, power &amp;
+                      performance optimization, interface &amp; protocol
+                      planning, memory &amp; data flow design,
+                      reliability-focused engineering.
+                    </p>
                   </div>
                   <div class="csc-glass">
-                    <h4 class="csc-glass-title">Prototyping &amp; Validation</h4>
-                    <p class="csc-glass-body">Functional testing &amp; verification, signal &amp; power integrity analysis, thermal testing, EMC pre-compliance testing, environmental testing support.</p>
+                    <h4 class="csc-glass-title">
+                      Prototyping &amp; Validation
+                    </h4>
+                    <p class="csc-glass-body">
+                      Functional testing &amp; verification, signal &amp; power
+                      integrity analysis, thermal testing, EMC pre-compliance
+                      testing, environmental testing support.
+                    </p>
                   </div>
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">PCB Design</h4>
-                    <p class="csc-glass-body">Multi-layer PCB layout, high-speed routing, thermal &amp; power optimization, manufacturing-ready layouts, impedance-controlled design.</p>
+                    <p class="csc-glass-body">
+                      Multi-layer PCB layout, high-speed routing, thermal &amp;
+                      power optimization, manufacturing-ready layouts,
+                      impedance-controlled design.
+                    </p>
                   </div>
                   <div class="csc-glass">
-                    <h4 class="csc-glass-title">Circuit Design &amp; Implementation</h4>
-                    <p class="csc-glass-body">Analog &amp; sensor interface design, high-speed digital communication (SPI, I2C, UART, USB, Ethernet), power management, EMI/EMC optimization, mixed-signal design.</p>
+                    <h4 class="csc-glass-title">
+                      Circuit Design &amp; Implementation
+                    </h4>
+                    <p class="csc-glass-body">
+                      Analog &amp; sensor interface design, high-speed digital
+                      communication (SPI, I2C, UART, USB, Ethernet), power
+                      management, EMI/EMC optimization, mixed-signal design.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -171,9 +260,17 @@
         </article>
 
         <!-- ══ CARD 2: Embedded Software Design ════════════ -->
-        <article class="csc-card" id="csc-card-1" aria-label="Embedded Software Design">
+        <article
+          class="csc-card"
+          id="csc-card-1"
+          aria-label="Embedded Software Design"
+        >
           <div class="csc-card-bg">
-            <img src="assets/images/Our Capabilities/Our Capabilities2.png" alt="" aria-hidden="true" />
+            <img
+              src="assets/images/Our Capabilities/Our Capabilities2.png"
+              alt=""
+              aria-hidden="true"
+            />
             <div class="csc-card-overlay"></div>
           </div>
           <div class="csc-card-inner">
@@ -184,26 +281,50 @@
             <div class="csc-card-body">
               <div class="csc-view-col">
                 <span class="csc-section-label">Our View</span>
-                <p class="csc-view-desc">Comprehensive embedded software development covering firmware architecture, RTOS integration, driver development, and field deployment for robust connected products.</p>
+                <p class="csc-view-desc">
+                  Comprehensive embedded software development covering firmware
+                  architecture, RTOS integration, driver development, and field
+                  deployment for robust connected products.
+                </p>
               </div>
               <div class="csc-caps-col">
                 <span class="csc-section-label">Our Core Capabilities</span>
                 <div class="csc-caps-grid">
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">Firmware Architecture</h4>
-                    <p class="csc-glass-body">Bare-metal &amp; RTOS firmware design, bootloader development, memory management, interrupt handling, low-power state machine design.</p>
+                    <p class="csc-glass-body">
+                      Bare-metal &amp; RTOS firmware design, bootloader
+                      development, memory management, interrupt handling,
+                      low-power state machine design.
+                    </p>
                   </div>
                   <div class="csc-glass">
-                    <h4 class="csc-glass-title">Driver &amp; BSP Development</h4>
-                    <p class="csc-glass-body">Custom peripheral drivers, HAL abstraction layers, board support packages, sensor &amp; actuator integration, protocol stack implementation.</p>
+                    <h4 class="csc-glass-title">
+                      Driver &amp; BSP Development
+                    </h4>
+                    <p class="csc-glass-body">
+                      Custom peripheral drivers, HAL abstraction layers, board
+                      support packages, sensor &amp; actuator integration,
+                      protocol stack implementation.
+                    </p>
                   </div>
                   <div class="csc-glass">
-                    <h4 class="csc-glass-title">Middleware &amp; Stack Integration</h4>
-                    <p class="csc-glass-body">Communication stacks (BLE, Wi-Fi, LTE, CAN, Modbus), OTA update frameworks, data logging, file systems, cloud connectivity.</p>
+                    <h4 class="csc-glass-title">
+                      Middleware &amp; Stack Integration
+                    </h4>
+                    <p class="csc-glass-body">
+                      Communication stacks (BLE, Wi-Fi, LTE, CAN, Modbus), OTA
+                      update frameworks, data logging, file systems, cloud
+                      connectivity.
+                    </p>
                   </div>
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">Testing &amp; Validation</h4>
-                    <p class="csc-glass-body">Unit &amp; integration testing, hardware-in-the-loop testing, code coverage analysis, static analysis, functional safety compliance support.</p>
+                    <p class="csc-glass-body">
+                      Unit &amp; integration testing, hardware-in-the-loop
+                      testing, code coverage analysis, static analysis,
+                      functional safety compliance support.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -212,9 +333,17 @@
         </article>
 
         <!-- ══ CARD 3: Interface System Design ═════════════ -->
-        <article class="csc-card" id="csc-card-2" aria-label="Interface System Design">
+        <article
+          class="csc-card"
+          id="csc-card-2"
+          aria-label="Interface System Design"
+        >
           <div class="csc-card-bg">
-            <img src="assets/images/Our Capabilities/Our Capabilities3.png" alt="" aria-hidden="true" />
+            <img
+              src="assets/images/Our Capabilities/Our Capabilities3.png"
+              alt=""
+              aria-hidden="true"
+            />
             <div class="csc-card-overlay"></div>
           </div>
           <div class="csc-card-inner">
@@ -225,26 +354,48 @@
             <div class="csc-card-body">
               <div class="csc-view-col">
                 <span class="csc-section-label">Our View</span>
-                <p class="csc-view-desc">End-to-end interface design — from HMI touchscreens to protocol bridges — ensuring seamless communication between subsystems and end users.</p>
+                <p class="csc-view-desc">
+                  End-to-end interface design — from HMI touchscreens to
+                  protocol bridges — ensuring seamless communication between
+                  subsystems and end users.
+                </p>
               </div>
               <div class="csc-caps-col">
                 <span class="csc-section-label">Our Core Capabilities</span>
                 <div class="csc-caps-grid">
                   <div class="csc-glass">
-                    <h4 class="csc-glass-title">HMI &amp; Display Integration</h4>
-                    <p class="csc-glass-body">Touchscreen UI design, embedded graphics frameworks (LVGL, Qt), display controller integration, multi-language support, accessibility compliance.</p>
+                    <h4 class="csc-glass-title">
+                      HMI &amp; Display Integration
+                    </h4>
+                    <p class="csc-glass-body">
+                      Touchscreen UI design, embedded graphics frameworks (LVGL,
+                      Qt), display controller integration, multi-language
+                      support, accessibility compliance.
+                    </p>
                   </div>
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">Protocol Bridge Design</h4>
-                    <p class="csc-glass-body">UART/SPI/I2C to Ethernet bridges, CAN-to-USB converters, fieldbus gateways, custom protocol translation layers.</p>
+                    <p class="csc-glass-body">
+                      UART/SPI/I2C to Ethernet bridges, CAN-to-USB converters,
+                      fieldbus gateways, custom protocol translation layers.
+                    </p>
                   </div>
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">UI/UX for Embedded Systems</h4>
-                    <p class="csc-glass-body">Workflow-driven interface design, color &amp; font standards, iconography systems, low-latency rendering, energy-efficient display management.</p>
+                    <p class="csc-glass-body">
+                      Workflow-driven interface design, color &amp; font
+                      standards, iconography systems, low-latency rendering,
+                      energy-efficient display management.
+                    </p>
                   </div>
                   <div class="csc-glass">
-                    <h4 class="csc-glass-title">Industrial Interface Standards</h4>
-                    <p class="csc-glass-body">Modbus RTU/TCP, Profibus, EtherCAT integration, industrial panel design, EMI-hardened interface circuitry.</p>
+                    <h4 class="csc-glass-title">
+                      Industrial Interface Standards
+                    </h4>
+                    <p class="csc-glass-body">
+                      Modbus RTU/TCP, Profibus, EtherCAT integration, industrial
+                      panel design, EMI-hardened interface circuitry.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -253,9 +404,17 @@
         </article>
 
         <!-- ══ CARD 4: Wireless System Design ══════════════ -->
-        <article class="csc-card" id="csc-card-3" aria-label="Wireless System Design">
+        <article
+          class="csc-card"
+          id="csc-card-3"
+          aria-label="Wireless System Design"
+        >
           <div class="csc-card-bg">
-            <img src="assets/images/Our Capabilities/Our Capabilities4.png" alt="" aria-hidden="true" />
+            <img
+              src="assets/images/Our Capabilities/Our Capabilities4.png"
+              alt=""
+              aria-hidden="true"
+            />
             <div class="csc-card-overlay"></div>
           </div>
           <div class="csc-card-inner">
@@ -266,26 +425,45 @@
             <div class="csc-card-body">
               <div class="csc-view-col">
                 <span class="csc-section-label">Our View</span>
-                <p class="csc-view-desc">RF system design and wireless protocol integration for reliable, low-power, long-range communication in embedded and IoT devices.</p>
+                <p class="csc-view-desc">
+                  RF system design and wireless protocol integration for
+                  reliable, low-power, long-range communication in embedded and
+                  IoT devices.
+                </p>
               </div>
               <div class="csc-caps-col">
                 <span class="csc-section-label">Our Core Capabilities</span>
                 <div class="csc-caps-grid">
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">RF &amp; Antenna Design</h4>
-                    <p class="csc-glass-body">Antenna matching networks, PCB antenna layout, RF front-end design, link budget analysis, co-existence optimization.</p>
+                    <p class="csc-glass-body">
+                      Antenna matching networks, PCB antenna layout, RF
+                      front-end design, link budget analysis, co-existence
+                      optimization.
+                    </p>
                   </div>
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">Protocol Implementation</h4>
-                    <p class="csc-glass-body">BLE 5.x, Wi-Fi 6, Zigbee, LoRa/LoRaWAN, LTE-M, NB-IoT, Thread — stack integration and certification support.</p>
+                    <p class="csc-glass-body">
+                      BLE 5.x, Wi-Fi 6, Zigbee, LoRa/LoRaWAN, LTE-M, NB-IoT,
+                      Thread — stack integration and certification support.
+                    </p>
                   </div>
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">Wireless Security</h4>
-                    <p class="csc-glass-body">TLS/DTLS encryption, certificate provisioning, secure key storage, device attestation, OTA firmware signing.</p>
+                    <p class="csc-glass-body">
+                      TLS/DTLS encryption, certificate provisioning, secure key
+                      storage, device attestation, OTA firmware signing.
+                    </p>
                   </div>
                   <div class="csc-glass">
-                    <h4 class="csc-glass-title">Range &amp; Power Optimization</h4>
-                    <p class="csc-glass-body">Duty-cycle tuning, sleep-mode scheduling, adaptive TX power, mesh topology design, interference mitigation.</p>
+                    <h4 class="csc-glass-title">
+                      Range &amp; Power Optimization
+                    </h4>
+                    <p class="csc-glass-body">
+                      Duty-cycle tuning, sleep-mode scheduling, adaptive TX
+                      power, mesh topology design, interference mitigation.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -294,9 +472,17 @@
         </article>
 
         <!-- ══ CARD 5: Mechanical System Design ════════════ -->
-        <article class="csc-card" id="csc-card-4" aria-label="Mechanical System Design">
+        <article
+          class="csc-card"
+          id="csc-card-4"
+          aria-label="Mechanical System Design"
+        >
           <div class="csc-card-bg">
-            <img src="assets/images/Our Capabilities/Our Capabilities5.png" alt="" aria-hidden="true" />
+            <img
+              src="assets/images/Our Capabilities/Our Capabilities5.png"
+              alt=""
+              aria-hidden="true"
+            />
             <div class="csc-card-overlay"></div>
           </div>
           <div class="csc-card-inner">
@@ -307,26 +493,48 @@
             <div class="csc-card-body">
               <div class="csc-view-col">
                 <span class="csc-section-label">Our View</span>
-                <p class="csc-view-desc">Mechanical design and prototyping services — from concept sketches to production-ready enclosures — ensuring structural integrity and manufacturability.</p>
+                <p class="csc-view-desc">
+                  Mechanical design and prototyping services — from concept
+                  sketches to production-ready enclosures — ensuring structural
+                  integrity and manufacturability.
+                </p>
               </div>
               <div class="csc-caps-col">
                 <span class="csc-section-label">Our Core Capabilities</span>
                 <div class="csc-caps-grid">
                   <div class="csc-glass">
-                    <h4 class="csc-glass-title">Enclosure &amp; Industrial Design</h4>
-                    <p class="csc-glass-body">3D CAD modeling, DFM reviews, IP-rated enclosure design, material selection, surface finish specifications, ergonomic form factors.</p>
+                    <h4 class="csc-glass-title">
+                      Enclosure &amp; Industrial Design
+                    </h4>
+                    <p class="csc-glass-body">
+                      3D CAD modeling, DFM reviews, IP-rated enclosure design,
+                      material selection, surface finish specifications,
+                      ergonomic form factors.
+                    </p>
                   </div>
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">Thermal Management</h4>
-                    <p class="csc-glass-body">Thermal simulations, heat-sink design, forced &amp; passive cooling, TIM selection, PCB thermal interface planning.</p>
+                    <p class="csc-glass-body">
+                      Thermal simulations, heat-sink design, forced &amp;
+                      passive cooling, TIM selection, PCB thermal interface
+                      planning.
+                    </p>
                   </div>
                   <div class="csc-glass">
-                    <h4 class="csc-glass-title">Structural &amp; Vibration Analysis</h4>
-                    <p class="csc-glass-body">FEA-based stress analysis, drop &amp; shock simulation, vibration profile testing, tolerance stack-up analysis.</p>
+                    <h4 class="csc-glass-title">
+                      Structural &amp; Vibration Analysis
+                    </h4>
+                    <p class="csc-glass-body">
+                      FEA-based stress analysis, drop &amp; shock simulation,
+                      vibration profile testing, tolerance stack-up analysis.
+                    </p>
                   </div>
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">Prototyping &amp; Tooling</h4>
-                    <p class="csc-glass-body">Rapid prototyping (FDM, SLA, SLS), soft tooling, pre-production validation, production-ready mold design.</p>
+                    <p class="csc-glass-body">
+                      Rapid prototyping (FDM, SLA, SLS), soft tooling,
+                      pre-production validation, production-ready mold design.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -335,9 +543,17 @@
         </article>
 
         <!-- ══ CARD 6: Manufacturing System Design ═════════ -->
-        <article class="csc-card" id="csc-card-5" aria-label="Manufacturing System Design">
+        <article
+          class="csc-card"
+          id="csc-card-5"
+          aria-label="Manufacturing System Design"
+        >
           <div class="csc-card-bg">
-            <img src="assets/images/Our Capabilities/Our Capabilities6.png" alt="" aria-hidden="true" />
+            <img
+              src="assets/images/Our Capabilities/Our Capabilities6.png"
+              alt=""
+              aria-hidden="true"
+            />
             <div class="csc-card-overlay"></div>
           </div>
           <div class="csc-card-inner">
@@ -348,26 +564,46 @@
             <div class="csc-card-body">
               <div class="csc-view-col">
                 <span class="csc-section-label">Our View</span>
-                <p class="csc-view-desc">Full manufacturing engineering support — from design-for-manufacturability reviews to production line setup — ensuring consistent quality at scale.</p>
+                <p class="csc-view-desc">
+                  Full manufacturing engineering support — from
+                  design-for-manufacturability reviews to production line setup
+                  — ensuring consistent quality at scale.
+                </p>
               </div>
               <div class="csc-caps-col">
                 <span class="csc-section-label">Our Core Capabilities</span>
                 <div class="csc-caps-grid">
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">DFM &amp; DFT Reviews</h4>
-                    <p class="csc-glass-body">Design-for-manufacturability analysis, test point placement, panelization strategy, solder paste stencil design, BOM cost optimization.</p>
+                    <p class="csc-glass-body">
+                      Design-for-manufacturability analysis, test point
+                      placement, panelization strategy, solder paste stencil
+                      design, BOM cost optimization.
+                    </p>
                   </div>
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">SMT &amp; Assembly</h4>
-                    <p class="csc-glass-body">SMT line setup, reflow profile optimization, selective soldering, THT assembly, conformal coating, potting &amp; encapsulation.</p>
+                    <p class="csc-glass-body">
+                      SMT line setup, reflow profile optimization, selective
+                      soldering, THT assembly, conformal coating, potting &amp;
+                      encapsulation.
+                    </p>
                   </div>
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">Test &amp; Inspection</h4>
-                    <p class="csc-glass-body">ICT fixture design, flying probe testing, AOI &amp; X-ray inspection, functional end-of-line testing, traceability systems.</p>
+                    <p class="csc-glass-body">
+                      ICT fixture design, flying probe testing, AOI &amp; X-ray
+                      inspection, functional end-of-line testing, traceability
+                      systems.
+                    </p>
                   </div>
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">Supply Chain &amp; NPI</h4>
-                    <p class="csc-glass-body">Component sourcing strategy, AVL management, NPI process planning, ramp-rate optimization, production yield analysis.</p>
+                    <p class="csc-glass-body">
+                      Component sourcing strategy, AVL management, NPI process
+                      planning, ramp-rate optimization, production yield
+                      analysis.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -376,9 +612,17 @@
         </article>
 
         <!-- ══ CARD 7: IoT System Design ════════════════════ -->
-        <article class="csc-card" id="csc-card-6" aria-label="IoT System Design">
+        <article
+          class="csc-card"
+          id="csc-card-6"
+          aria-label="IoT System Design"
+        >
           <div class="csc-card-bg">
-            <img src="assets/images/Our Capabilities/Our Capabilities7.png" alt="" aria-hidden="true" />
+            <img
+              src="assets/images/Our Capabilities/Our Capabilities7.png"
+              alt=""
+              aria-hidden="true"
+            />
             <div class="csc-card-overlay"></div>
           </div>
           <div class="csc-card-inner">
@@ -389,26 +633,45 @@
             <div class="csc-card-body">
               <div class="csc-view-col">
                 <span class="csc-section-label">Our View</span>
-                <p class="csc-view-desc">Complete IoT ecosystem development — edge hardware, gateway firmware, cloud backend, and analytics dashboards — built for industrial and consumer deployments.</p>
+                <p class="csc-view-desc">
+                  Complete IoT ecosystem development — edge hardware, gateway
+                  firmware, cloud backend, and analytics dashboards — built for
+                  industrial and consumer deployments.
+                </p>
               </div>
               <div class="csc-caps-col">
                 <span class="csc-section-label">Our Core Capabilities</span>
                 <div class="csc-caps-grid">
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">Edge Node Design</h4>
-                    <p class="csc-glass-body">Low-power sensor nodes, multi-protocol gateways, edge AI inference, local data buffering, fleet management support.</p>
+                    <p class="csc-glass-body">
+                      Low-power sensor nodes, multi-protocol gateways, edge AI
+                      inference, local data buffering, fleet management support.
+                    </p>
                   </div>
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">Connectivity &amp; Cloud</h4>
-                    <p class="csc-glass-body">MQTT/AMQP brokers, AWS IoT &amp; Azure IoT Hub integration, device shadow, telemetry pipelines, time-series databases.</p>
+                    <p class="csc-glass-body">
+                      MQTT/AMQP brokers, AWS IoT &amp; Azure IoT Hub
+                      integration, device shadow, telemetry pipelines,
+                      time-series databases.
+                    </p>
                   </div>
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">IoT Security</h4>
-                    <p class="csc-glass-body">Secure boot, device identity management, PKI infrastructure, encrypted OTA, anomaly detection, zero-trust architecture.</p>
+                    <p class="csc-glass-body">
+                      Secure boot, device identity management, PKI
+                      infrastructure, encrypted OTA, anomaly detection,
+                      zero-trust architecture.
+                    </p>
                   </div>
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">Dashboard &amp; Analytics</h4>
-                    <p class="csc-glass-body">Real-time monitoring dashboards, KPI visualization, alerting &amp; notification pipelines, predictive maintenance models, data export APIs.</p>
+                    <p class="csc-glass-body">
+                      Real-time monitoring dashboards, KPI visualization,
+                      alerting &amp; notification pipelines, predictive
+                      maintenance models, data export APIs.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -417,9 +680,17 @@
         </article>
 
         <!-- ══ CARD 8: Technology System Design ════════════ -->
-        <article class="csc-card" id="csc-card-7" aria-label="Technology System Design">
+        <article
+          class="csc-card"
+          id="csc-card-7"
+          aria-label="Technology System Design"
+        >
           <div class="csc-card-bg">
-            <img src="assets/images/Our Capabilities/Our Capabilities8.png" alt="" aria-hidden="true" />
+            <img
+              src="assets/images/Our Capabilities/Our Capabilities8.png"
+              alt=""
+              aria-hidden="true"
+            />
             <div class="csc-card-overlay"></div>
           </div>
           <div class="csc-card-inner">
@@ -430,40 +701,60 @@
             <div class="csc-card-body">
               <div class="csc-view-col">
                 <span class="csc-section-label">Our View</span>
-                <p class="csc-view-desc">Technology architecture and consulting services that align business goals with engineering execution — from feasibility studies to system integration and program management.</p>
+                <p class="csc-view-desc">
+                  Technology architecture and consulting services that align
+                  business goals with engineering execution — from feasibility
+                  studies to system integration and program management.
+                </p>
               </div>
               <div class="csc-caps-col">
                 <span class="csc-section-label">Our Core Capabilities</span>
                 <div class="csc-caps-grid">
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">Technology Roadmapping</h4>
-                    <p class="csc-glass-body">Feasibility studies, technology selection, build-vs-buy analysis, IP landscape review, risk &amp; compliance assessment.</p>
+                    <p class="csc-glass-body">
+                      Feasibility studies, technology selection, build-vs-buy
+                      analysis, IP landscape review, risk &amp; compliance
+                      assessment.
+                    </p>
                   </div>
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">System Integration</h4>
-                    <p class="csc-glass-body">Multi-vendor integration, hardware-software co-design, interoperability testing, migration planning, legacy system modernization.</p>
+                    <p class="csc-glass-body">
+                      Multi-vendor integration, hardware-software co-design,
+                      interoperability testing, migration planning, legacy
+                      system modernization.
+                    </p>
                   </div>
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">Architecture Consulting</h4>
-                    <p class="csc-glass-body">Reference architecture definition, scalability planning, platform reuse strategy, modular design frameworks, standards alignment.</p>
+                    <p class="csc-glass-body">
+                      Reference architecture definition, scalability planning,
+                      platform reuse strategy, modular design frameworks,
+                      standards alignment.
+                    </p>
                   </div>
                   <div class="csc-glass">
                     <h4 class="csc-glass-title">Program Management</h4>
-                    <p class="csc-glass-body">Technical program management, milestone tracking, cross-functional coordination, risk mitigation, supplier qualification.</p>
+                    <p class="csc-glass-body">
+                      Technical program management, milestone tracking,
+                      cross-functional coordination, risk mitigation, supplier
+                      qualification.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </article>
-
-      </div><!-- /csc-wrapper -->
+      </div>
+      <!-- /csc-wrapper -->
     </section>
 
     <!-- ══════════════════════════════════════════════════════
          CTA BANNER (UNCHANGED from capabilities.html)
     ══════════════════════════════════════════════════════ -->
-   <section class="footer-cta">
+    <section class="footer-cta">
       <div class="container footer-cta-inner">
         <div class="cta-text">
           <h2>Have a Product Idea?</h2>
@@ -478,7 +769,7 @@
     <!-- ══════════════════════════════════════════════════════
          FOOTER (UNCHANGED from capabilities.html)
     ══════════════════════════════════════════════════════ -->
-     <footer class="footer">
+    <footer class="footer">
       <div class="container footer-inner">
         <div class="footer-top">
           <!-- Brand -->
@@ -604,6 +895,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <!-- Navbar / drawer logic -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
     <script src="js/main.js"></script>
     <!-- Stacked scroll animation -->
     <script src="js/capabilities-scroll.js"></script>

@@ -1,29 +1,35 @@
 /* ============================================================
    capabilities-scroll.css — Premium Stacked Scroll Capabilities
    ============================================================ */
-
+.nav-link--active {
+  background: #fff !important;
+  color: #0079f3 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+}
 /* ── INTRO SECTION ─────────────────────────────────────────── */
 .csc-intro {
   min-height: 28vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   background: #f4f7fb;
   padding: 100px 24px 64px;
 }
 
 .csc-intro-inner {
-  text-align: center;
-  max-width: 720px;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .csc-intro-eyebrow {
   font-family: "Sora", sans-serif;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #0079f3;
@@ -33,7 +39,7 @@
 .csc-intro-heading {
   font-family: "Sora", sans-serif;
   font-size: clamp(32px, 5.5vw, 60px);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.1;
   color: #0b1526;
   margin-bottom: 20px;
@@ -71,8 +77,13 @@
 }
 
 @keyframes csc-bounce {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(7px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(7px);
+  }
 }
 
 /* ── STACKED SECTION ────────────────────────────────────────── */
@@ -112,7 +123,11 @@
   height: 6px;
   border-radius: 50%;
   background: rgba(11, 21, 38, 0.22);
-  transition: background 0.3s, transform 0.3s, width 0.3s, height 0.3s;
+  transition:
+    background 0.3s,
+    transform 0.3s,
+    width 0.3s,
+    height 0.3s;
   cursor: default;
 }
 
@@ -142,7 +157,7 @@
 
 /* Subtle fade at bottom edge */
 .csc-card::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -154,40 +169,22 @@
 }
 
 /* ── Card background: image + gradient overlay ── */
-.csc-card-bg {
+/* .csc-card-bg {
   position: absolute;
   inset: 0;
   overflow: hidden;
-}
-
-.csc-card-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: blur(3px) brightness(0.5) saturate(0.65);
-  transform: scale(1.07);
-}
+} */
 
 .csc-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    148deg,
-    rgba(0, 68, 215, 0.91) 0%,
-    rgba(0, 38, 158, 0.87) 42%,
-    rgba(0, 10, 82, 0.93) 100%
-  );
+  background: linear-gradient(135deg, #0079f3, #0050cc);
 }
 
 /* Alternate gradient for visual variety */
-.csc-card:nth-of-type(even) .csc-card-overlay {
-  background: linear-gradient(
-    218deg,
-    rgba(0, 52, 200, 0.92) 0%,
-    rgba(0, 28, 148, 0.88) 45%,
-    rgba(0, 6, 72, 0.94) 100%
-  );
-}
+/* .csc-card {
+  background: linear-gradient(135deg, #0079f3, #0050cc);
+} */
 
 /* ── Card inner content ── */
 .csc-card-inner {
@@ -213,18 +210,16 @@
 
 .csc-card-num {
   font-family: "Sora", sans-serif;
-  font-size: 11px;
+  font-size: 28px;
   font-weight: 600;
-  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.38);
-  padding-bottom: 5px;
+  color: #ffff;
 }
 
 .csc-card-title {
   font-family: "Sora", sans-serif;
   font-size: clamp(22px, 3vw, 40px);
-  font-weight: 700;
+  font-weight: 600;
   color: #fff;
   line-height: 1.18;
 }
@@ -248,21 +243,21 @@
 
 .csc-section-label {
   font-family: "Sora", sans-serif;
-  font-size: 10.5px;
+  font-size: 20px;
   font-weight: 600;
-  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.48);
+  color: #fff;
   margin-bottom: 14px;
   flex-shrink: 0;
 }
 
 .csc-view-desc {
   font-family: "DM Sans", sans-serif;
-  font-size: clamp(13.5px, 1.3vw, 15.5px);
+  font-size: 20px;
   color: rgba(255, 255, 255, 0.82);
-  line-height: 1.72;
+  line-height: 1.5;
   overflow: hidden;
+  font-weight: 100;
 }
 
 /* ── Core Capabilities column ── */
@@ -303,7 +298,7 @@
 
 .csc-glass-title {
   font-family: "Sora", sans-serif;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: 600;
   color: #fff;
   margin-bottom: 8px;
@@ -312,7 +307,7 @@
 
 .csc-glass-body {
   font-family: "DM Sans", sans-serif;
-  font-size: 11.5px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.62);
   line-height: 1.6;
   display: -webkit-box;
@@ -522,8 +517,6 @@
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
 }
 
-
-
 /* ============================================================
    FOOTER
    ============================================================ */
@@ -658,4 +651,72 @@
 
 .footer-bottom-links a:hover {
   color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* ============================================================
+   CAPABILITIES FILTER NAV
+============================================================ */
+
+.csc-filter {
+  width: 100%;
+  padding: 0 24px 40px;
+  background: #f4f7fb;
+}
+
+.csc-filter-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.csc-filter-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.csc-filter-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #0b1526;
+  font-family: "Sora", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+
+.csc-filter-btn:hover {
+  background: #0079f3;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.csc-filter-btn.active {
+  background: linear-gradient(135deg, #0079f3, #0050cc);
+  color: #fff;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .csc-filter {
+    padding: 0 14px 28px;
+  }
+
+  .csc-filter-btn {
+    font-size: 12px;
+    padding: 12px 18px;
+  }
+
 }

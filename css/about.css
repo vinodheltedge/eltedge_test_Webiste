@@ -4,50 +4,65 @@
 
 /* ---- HERO ---- */
 .about-hero {
-  background: url(../assets/videos/ourprocessvid.gif);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  min-height: 700px;
-
-  padding: 80px 0 72px;
-  position: relative;
-  overflow: hidden;
+  
+    position: relative;
+    min-height: 700px;
+    background: url("../assets/videos/ourprocessvid.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 80px 0 72px;
+  
 }
 
-.about-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    ellipse 60% 80% at 50% 100%,
-    rgba(0, 100, 240, 0.08) 0%,
-    transparent 70%
-  );
-  pointer-events: none;
-}
+
+  .about-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* dark overlay */
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.72) 2%,
+      rgba(0, 0, 0, 0.48) 45%,
+      rgba(0, 0, 0, 0.18) 100%
+    );
+    z-index: 1;
+  }
+
 
 .about-hero-inner {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .about-hero h1 {
   font-family: "Graphik Trial", sans-serif;
-  font-size: clamp(28px, 4vw, 40px);
+  font-size: 50px;
   font-weight: 600;
-  color: #0079f3;
+  color: #fff;
   line-height: 1.18;
   max-width: 580px;
   margin-bottom: 20px;
+  text-align: left;
+  margin-left: 0;
 }
 
 .about-hero p {
-  font-size: clamp(14px, 1.4vw, 16px);
+  font-size: clamp(20px, 1.4vw, 16px);
   color: rgba(255, 255, 255, 0.72);
   max-width: 520px;
   line-height: 1.72;
+  text-align: left;
+  margin-left: 0;
 }
 
 /* ---- WHO ARE WE ---- */
@@ -495,7 +510,7 @@
   transition:
     box-shadow 0.25s,
     transform 0.25s;
-  box-shadow: 0 8px 24px rgba(0, 80, 200, 0.03);
+  box-shadow: 0 8px 24px rgba(0, 80, 200, 0.1);
 }
 
 .value-card:hover {
