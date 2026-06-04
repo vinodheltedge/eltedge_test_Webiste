@@ -107,8 +107,6 @@
          HERO SECTION
          ============================================================ -->
     <section class="works-hero" id="worksHero">
-    
-
       <div class="works-hero-inner container">
         <!-- LEFT: Text Content -->
         <div class="hero-text-col" id="heroTextCol">
@@ -128,19 +126,23 @@
         <div class="hero-showcase-col" id="heroShowcaseCol">
           <!-- Slide category label -->
           <div class="showcase-label-wrap">
-            <span class="showcase-label-text" id="showcaseLabelText">Code Design</span>
+            <span class="showcase-label-text" id="showcaseLabelText"
+              >Code Design</span
+            >
           </div>
 
           <!-- Stage — all slides stacked, only one visible at a time -->
           <div class="showcase-stage" id="showcaseStage">
-
             <!-- Slide 0 · Code Design -->
             <div class="showcase-slide" data-slide="0">
               <div class="slide-layer slide-layer--back">
                 <img src="assets/images/ourworks/ourworks2.png" alt="" />
               </div>
               <div class="slide-layer slide-layer--main">
-                <img src="assets/images/ourworks/ourworks1.png" alt="Code Design" />
+                <img
+                  src="assets/images/ourworks/ourworks1.png"
+                  alt="Code Design"
+                />
               </div>
             </div>
 
@@ -150,7 +152,10 @@
                 <img src="assets/images/ourworks/ourworks3.png" alt="" />
               </div>
               <div class="slide-layer slide-layer--main">
-                <img src="assets/images/ourworks/ourworks2.png" alt="Prototype Design" />
+                <img
+                  src="assets/images/ourworks/ourworks2.png"
+                  alt="Prototype Design"
+                />
               </div>
             </div>
 
@@ -160,7 +165,10 @@
                 <img src="assets/images/ourworks/ourworks4.png" alt="" />
               </div>
               <div class="slide-layer slide-layer--main">
-                <img src="assets/images/ourworks/ourworks3.png" alt="Product Engineering" />
+                <img
+                  src="assets/images/ourworks/ourworks3.png"
+                  alt="Product Engineering"
+                />
               </div>
             </div>
 
@@ -170,7 +178,10 @@
                 <img src="assets/images/ourworks/ourworks1.png" alt="" />
               </div>
               <div class="slide-layer slide-layer--main">
-                <img src="assets/images/ourworks/ourworks4.png" alt="Manufacturing &amp; Deployment" />
+                <img
+                  src="assets/images/ourworks/ourworks4.png"
+                  alt="Manufacturing &amp; Deployment"
+                />
               </div>
             </div>
 
@@ -185,10 +196,26 @@
 
       <!-- Navigation dots -->
       <div class="hero-dots" id="heroDots">
-        <button class="hero-dot active" data-dot="0" aria-label="Code Design"></button>
-        <button class="hero-dot" data-dot="1" aria-label="Prototype Design"></button>
-        <button class="hero-dot" data-dot="2" aria-label="Product Engineering"></button>
-        <button class="hero-dot" data-dot="3" aria-label="Manufacturing &amp; Deployment"></button>
+        <button
+          class="hero-dot active"
+          data-dot="0"
+          aria-label="Code Design"
+        ></button>
+        <button
+          class="hero-dot"
+          data-dot="1"
+          aria-label="Prototype Design"
+        ></button>
+        <button
+          class="hero-dot"
+          data-dot="2"
+          aria-label="Product Engineering"
+        ></button>
+        <button
+          class="hero-dot"
+          data-dot="3"
+          aria-label="Manufacturing &amp; Deployment"
+        ></button>
       </div>
     </section>
 
@@ -472,18 +499,45 @@
            PROJECT DATA
         ---------------------------------------------------------- */
         var IMGS = [
-          "assets/images/ourworks/ourworks1.png",
-          "assets/images/ourworks/ourworks2.png",
-          "assets/images/ourworks/ourworks3.png",
-          "assets/images/ourworks/ourworks4.png",
+          // image1
+          "assets/images/ourworks/Power Distribution.png",
+          // image2
+          "assets/images/ourworks/Wireless voting system.png",
+          // image3
+          "assets/images/ourworks/Smart home.png",
+          // image4
+          "assets/images/ourworks/Power Distribution Board.png",
+          // image5
+          "assets/images/ourworks/Industrial Desing Processing Board.png",
+          // image6
+          "assets/images/ourworks/Chemical Testing lab equipment.png",
+          // image7
+          "assets/images/ourworks/Process Analyzer.png",
+          // image8
+          "assets/images/ourworks/Digital IOT Enabled Gas detection Module.png",
+          // image9
+          "assets/images/ourworks/Linux Single - board Computer.png",
+          // image10
+          "assets/images/ourworks/Industrial IO Module.png",
+          // image11
+          "assets/images/ourworks/Thermal Imaging Masking Project.png",
+          // image12
+          "assets/images/ourworks/Smart residential Eneergy meter.png",
+          // image13
+          "assets/images/ourworks/Gas Floe Meterig System.png",
+          // image14
+          "assets/images/ourworks/Wired - bending machine embedded Controller.png",
+          // image15
+          "assets/images/ourworks/Wireless voting system.png",
         ];
 
         var projects = [
+          // card 1
           {
             id: 1,
             category: "consumer",
             catLabel: "Consumer Electronics",
-            title: "Smart Home Automation Controller",
+            title: "Power Distribution Board",
             tags: [
               "Hardware Design",
               "PCB layout & routing",
@@ -494,259 +548,261 @@
             challenge:
               "Our custom IoT application development service delivers end-to-end solutions for connected devices and systems. We specialize in creating secure, scalable, and efficient IoT applications that bridge edge devices with cloud infrastructure, enabling data-driven insights and remote control capabilities across industrial, commercial, and scientific applications.",
             capabilities:
-              "Hardware design, firmware development, mechanical design, UI design, PCB layout & routing, wireless protocol implementation, 3D rendering",
-            spotlight: "INTUITIVE MINIMAL USER INTERFACE DESIGN",
+              "Hardware design, PCB layout ,Power intergrity analysis,lab prototyping",
+            spotlight:
+              "Closed-feedback-loop thermal controller tuning,mil-spec componets specifiaction & specialzed power electronics design besed on custom MOSFET",
           },
+          // Card 2
           {
             id: 2,
             category: "industrial",
             catLabel: "Industrial Controls & Instrumentation",
-            title: "Linux Single-Board Computer",
+            title: "Wireless Voting System",
             tags: [
-              "Mechanical design",
-              "DFM optimization",
-              "System-on-module",
-              "True kernel",
+              "hardware design",
+              "PCB layout & routing",
+              "anrenna design",
+              "RF protocol design",
             ],
             img: IMGS[1],
             challenge:
               "Designed a compact, high-performance Linux SBC tailored for industrial environments requiring real-time processing, extensive I/O interfaces, and long-term supply chain stability. The platform supports custom Linux BSPs with full kernel-level customization.",
             capabilities:
-              "System-on-module integration, BSP development, mechanical design, DFM optimization, Linux kernel customization, hardware bring-up",
-            spotlight: "CUSTOM LINUX BSP WITH REAL-TIME KERNEL PATCHES",
+              "hardware Design, PCB layout & routing,antenna design,RF protocall design,firmware development,power optimization,mechanical design,3D rendering,custom PCB membrane design,user interface design,power & signal integrity analysis,lab prototyping,tooling design,DfM+DfA optimization",
+            spotlight: "Custom wireless protocol & stack design",
           },
+          // Card 3
           {
             id: 3,
-            category: "iot",
-            catLabel: "IoT & Edge Computing",
-            title: "Digital IoT-enabled Gas Detection Module",
+            category: "consumer",
+            catLabel: "Consumer Electronics",
+            title: "Smart home automation controller",
             tags: [
-              "Firmware development",
+              "hardware design",
               "PCB layout & routing",
-              "User interface design",
-              "Cellular connectivity",
+              "firmware development",
+              "wireless protocol implementation",
             ],
             img: IMGS[2],
             challenge:
               "Developed an IoT gas detection module with multi-sensor fusion, real-time alert systems, and cloud connectivity. The system integrates with industrial safety protocols and provides remote monitoring capabilities through a web dashboard.",
             capabilities:
-              "Firmware development, multi-sensor fusion, cellular modem integration, PCB layout & routing, cloud backend, user interface design",
-            spotlight: "MULTI-SENSOR FUSION WITH AI-BASED ANOMALY DETECTION",
+              "hardware design,PCB layout & routing,firmware development,wireless protocol implementation,mechanical design,3D rendering,user interface design",
+            spotlight: "intuitive minimal user interface design",
           },
+          // Card 4
           {
             id: 4,
             category: "consumer",
             catLabel: "Consumer Electronics",
-            title: "Wireless Audience Polling System",
+            title: "Power Distribution Board",
             tags: [
-              "RF protocol design",
-              "DFM-OTA optimization",
-              "Power & signal integrity",
-              "Custom wireless protocol",
+              "analog & digital hardware design",
+              "mixed-signal PCB layout & routing",
+              "firmware development",
+              "wireless protocol implementation",
             ],
             img: IMGS[3],
             challenge:
               "Created a proprietary sub-GHz wireless polling system capable of handling thousands of simultaneous responses with sub-second latency. The system includes base station hardware, handheld response units, and real-time results visualization software.",
             capabilities:
-              "RF protocol design, custom wireless stack, firmware development, PCB design, power optimization, DFM, OTA firmware updates",
+              "analog & digital hardware design, mixed-signal PCB layout & routing, firmware development, wireless protocol implementation,mechanical design,3D rendering,user interface design",
             spotlight:
               "PROPRIETARY SUB-GHz PROTOCOL WITH 2000+ CONCURRENT DEVICES",
           },
+          // Card 5
           {
             id: 5,
             category: "industrial",
             catLabel: "Industrial Controls & Instrumentation",
-            title: "Battery Management System for Autonomous Mobile Robots",
+            title: "Industrial signal processing board",
             tags: [
-              "Analog & digital hardware",
-              "Firmware development",
-              "PCB layout & routing",
+              "ADC",
+              "DAC & power electronics hardware design",
+              "mixed-signal PCB layout & routing",
               "Mechanical design",
             ],
-            img: IMGS[0],
+            img: IMGS[4],
             challenge:
-              "Engineered a high-precision BMS for autonomous mobile robot fleets, supporting lithium-ion pack management with cell balancing, state-of-charge estimation, thermal management, and safety protection circuits for 24/7 industrial operation.",
+              "ADC, DAC & power electronics hardware design, mixed-signal PCB layout & routing.",
             capabilities:
               "Analog mixed-signal design, BMS firmware, cell balancing algorithms, CAN bus integration, thermal management, PCB layout & routing",
-            spotlight:
-              "COULOMB COUNTING WITH ADAPTIVE SOC ESTIMATION ALGORITHM",
+            spotlight: "FPGA based digital signal processing",
           },
+          // Card 6
           {
             id: 6,
             category: "industrial",
             catLabel: "Industrial Controls & Instrumentation",
-            title: "Industrial Single-Board Computer",
+            title: "Chemical testing lab equipment",
             tags: [
-              "Cellular IoT integration",
-              "Driver development",
-              "Linux kernel & driver development",
+              "modular analog front-end design",
+              "System-on-module-based hardware design",
+              "mechanical design",
             ],
-            img: IMGS[1],
+            img: IMGS[5],
             challenge:
               "Developed a ruggedized industrial SBC with extended temperature range, multiple industrial interfaces (CAN, RS-485, Ethernet), cellular connectivity, and a custom Linux distribution optimized for industrial edge computing workloads.",
             capabilities:
-              "Hardware design, Linux kernel development, device driver development, cellular IoT integration, industrial protocol stack, thermal design",
-            spotlight: "EXTENDED TEMPERATURE RANGE -40°C TO +85°C OPERATION",
+              "modular analog front-end design,System-on-module-based hardware design,mechanical design,mixed-signal & high speed PCB layout & routing,linux kernel customization and application development,3D rendering,touch interface design,power & signal integrity analysis,lab prototyping,tooling design,DfM optimization",
+            spotlight: "analog front end design, industrial product design",
           },
+          // Card 7
           {
             id: 7,
             category: "industrial",
             catLabel: "Industrial Controls & Instrumentation",
-            title: "PLC Panel Opacity Control Module",
+            title: "Process analyzer",
             tags: [
-              "Firmware development",
-              "Wireless implementation",
-              "Mixed signal PCB layout",
-              "Analog & digital hardware",
+              "modular analog front-end design",
+              "hardware design",
+              "mixed-signal PCB layout & routing",
+              "linux kernel customization and application development",
             ],
-            img: IMGS[2],
+            img: IMGS[6],
             challenge:
-              "Designed a PLC-compatible opacity control module for industrial panel applications, featuring precise analog output control, wireless configuration capability, and seamless integration with existing automation infrastructure.",
+              "Our custom IoT application development service delivers end-to-end solutions for connected devices and systems. We specialize in creating secure, scalable, and efficient IoT applications that bridge edge devices with cloud infrastructure, enabling data-driven insights and remote control capabilities across industrial, commercial, and scientific applications.",
             capabilities:
-              "Mixed-signal PCB design, firmware development, PLC protocol integration, wireless module implementation, analog signal conditioning",
-            spotlight: "WIRELESS PLC INTEGRATION WITH 0.1% OPACITY RESOLUTION",
+              "modular analog front-end design, hardware design, mixed-signal PCB layout & routing, linux kernel customization and application development,mechanical design,3D rendering,touch interface design,power & signal integrity analysis,lab prototyping",
+            spotlight: "Extensive cost-optimzation for price-sensitive markets",
           },
+          // Card 8
           {
             id: 8,
             category: "industrial",
             catLabel: "Industrial Controls & Instrumentation",
-            title: "Chemical Testing Lab Equipment",
+            title: "Digital IoT-enabled gas detection module",
             tags: [
-              "Signal integrity analysis",
-              "Linux kernel customization",
-              "SDM hardware design",
-              "Analog front-end design",
+              "hardware design",
+              "PCB layout & routing",
+              "firmware development",
+              "cellular connectivity & IoT protocols implementation",
             ],
-            img: IMGS[3],
+            img: IMGS[7],
             challenge:
-              "Built precision analog front-end measurement equipment for chemical laboratory analysis, requiring ultra-low noise signal chains, high-resolution ADCs, and robust data acquisition software with calibration and traceability features.",
+              "Our custom IoT application development service delivers end-to-end solutions for connected devices and systems. We specialize in creating secure, scalable, and efficient IoT applications that bridge edge devices with cloud infrastructure, enabling data-driven insights and remote control capabilities across industrial, commercial, and scientific applications.",
             capabilities:
-              "Analog front-end design, SDM hardware, signal integrity analysis, Linux kernel customization, data acquisition software, calibration systems",
-            spotlight: "SUB-MICROVOLT NOISE FLOOR WITH 24-BIT SIGMA-DELTA ADC",
+              "hardware design, PCB layout & routing, firmware development, cellular connectivity & IoT protocols implementation,wired & wireless industrial fieldbus protocols implementation,mechanical design,3D rendering,user interface design",
+            spotlight: "ATEX class II rated intrinsically safe design",
           },
+          // card 9
           {
             id: 9,
             category: "industrial",
             catLabel: "Industrial Controls & Instrumentation",
-            title: "Industrial I/O Module",
+            title: "Linux single-board computer",
             tags: [
-              "Protocol implementation",
-              "Linux kernel development",
-              "Microprocessor hardware design",
-              "Signal PCB design",
+              "linux kernel customization and application development",
+              "System-on-module-based hardware design",
+              "wired & wireless protocol implementation",
+              "cellular connectivity & IoT protocols implementation",
             ],
-            img: IMGS[0],
+            img: IMGS[8],
             challenge:
               "Developed a versatile industrial I/O expansion module supporting multiple fieldbuses (Modbus, Profibus, EtherCAT), with configurable analog/digital I/O channels and real-time processing for deterministic control applications.",
             capabilities:
-              "Industrial fieldbus protocols, microprocessor hardware design, Linux kernel development, real-time firmware, signal PCB design, EMC compliance",
-            spotlight:
-              "MULTI-PROTOCOL FIELDBUS WITH <1μS DETERMINISTIC LATENCY",
+              "linux kernel customization and application development, System-on-module-based hardware design, wired & wireless protocol implementation, cellular connectivity & IoT protocols implementation,mechanical design,mixed-signal & high speed PCB layout & routing ,3D rendering,web-server user interface design,power & signal integrity analysis,lab prototyping,tooling design,DfM optimization",
+            spotlight: "custom bootloader, kernel & drivers development",
           },
+          // card 10
           {
             id: 10,
             category: "industrial",
             catLabel: "Industrial Controls & Instrumentation",
-            title: "Industrial Chemical Process Analyzer",
+            title: "Industrial I/O module",
             tags: [
-              "Linux kernel customization",
-              "Modular Analog Design",
-              "Touch UI design",
-              "Signal integrity analysis",
+              "microprocessor-based hardware design",
+              "mixed-signal & high speed PCB layout & routing",
+              "linux kernel customization and application development",
+              "wired & wireless protocol implementation",
             ],
-            img: IMGS[1],
+            img: IMGS[9],
             challenge:
               "Created an integrated chemical process analyzer with modular sensor inputs, real-time data processing, and a ruggedized touchscreen interface for harsh industrial environments. The system provides continuous process monitoring with alarm management.",
             capabilities:
-              "Modular analog hardware design, Linux kernel customization, touch UI development, signal integrity analysis, industrial enclosure design",
-            spotlight: "MODULAR SENSOR ARCHITECTURE WITH HOT-SWAP CAPABILITY",
+              "microprocessor-based hardware design, mixed-signal & high speed PCB layout & routing, linux kernel customization and application development, wired & wireless protocol implementation,mechanical design,3D rendering,power & signal integrity analysis,lab prototyping,tooling design,DfM optimization,standards-compliance documentation & testing",
+            spotlight:
+              "IEC-something compliance, modular & expandable plug-in I/O design",
           },
+          // Card 11
           {
             id: 11,
             category: "commercial",
             catLabel: "Commercial Equipment",
-            title: "Thermal Imaging Camouflage System",
+            title: "Thermal Imaging Masking Proejct",
             tags: [
-              "Closed-loop control development",
-              "Field testing",
-              "Thermal & power simulations",
+              "hardware design",
               "PCB layout & routing",
+              "power & thermal simulations",
+              "firmware development",
             ],
-            img: IMGS[2],
+            img: IMGS[10],
             challenge:
               "Engineered an advanced thermal management system using adaptive material control for thermal signature management. The system uses closed-loop feedback with IR sensors to dynamically adjust thermal emission patterns in real time.",
             capabilities:
-              "Thermal simulation, closed-loop control firmware, power electronics design, field testing, PCB layout & routing, EMI/EMC compliance",
-            spotlight: "REAL-TIME ADAPTIVE THERMAL SIGNATURE CONTROL SYSTEM",
+              "hardware design, PCB layout & routing, power & thermal simulations, firmware development,closed-loop control system development & tuning,wireless protocol implementation,harness design,field testing ",
+            spotlight:
+              "closed-feedback-loop thermal system controller tuning, mil-spec component specification & specialized power electronics design based on custom MOSFET",
           },
+          // card 12
           {
             id: 12,
             category: "iot",
             catLabel: "IoT & Edge Computing",
             title: "Smart Residential Energy Meter",
             tags: [
-              "Analog front-end design",
-              "Linux kernel development",
-              "Microprocessor hardware design",
-              "Signal PCB & routing",
+              "analog front end design",
+              "hardware design",
+              "PCB layout & routing",
+              "firmware development",
             ],
-            img: IMGS[3],
+            img: IMGS[11],
             challenge:
               "Developed a smart energy metering solution with tamper detection, bidirectional metering for solar installations, real-time consumption analytics, and over-the-air update capability for large-scale residential deployment.",
             capabilities:
-              "Analog front-end design, energy measurement IC integration, Linux kernel development, cloud connectivity, OTA updates, microprocessor hardware design",
+              "analog front end design, hardware design, PCB layout & routing, firmware development,cellular connectivity & IoT protocols implementation,mechanical design,3D rendering,user interface design",
             spotlight:
               "CLASS 1 METERING ACCURACY WITH BIDIRECTIONAL SOLAR SUPPORT",
           },
+          // card 13
           {
             id: 13,
             category: "industrial",
             catLabel: "Industrial Controls & Instrumentation",
-            title: "Paper Tube Rolling Special Purpose Machine",
+            title: "Gas flow metering system controller",
             tags: [
-              "PLC to embedded conversion",
+              "Closed-loop control system design & tuning",
               "Firmware development",
               "System integration",
               "Field testing",
             ],
-            img: IMGS[0],
+            img: IMGS[12],
             challenge:
               "Converted a legacy PLC-based paper tube rolling machine to a modern embedded control platform, improving precision, adding recipe management, real-time diagnostics, and remote monitoring while maintaining backward compatibility.",
             capabilities:
-              "PLC migration, embedded controller design, motor control firmware, HMI development, system integration, field testing and commissioning",
-            spotlight: "LEGACY PLC MIGRATION WITH ZERO PRODUCTION DOWNTIME",
+              "Closed-loop control system design & tuning, Firmware development, System Integration, Field testing",
+            spotlight: "PLC-to-embedded conversion",
           },
+          // Card 14
           {
             id: 14,
             category: "industrial",
             catLabel: "Industrial Controls & Instrumentation",
-            title: "Wire-Bending Machine Embedded Controller",
+            title: "Wire-Bending machine embedded controller",
             tags: [
               "Closed-loop control development",
               "Field testing",
               "Thermal & power simulations",
               "PCB layout & routing",
             ],
-            img: IMGS[1],
+            img: IMGS[13],
             challenge:
               "Designed a high-speed closed-loop motion controller for precision wire-bending machinery, achieving sub-millimeter bending accuracy at production speeds. The system includes servo drive integration, recipe storage, and quality monitoring.",
             capabilities:
-              "Closed-loop control development, servo drive integration, firmware development, thermal & power simulations, PCB layout & routing, field testing",
-            spotlight: "SUB-MILLIMETER BENDING ACCURACY AT 200 CYCLES/MINUTE",
+              "Firmware development,System Integration,Field testing,Closed-loop control system design & tuning",
+            spotlight: "PLC-to-embedded conversion",
           },
-          {
-            id: 15,
-            category: "industrial",
-            catLabel: "Industrial Controls & Instrumentation",
-            title: "Industrial Single-Board Computer",
-            tags: ["SOM-based hardware design"],
-            img: IMGS[2],
-            challenge:
-              "Developed a cost-optimized industrial SBC using SOM (System-on-Module) architecture, providing standardized compute with customizable carrier boards for rapid deployment across multiple industrial automation applications.",
-            capabilities:
-              "SOM-based hardware design, carrier board development, BSP customization, industrial interface integration, production test framework",
-            spotlight: "SOM ARCHITECTURE REDUCING TIME-TO-MARKET BY 40%",
-          },
+          
         ];
 
         /* ----------------------------------------------------------
