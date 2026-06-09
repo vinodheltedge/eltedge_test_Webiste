@@ -19,6 +19,8 @@
   width: 100%;
   padding-left: 40px;
   margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .page-hero-bg {
@@ -49,7 +51,24 @@
   margin-left: 0;
   padding-left: 0;
 }
+.page-hero-content{
+  margin-left: -20px;
+}
 
+.page-hero {
+  align-items: center;
+}
+
+.page-hero .container{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-hero-content{
+  max-width: 650px;
+  padding: 0;
+}
 .page-hero-label {
   display: inline-block;
   font-size: 11px;

@@ -121,6 +121,10 @@
   transform: translateY(10px);
 }
 
+.showcase-label-text.label-static {
+  transition: none;
+}
+
 /* === Stage === */
 .showcase-stage {
   position: relative;
@@ -156,16 +160,23 @@
   display: none;
 }
 
-/* All slides: smooth orbit transitions (CSS handles position, GSAP handles float) */
+/* All slides: positioned absolutely, stacked vertically with smooth transitions */
 .showcase-slide {
   position: absolute;
   inset: 0;
   pointer-events: none;
   will-change: transform, opacity, filter;
   transition:
-    transform 1.4s cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 1.2s ease,
-    filter 1.2s ease;
+    transform 1.6s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 1.4s ease,
+    filter 1.4s ease;
+}
+
+.showcase-slide.carousel-animate {
+  transition:
+    transform 1.6s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 1.4s ease,
+    filter 1.4s ease;
 }
 
 /* Shared image layer base */
@@ -191,39 +202,42 @@
     drop-shadow(0 8px 20px rgba(0, 30, 160, 0.55));
 }
 
-/* ── Orbit position classes ─────────────────────────────── */
+/* ── Vertical Carousel Position States ─────────────────────────────── */
 
-/* Active: front-center, full size, crisp, pointer events on */
-.img-pos--active {
+/* ACTIVE: Front-center, full size, 100% opacity, sharp */
+.carousel-pos--active {
   opacity: 1;
-  transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
+  transform: translateY(0px) scale(1);
   filter: blur(0px);
   z-index: 4;
   pointer-events: auto;
 }
 
-/* Next (+1): right side, medium depth */
-.img-pos--next {
-  opacity: 0.38;
-  transform: translateX(125px) translateY(-8px) scale(0.8) rotate(2.5deg);
-  filter: blur(2.8px);
+/* NEXT (+1): Moving to center position, coming from below */
+.carousel-pos--next {
+  opacity: 0.4;
+  transform: translateY(80px) scale(0.85);
+  filter: blur(2.2px);
   z-index: 3;
+  pointer-events: none;
 }
 
-/* Far (+2): furthest back */
-.img-pos--far {
-  opacity: 0.15;
-  transform: translateX(58px) translateY(-22px) scale(0.6) rotate(1.5deg);
-  filter: blur(5px);
-  z-index: 1;
-}
-
-/* Prev (-1): left side, medium depth */
-.img-pos--prev {
-  opacity: 0.26;
-  transform: translateX(-128px) translateY(-14px) scale(0.74) rotate(-3deg);
-  filter: blur(3.5px);
+/* FAR (+2): Behind, small, blurred */
+.carousel-pos--far {
+  opacity: 0.18;
+  transform: translateY(140px) scale(0.7);
+  filter: blur(4.5px);
   z-index: 2;
+  pointer-events: none;
+}
+
+/* FAR-FAR (+3): Very far back, very small, very blurred */
+.carousel-pos--farfar {
+  opacity: 0.08;
+  transform: translateY(200px) scale(0.6);
+  filter: blur(6px);
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* === Navigation dots === */
@@ -326,7 +340,7 @@
    PROJECT CARD
    ============================================================ */
 .project-card {
-  background: #DCEDFB;
+  background: #dcedfb;
   border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
@@ -355,7 +369,7 @@
   right: 0;
   width: 46px;
   height: 46px;
-  background:#f0f5fb;
+  background: #f0f5fb;
   border: none;
   border-radius: 0 16px 0 16px;
   display: flex;
@@ -748,18 +762,6 @@
     width: 242px;
   }
 
-  .img-pos--next {
-    transform: translateX(94px) translateY(-7px) scale(0.8) rotate(2.5deg);
-  }
-
-  .img-pos--prev {
-    transform: translateX(-96px) translateY(-12px) scale(0.74) rotate(-3deg);
-  }
-
-  .img-pos--far {
-    transform: translateX(44px) translateY(-18px) scale(0.6) rotate(1.5deg);
-  }
-
   .works-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -811,18 +813,6 @@
 
   .slide-layer--main img {
     width: 192px;
-  }
-
-  .img-pos--next {
-    transform: translateX(72px) translateY(-6px) scale(0.8) rotate(2deg);
-  }
-
-  .img-pos--prev {
-    transform: translateX(-74px) translateY(-10px) scale(0.74) rotate(-2.5deg);
-  }
-
-  .img-pos--far {
-    transform: translateX(32px) translateY(-15px) scale(0.6) rotate(1.5deg);
   }
 
   .wh-glow--1 {

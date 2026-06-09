@@ -148,8 +148,8 @@
 .csc-card {
   width: 100%;
   max-width: 1100px;
-  height: min(76vh, 720px);
-  min-height: 400px;
+  height: min(82vh, 780px);
+  min-height: 500px;
   border-radius: 26px;
   overflow: hidden;
   position: relative;
@@ -199,7 +199,7 @@
   position: relative;
   z-index: 1;
   height: 100%;
-  padding: 40px 52px 52px;
+  padding: 40px 52px 120px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
