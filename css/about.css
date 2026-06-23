@@ -6,7 +6,7 @@
 .about-hero {
   
     position: relative;
-    min-height: 700px;
+    min-height: 460px;
     background: url("../assets/videos/ourprocessvid.gif");
     background-size: cover;
     background-position: center;

@@ -136,7 +136,10 @@
             <!-- Slide 0 · Code Design -->
             <div class="showcase-slide" data-slide="0">
               <div class="slide-layer slide-layer--back">
-                <img src="assets/images/ourworks/Chemical Testing lab equipment.png" alt="" />
+                <img
+                  src="assets/images/ourworks/Chemical Testing lab equipment.png"
+                  alt=""
+                />
               </div>
               <div class="slide-layer slide-layer--main">
                 <img
@@ -149,7 +152,10 @@
             <!-- Slide 1 · Prototype Design -->
             <div class="showcase-slide" data-slide="1">
               <div class="slide-layer slide-layer--back">
-                <img src="assets/images/ourworks//Gas Floe Meterig System.png" alt="" />
+                <img
+                  src="assets/images/ourworks//Gas Floe Meterig System.png"
+                  alt=""
+                />
               </div>
               <div class="slide-layer slide-layer--main">
                 <img
@@ -367,7 +373,7 @@
             Let's turn your vision into a production-ready embedded product.
           </p>
         </div>
-        <a href="#" class="btn-cta-white">Start Your Project →</a>
+        <a href="./contact.html" class="btn-cta-white">Start Your Project →</a>
       </div>
     </section>
     <!-- ============================================================
@@ -535,7 +541,9 @@
           // card 1
           {
             id: 1,
+            slug: "power-distribution-board",
             category: "consumer",
+
             catLabel: "Consumer Electronics",
             title: "Power Distribution Board",
             tags: [
@@ -555,6 +563,7 @@
           // Card 2
           {
             id: 2,
+            slug: "wireless-voting-system",
             category: "industrial",
             catLabel: "Industrial Controls & Instrumentation",
             title: "Wireless Voting System",
@@ -574,6 +583,7 @@
           // Card 3
           {
             id: 3,
+            slug: "smart-home-automation-controller",
             category: "consumer",
             catLabel: "Consumer Electronics",
             title: "Smart home automation controller",
@@ -594,6 +604,7 @@
           {
             id: 4,
             category: "consumer",
+             slug: "digital-power-distribution-board",
             catLabel: "Consumer Electronics",
             title: "Power Distribution Board",
             tags: [
@@ -669,6 +680,7 @@
           // Card 8
           {
             id: 8,
+             slug: "Digital-IoT-enabled-gas-detection-module",
             category: "industrial",
             catLabel: "Industrial Controls & Instrumentation",
             title: "Digital IoT-enabled gas detection module",
@@ -767,6 +779,7 @@
           // card 13
           {
             id: 13,
+              slug: "Gas flow metering system controller",
             category: "industrial",
             catLabel: "Industrial Controls & Instrumentation",
             title: "Gas flow metering system controller",
@@ -802,7 +815,6 @@
               "Firmware development,System Integration,Field testing,Closed-loop control system design & tuning",
             spotlight: "PLC-to-embedded conversion",
           },
-          
         ];
 
         /* ----------------------------------------------------------
@@ -828,6 +840,7 @@
             var card = document.createElement("div");
             card.className = "project-card";
             card.setAttribute("data-index", idx);
+            card.setAttribute("data-project", p.slug);
             card.setAttribute("role", "button");
             card.setAttribute("tabindex", "0");
             card.setAttribute("aria-label", "Open " + p.title);

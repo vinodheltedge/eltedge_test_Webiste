@@ -141,7 +141,22 @@
 
             <!-- TAB: SERVICE -->
             <div class="c-panel active" id="panel-service">
-              <form class="c-form" novalidate>
+              <form
+                class="c-form"
+                action="https://api.web3forms.com/submit"
+                method="POST"
+              >
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="82fb8d5d-7713-4411-b757-82e2e627a30c"
+                />
+
+                <input
+                  type="hidden"
+                  name="subject"
+                  value="New Contact Form Submission"
+                />
                 <div class="c-row-2">
                   <div class="c-field">
                     <label class="c-label">Name</label>
@@ -149,7 +164,7 @@
                       class="c-input"
                       type="text"
                       placeholder="Enter Your Name"
-                      autocomplete="name"
+                      name="name"
                     />
                   </div>
                   <div class="c-field">
@@ -157,6 +172,7 @@
                     <input
                       class="c-input"
                       type="text"
+                      name="company"
                       placeholder="Enter Your Company Name"
                       autocomplete="organization"
                     />
@@ -179,6 +195,7 @@
                         type="tel"
                         placeholder=""
                         autocomplete="tel-national"
+                        name="phone"
                       />
                     </div>
                   </div>
@@ -189,10 +206,11 @@
                       type="email"
                       placeholder="Enter Your Email"
                       autocomplete="email"
+                      name="email"
                     />
                   </div>
                 </div>
-                <div class="c-field">
+                <div class="c-field" name="service">
                   <label class="c-label">Choose a Service</label>
                   <div class="c-select-wrap">
                     <select class="c-select">
@@ -477,6 +495,7 @@
                   <label class="c-label">Tell Us About Your Project</label>
                   <textarea
                     class="c-textarea"
+                    name="message"
                     placeholder="Enter description"
                     rows="4"
                   ></textarea>
@@ -493,11 +512,13 @@
           <div class="c-info-card">
             <div class="c-map">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4!2d78.4081!3d17.4399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb971bb8ae74b1%3A0xd63f7cad8c2d9a23!2sAshoka%20HiTech%20Chambers!5e0!3m2!1sen!2sin!4v1715000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7613.47679840246!2d78.42133473995511!3d17.424337583537877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb970d18993739%3A0x90c151e6974d10e8!2seLT%20Edge!5e0!3m2!1sen!2sin!4v1782206076882!5m2!1sen!2sin"
+                width="600"
+                height="450"
+                style="border: 0"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                title="eLT Edge Location — Hyderabad"
               ></iframe>
             </div>
             <div class="c-info-body">
@@ -566,13 +587,15 @@
     </section>
 
     <!-- CTA SECTION -->
-    <section class="c-cta">
-      <div class="c-cta-inner">
-        <h2>Have a Product Idea?</h2>
-        <p>Let's Turn Vision into a production - ready embedded product.</p>
-        <a href="contact.html" class="c-cta-btn"
-          >Start your Project &nbsp;&#8594;</a
-        >
+    <section class="footer-cta">
+      <div class="container footer-cta-inner">
+        <div class="cta-text">
+          <h2>Have a Product Idea?</h2>
+          <p>
+            Let's turn your vision into a production-ready embedded product.
+          </p>
+        </div>
+        <a href="./contact.html" class="btn-cta-white">Start Your Project →</a>
       </div>
     </section>
 
@@ -826,18 +849,18 @@
         }
 
         /* ---- FORM SUBMIT ---- */
-        document.querySelectorAll(".c-form").forEach(function (form) {
-          form.addEventListener("submit", function (e) {
-            e.preventDefault();
-            alert("Thank you! We will get back to you shortly.");
-            form.reset();
-            form.querySelectorAll(".c-chip").forEach(function (c) {
-              c.classList.remove("selected");
-            });
-            var ft = form.querySelector(".c-file-text");
-            if (ft) ft.textContent = "Upload Resume";
-          });
-        });
+        // document.querySelectorAll(".c-form").forEach(function (form) {
+        //   form.addEventListener("submit", function (e) {
+        //     e.preventDefault();
+        //     alert("Thank you! We will get back to you shortly.");
+        //     form.reset();
+        //     form.querySelectorAll(".c-chip").forEach(function (c) {
+        //       c.classList.remove("selected");
+        //     });
+        //     var ft = form.querySelector(".c-file-text");
+        //     if (ft) ft.textContent = "Upload Resume";
+        //   });
+        // });
 
         /* ---- FOOTER ACCORDION (MOBILE) ---- */
         document.querySelectorAll(".footer-acc-head").forEach(function (head) {

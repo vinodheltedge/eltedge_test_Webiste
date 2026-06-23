@@ -168,3 +168,24 @@
 
   window.addEventListener("scroll", onScroll, { passive: true });
 })();
+
+window.addEventListener("load", () => {
+
+  const params = new URLSearchParams(window.location.search);
+  const project = params.get("project");
+
+  if (!project) return;
+
+  setTimeout(() => {
+
+    const card = document.querySelector(
+      `[data-project="${project}"]`
+    );
+
+    if(card){
+      card.click();
+    }
+
+  }, 500);
+
+});

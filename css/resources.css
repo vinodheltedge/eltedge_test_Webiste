@@ -5,7 +5,7 @@
 /* ---- HERO ---- */
 .res-hero {
   position: relative;
-  height: 600px;
+  height: 460px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@
   width: 100%;
   height: 100%;
 
-  background: url("../assets/images/Events/bloghero.png") no-repeat center;
+  background: url("../assets/images/blogs-images/blog-1.png") no-repeat center;
   background-size: cover;
 }
 
@@ -385,7 +385,7 @@
   align-items: center;
   gap: 6px;
   font-family: "Sora", sans-serif;
-  font-size: 13px;
+  font-size: 24px;
   font-weight: 700;
   color: #0079f3;
   text-decoration: none;
@@ -395,6 +395,9 @@
   background: none;
   border: none;
   padding: 0;
+  border: 2px solid#0079f3;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .blog-back-nav:hover {
@@ -672,4 +675,13 @@
     width: 180px;
     height: 120px;
   }
+}
+
+.res-hero-bg{
+  transition: background-image .6s ease;
+}
+
+.res-hero-title,
+.res-hero-sub{
+  transition: all .4s ease;
 }

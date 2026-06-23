@@ -14,7 +14,7 @@
    ================================================================ */
 .ap-hero {
   position: relative;
-  min-height: 520px;
+  min-height: 460px;
   display: flex;
   align-items: center;
   overflow: hidden;
